@@ -1,0 +1,125 @@
+<!doctype html>
+    <html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Registro | Boost Level</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/formularios.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-success">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="img/icono-boost-limpio.png" alt="Logo Boost Level" class="nav-logo-real">
+          <span class="brand-text">BOOST LEVEL</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+            <li class="nav-item">
+              <a class="btn btn-outline-success ms-lg-2" href="carrito.html">
+                🛒 Carrito <span class="badge text-bg-success contador-carrito">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<main class="container py-5">
+  <div class="mx-auto" style="max-width:850px">
+    <h1 class="section-title mb-4">Registro de usuario</h1>
+    <form id="formUsuario" class="panel" data-destino="login.html" novalidate>
+
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <label for="run" class="form-label">RUN</label>
+    <input id="run" class="form-control" type="text" maxlength="9" placeholder="123456785">
+    <p id="errorRun" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input id="nombre" class="form-control" type="text" maxlength="50">
+    <p id="errorNombre" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="apellidos" class="form-label">Apellidos</label>
+    <input id="apellidos" class="form-control" type="text" maxlength="100">
+    <p id="errorApellidos" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="correo" class="form-label">Correo</label>
+    <input id="correo" class="form-control" type="text" maxlength="100">
+    <p id="errorCorreo" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+    <input id="fechaNacimiento" class="form-control" type="date">
+    <p id="errorFecha" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="password" class="form-label">Contraseña</label>
+    <input id="password" class="form-control" type="password" maxlength="10">
+    <p id="errorPassword" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="repetirPassword" class="form-label">Repetir contraseña</label>
+    <input id="repetirPassword" class="form-control" type="password" maxlength="10">
+    <p id="errorRepetir" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="region" class="form-label">Región</label>
+    <select id="region" class="form-select"></select>
+    <p id="errorRegion" class="error"></p>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="comuna" class="form-label">Comuna</label>
+    <select id="comuna" class="form-select">
+      <option value="">Seleccione una comuna</option>
+    </select>
+    <p id="errorComuna" class="error"></p>
+  </div>
+  <div class="col-12 mb-3">
+    <label for="direccion" class="form-label">Dirección</label>
+    <input id="direccion" class="form-control" type="text" maxlength="300">
+    <p id="errorDireccion" class="error"></p>
+  </div>
+</div>
+
+      <div class="image-placeholder-note mb-3">
+        Los correos @duoc.cl reciben el mensaje del descuento de por vida del 20%.
+      </div>
+      <button class="btn btn-neon" type="submit">Registrarme</button>
+    </form>
+  </div>
+</main>
+
+    <footer class="site-footer mt-5">
+      <div class="container py-4 text-center">
+        <p class="mb-1"><strong>BOOST LEVEL</strong> — Sube de nivel tu setup.</p>
+        <small>Proyecto académico Full Stack II · 2026</small>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/datos.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/regiones.js"></script>
+<script src="js/usuario-form.js"></script>
+    </body>
+    </html>
