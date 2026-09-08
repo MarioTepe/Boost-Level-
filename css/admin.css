@@ -1,0 +1,78 @@
+.admin-body {
+  background: #090d12;
+}
+
+.admin-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.admin-sidebar {
+  background: #05070a;
+  border-right: 1px solid var(--borde);
+  padding: 22px 16px;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.admin-logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.admin-menu {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-link {
+  color: var(--secundario);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.admin-link:hover,
+.admin-link.active {
+  color: #071006;
+  background: var(--verde);
+}
+
+.admin-content {
+  padding: 28px;
+}
+
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.table-dark-custom {
+  --bs-table-bg: var(--panel);
+  --bs-table-color: #fff;
+  --bs-table-border-color: var(--borde);
+}
+
+@media (max-width: 850px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: static;
+  }
+
+  .admin-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

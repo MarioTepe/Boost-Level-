@@ -1,0 +1,35 @@
+.form-control,
+.form-select {
+  background: #0b1016;
+  color: white;
+  border: 1px solid #394657;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: #0b1016;
+  color: white;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 .2rem rgba(57,255,20,.12);
+}
+
+.form-control::placeholder {
+  color: #738091;
+}
+
+.form-select option {
+  color: #111;
+  background: #fff;
+}
+
+.error {
+  min-height: 20px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #ff7b7b;
+  font-size: .88rem;
+}
+
+.ok {
+  color: var(--verde);
+}
