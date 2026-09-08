@@ -1,0 +1,35 @@
+.hero {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.55)),
+    url("../img/fondo-setup.png") center/cover no-repeat;
+}
+
+.hero-box {
+  max-width: 720px;
+}
+
+.hero-brand-image {
+  width: min(100%, 720px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 22px rgba(0, 153, 255, .28));
+}
+
+.neon-promo {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+  background:
+    linear-gradient(rgba(0, 0, 0, .46), rgba(0, 0, 0, .64)),
+    url("../img/fondo-neon.png") center/cover no-repeat;
+}
+
+.neon-promo .panel {
+  background: rgba(5, 7, 10, .78);
+  backdrop-filter: blur(2px);
+}
