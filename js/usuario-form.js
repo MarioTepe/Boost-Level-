@@ -11,7 +11,10 @@ const region = document.querySelector("#region");
 const comuna = document.querySelector("#comuna");
 const direccion = document.querySelector("#direccion");
 
-region.innerHTML = '<option value="">Seleccione una región</option>';
+
+region.innerHTML =
+    '<option value="">Seleccione una región</option>';
+
 
 for (let i = 0; i < regiones.length; i++) {
 
@@ -22,15 +25,18 @@ for (let i = 0; i < regiones.length; i++) {
     `;
 }
 
+
 region.addEventListener("change", function () {
 
     comuna.innerHTML =
         '<option value="">Seleccione una comuna</option>';
 
+
     if (region.value !== "") {
 
         const comunasRegion =
             regiones[region.value].comunas;
+
 
         for (let i = 0; i < comunasRegion.length; i++) {
 
@@ -43,11 +49,13 @@ region.addEventListener("change", function () {
     }
 });
 
+
 formulario.addEventListener("submit", function (evento) {
 
     evento.preventDefault();
 
     let valido = true;
+
 
     document.querySelector("#errorRun").textContent = "";
     document.querySelector("#errorNombre").textContent = "";
@@ -59,6 +67,9 @@ formulario.addEventListener("submit", function (evento) {
     document.querySelector("#errorRegion").textContent = "";
     document.querySelector("#errorComuna").textContent = "";
     document.querySelector("#errorDireccion").textContent = "";
+
+
+    // VALIDAR RUN
 
     if (run.value.trim() === "") {
 
@@ -78,6 +89,9 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // VALIDAR NOMBRE
+
     if (nombre.value.trim() === "") {
 
         document.querySelector("#errorNombre").textContent =
@@ -85,6 +99,9 @@ formulario.addEventListener("submit", function (evento) {
 
         valido = false;
     }
+
+
+    // VALIDAR APELLIDOS
 
     if (apellidos.value.trim() === "") {
 
@@ -94,8 +111,12 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // VALIDAR CORREO
+
     const correoIngresado =
         correo.value.trim().toLowerCase();
+
 
     if (correoIngresado === "") {
 
@@ -116,37 +137,110 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
-    if (fechaNacimiento.value !== "") {
 
-        const fecha = new Date(fechaNacimiento.value);
-        const hoy = new Date();
+    // VALIDAR FECHA DE NACIMIENTO
 
-        let edad =
-            hoy.getFullYear() -
-            fecha.getFullYear();
+    const fechaTexto =
+        fechaNacimiento.value.trim();
 
-        const mes =
-            hoy.getMonth() -
-            fecha.getMonth();
 
-        if (
-            mes < 0 ||
-            (mes === 0 && hoy.getDate() < fecha.getDate())
-        ) {
-            edad--;
-        }
+    if (fechaTexto === "") {
 
-        if (edad < 18) {
+        document.querySelector("#errorFecha").textContent =
+            "Ingrese su fecha de nacimiento.";
+
+        valido = false;
+
+    } else {
+
+        const partes =
+            fechaTexto.split("/");
+
+
+        if (partes.length !== 3) {
 
             document.querySelector("#errorFecha").textContent =
-                "Debe ser mayor de 18 años.";
+                "Ingrese la fecha en formato DD/MM/AAAA.";
 
             valido = false;
+
+        } else {
+
+            const dia =
+                Number(partes[0]);
+
+            const mes =
+                Number(partes[1]);
+
+            const anio =
+                Number(partes[2]);
+
+
+            const fecha =
+                new Date(anio, mes - 1, dia);
+
+            const hoy =
+                new Date();
+
+
+            // COMPROBAR QUE LA FECHA EXISTA
+
+            if (
+                fecha.getDate() !== dia ||
+                fecha.getMonth() !== mes - 1 ||
+                fecha.getFullYear() !== anio
+            ) {
+
+                document.querySelector("#errorFecha").textContent =
+                    "Ingrese una fecha válida.";
+
+                valido = false;
+
+            } else {
+
+                // CALCULAR EDAD
+
+                let edad =
+                    hoy.getFullYear() -
+                    fecha.getFullYear();
+
+
+                const diferenciaMes =
+                    hoy.getMonth() -
+                    fecha.getMonth();
+
+
+                if (
+                    diferenciaMes < 0 ||
+                    (
+                        diferenciaMes === 0 &&
+                        hoy.getDate() < fecha.getDate()
+                    )
+                ) {
+
+                    edad--;
+                }
+
+
+                if (edad < 18) {
+
+                    document.querySelector("#errorFecha").textContent =
+                        "Debe ser mayor de 18 años.";
+
+                    valido = false;
+                }
+            }
         }
     }
 
+
+    // MODO EDITAR
+
     const modoEditar =
         formulario.dataset.modo === "editar";
+
+
+    // VALIDAR CONTRASEÑA
 
     if (
         password.value === "" &&
@@ -172,6 +266,9 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // VALIDAR REPETIR CONTRASEÑA
+
     if (
         password.value !== repetirPassword.value
     ) {
@@ -182,6 +279,9 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // VALIDAR REGIÓN
+
     if (region.value === "") {
 
         document.querySelector("#errorRegion").textContent =
@@ -189,6 +289,9 @@ formulario.addEventListener("submit", function (evento) {
 
         valido = false;
     }
+
+
+    // VALIDAR COMUNA
 
     if (comuna.value === "") {
 
@@ -198,6 +301,9 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // VALIDAR DIRECCIÓN
+
     if (direccion.value.trim() === "") {
 
         document.querySelector("#errorDireccion").textContent =
@@ -206,16 +312,23 @@ formulario.addEventListener("submit", function (evento) {
         valido = false;
     }
 
+
+    // SI TODO ESTÁ CORRECTO
+
     if (valido === true) {
 
         alert("Usuario registrado correctamente");
 
-        if (correoIngresado.endsWith("@duoc.cl")) {
+
+        if (
+            correoIngresado.endsWith("@duoc.cl")
+        ) {
 
             alert(
                 "Usuario Duoc: obtiene un 20% de descuento."
             );
         }
+
 
         if (formulario.dataset.destino) {
 
