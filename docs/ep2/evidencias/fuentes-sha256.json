@@ -1,0 +1,438 @@
+{
+  "ejecucionUTC": "2026-10-24T22:50:55.501Z",
+  "commitCodigo": "97c23a854ce578096ad229770e1152c118c9e4e3",
+  "rama": "main",
+  "estado": "Código medido versionado; documentación y evidencia se registran en un commit posterior.",
+  "algoritmo": "SHA-256 de bytes de cada archivo; agregado de filas hash + dos espacios + ruta separadas por LF.",
+  "agregado": "b348d73d598ed63d030fb76238da7e5c323bd530446e3e0f577f199b4933faff",
+  "archivos": [
+    {
+      "archivo": ".gitignore",
+      "sha256": "9288dbff6495268c549c3a65b192c394cc894c015dfa760654a9d7d210bb65b6"
+    },
+    {
+      "archivo": ".prettierrc.json",
+      "sha256": "d13604b0fe1462ea98ee37ef886020ea307311c17ad8ca35a33814c5649aaf3f"
+    },
+    {
+      "archivo": "index.html",
+      "sha256": "61f663dea3d9b5d331cd6f67be8fa1d5377b210b27d9556e1e8887a9d0dd7660"
+    },
+    {
+      "archivo": "package-lock.json",
+      "sha256": "e74875a65d2af4fb4ad5c500baf471f6366e1d10a6401f52130bde12bf296df3"
+    },
+    {
+      "archivo": "package.json",
+      "sha256": "981d3e90dd1134210087718da44c9916400dec61c054591e16f64d46c71caaa2"
+    },
+    {
+      "archivo": "public/_redirects",
+      "sha256": "6036983e5fc00f0169c9e939b1816ed771eee00e27f2fcc517b819041460b9ef"
+    },
+    {
+      "archivo": "public/img/audifonosGaming.webp",
+      "sha256": "856a05ae016f0a9136a1c1c6a71e56e7d51262ac3bbd2d2efcfa3452d2db6bb2"
+    },
+    {
+      "archivo": "public/img/banner.svg",
+      "sha256": "da7baaef525cb610e4cd648f56cfc8897ddaa61fcd882b902958329ebaa60d86"
+    },
+    {
+      "archivo": "public/img/blog1.svg",
+      "sha256": "1d2f32c27a83be02a09b9eb71d59bb8fc8331ce56ba5e3c2fca82b7ec4c203cf"
+    },
+    {
+      "archivo": "public/img/blog2.svg",
+      "sha256": "3e5891474279a0cc768ec288860eeb6c9f9a637387fdb5adf6ab5bcbf872ed6e"
+    },
+    {
+      "archivo": "public/img/boost-level-horizontal.png",
+      "sha256": "b1bf54d89dcaab5980c4819d6fcadce8a2585b5a232e4ce39dfed73551597537"
+    },
+    {
+      "archivo": "public/img/catan.webp",
+      "sha256": "7d62315af7ddc21f15d9c9f0fa5eaaa6521729e8682638f1598faea9c48cd298"
+    },
+    {
+      "archivo": "public/img/controlxbox.jpeg",
+      "sha256": "dcb5ab3a507441f66eba47b3d63d6134c8508ae627998d73183e99972e80e431"
+    },
+    {
+      "archivo": "public/img/fondo-neon.png",
+      "sha256": "e4f58e77a8b295df4174fecf636fea5aa9bacbd84060d6f90b9573886b9e62c9"
+    },
+    {
+      "archivo": "public/img/fondo-setup.png",
+      "sha256": "7fdc1d9b2122e8f2d9e5e8a193090025375f80720cd5de3e88c5039eec7a00c4"
+    },
+    {
+      "archivo": "public/img/icono-boost-limpio.png",
+      "sha256": "34a6968cd6767d8e2106b416f2e9fdf6e27fa000f133a9b531ca8d1ea5d5eebb"
+    },
+    {
+      "archivo": "public/img/icono-boost.png",
+      "sha256": "de4ef35caa0149c1c81523fa196dc0e57a724a418eb795270b7341e1e2dc4f92"
+    },
+    {
+      "archivo": "public/img/logo-boost-level.png",
+      "sha256": "a7b8c0abdde59caedfbf57a41ed734c1487498872d7b0df52bf3197e8641a882"
+    },
+    {
+      "archivo": "public/img/logo.svg",
+      "sha256": "c3544536ca316984348a9e6035e6dcd3be8912ab63a17469daa8d7e9d418b0b4"
+    },
+    {
+      "archivo": "public/img/monitor.jpeg",
+      "sha256": "02f5d512ce13291e66612a5c6587ff7384d360b5050d09cfcb2a143db338c36f"
+    },
+    {
+      "archivo": "public/img/mousepad.webp",
+      "sha256": "0cb16b10f4a3a6862978c335cb449ccca8e39abbbc5ba525ddcd8a1990921b75"
+    },
+    {
+      "archivo": "public/img/Mousse.webp",
+      "sha256": "5c47bef6923b9b7b2fe08301ccebbd20ee8b7a0d8e90b68239c711b451cb1317"
+    },
+    {
+      "archivo": "public/img/pcGamer.jpg",
+      "sha256": "326c2c4b9f59cbe8b728f5da58eb62ba01cb70b76cbc7fb3806787883522bc86"
+    },
+    {
+      "archivo": "public/img/polera.webp",
+      "sha256": "6f9af618889d752ec68401864f85de7f92345767bf50aee9e24208cc7b78c23e"
+    },
+    {
+      "archivo": "public/img/ps5.webp",
+      "sha256": "b292073b90eaea3e02d8529a771ec9b9871c61f0ac2076e3cf25f0f58bebae07"
+    },
+    {
+      "archivo": "public/img/sillaGaming.jpeg",
+      "sha256": "c97457b135d7accb3c0d4bb423a7bf598987b77ac642f536154d6bc6cb455d66"
+    },
+    {
+      "archivo": "public/img/xboxX.webp",
+      "sha256": "a3b588a20c65a903c219186695cfa0892a9b336502a40c50bd5f45da772210ed"
+    },
+    {
+      "archivo": "src/App.jsx",
+      "sha256": "d59008c97ba0387696472979705ae6f113a1fe06395144863e2b3e0693d782ad"
+    },
+    {
+      "archivo": "src/App.test.jsx",
+      "sha256": "34f4789a64aaf3aec4474a054f2fe579ae2ae6879c0b936d7a6ac5da8753e8c5"
+    },
+    {
+      "archivo": "src/componentes/administracion/BajaButton.jsx",
+      "sha256": "efa8257ecf8fa045516204f7ca08b59687eb92a881e3f5eb9a499b9781ab9543"
+    },
+    {
+      "archivo": "src/componentes/administracion/Estado.jsx",
+      "sha256": "acbe83f3efe74ef5a370728536c9f2e32f58ae4b97de7eff3f1c1821fea14c8a"
+    },
+    {
+      "archivo": "src/componentes/administracion/Tabla.jsx",
+      "sha256": "6a98648ee6cea9e8e9da9c3de35124ffec60ae5d760362f9b2cbbec047d1d06f"
+    },
+    {
+      "archivo": "src/componentes/carrito/LineaCarrito.jsx",
+      "sha256": "e7677f48a2b13b53e72581d05de7d3f1656165bcad7f496f7e7553d91f82f8fb"
+    },
+    {
+      "archivo": "src/componentes/catalogo/GrillaProductos.jsx",
+      "sha256": "aea6a90160b295add9fb73c4cd55f2f3e62c02a6c0d21c52ac47e91a5ab4b0b1"
+    },
+    {
+      "archivo": "src/componentes/catalogo/TarjetaProducto.jsx",
+      "sha256": "4d9ec9f12791d5dc353c93c23dd4aafbc4dfe2aeee6e5146d926d0fc184644e5"
+    },
+    {
+      "archivo": "src/componentes/contenido/BlogCards.jsx",
+      "sha256": "912645c3a2e4643095d73322c1bfc9b98daf2a88c1007023dd7a8f44786c2ac2"
+    },
+    {
+      "archivo": "src/componentes/formularios/Direccion.jsx",
+      "sha256": "94275306a8ea073cfe7a3716f01be31f91ecbaf7c414d9d46186e29bbaba7556"
+    },
+    {
+      "archivo": "src/componentes/formularios/UsuarioForm.jsx",
+      "sha256": "e03a07d6a67a315f466276409ec97ce00eabe0757bdde54b793c8400c649fc03"
+    },
+    {
+      "archivo": "src/componentes/layout/AdminLayout.jsx",
+      "sha256": "f0cc59ae400d11091987c2432f400aa51280cff09b19dc92bb0bdcd43aefd29f"
+    },
+    {
+      "archivo": "src/componentes/layout/Layout.jsx",
+      "sha256": "598adfc009deaae208bfc5876c2daca885e81ef3d6ff5520aa7abb3f22099cc2"
+    },
+    {
+      "archivo": "src/componentes/navegacion/RutaAdmin.jsx",
+      "sha256": "ed73f900e96a862ecad603df143c9b73e4fa0588945d07fc40795713dcfb50a8"
+    },
+    {
+      "archivo": "src/componentes/pedidos/Comprobante.jsx",
+      "sha256": "945cb596fa3ba43419a02106fbb4c029f0c9755846fa72c9040b81ad40175c74"
+    },
+    {
+      "archivo": "src/componentes/ui/Campo.jsx",
+      "sha256": "58af16ac9618b0087427e60109655ec7eb270686c1ba998783590af89b6e2f0c"
+    },
+    {
+      "archivo": "src/componentes/ui/Confirmacion.jsx",
+      "sha256": "ef296802129ec03115bedaf5bb47918768dbd064291920aa69c46749dd7057f5"
+    },
+    {
+      "archivo": "src/componentes/ui/ErrorMensaje.jsx",
+      "sha256": "c11890240532ba646f45da7fc3fceec47cf9c99988bf692a89fa9a44da4f1455"
+    },
+    {
+      "archivo": "src/componentes/ui/FotoProducto.jsx",
+      "sha256": "fa10e632fd54f7187a0923c54f367a1ae3aca37aa3506165fd813c23bbe23fba"
+    },
+    {
+      "archivo": "src/componentes/ui/Icono.jsx",
+      "sha256": "dcabdd49333d61331fc5b7444a51c798388aeab97314b63016629223d4b158e7"
+    },
+    {
+      "archivo": "src/componentes/ui/NoEncontrado.jsx",
+      "sha256": "fa1f0490ea4bea225dac6a0c3604c5dbd5c031b039877b12bdab250c171a0ebd"
+    },
+    {
+      "archivo": "src/componentes/ui/PageTitle.jsx",
+      "sha256": "95ae06a7160d53efd39120e90da0311d74b2cb8bbecc7648cc5df2b8dcb7a1a1"
+    },
+    {
+      "archivo": "src/componentes/ui/Resumen.jsx",
+      "sha256": "5a58bbf23045fd3ab97758501a2f1c90e500a1bd4c3f48329d120a9871cc2ab7"
+    },
+    {
+      "archivo": "src/componentes/ui/Vacio.jsx",
+      "sha256": "75af22c3d49f2a1b6196f9fa60297958be1f813f1aa9c75bc50d8513b7d62783"
+    },
+    {
+      "archivo": "src/contexto/SesionContext.js",
+      "sha256": "6465329b47b6ccf2bab95a2546629082113034c987f3b2827955925da4231213"
+    },
+    {
+      "archivo": "src/contexto/SessionProvider.jsx",
+      "sha256": "4cd159cb2bd23116dc69b4a07e44f541ffbfdc11b09297b7d7b61918fa934966"
+    },
+    {
+      "archivo": "src/contexto/TiendaContext.js",
+      "sha256": "51abaaa9300bbb15de635c785d2240228a6912da0546744ef1f3966daf132fee"
+    },
+    {
+      "archivo": "src/contexto/TiendaProvider.jsx",
+      "sha256": "b78504cbf52f327d57a74de9de7d43d11f2339f5f2da0fbf024d8c230bbf9344"
+    },
+    {
+      "archivo": "src/data/blogs.js",
+      "sha256": "78cc60a7d38f64a30dab176082620b10097915c42042f0fcce20540b56f1d82a"
+    },
+    {
+      "archivo": "src/data/categorias.js",
+      "sha256": "67504e269b89a0a69dccd7ab901a5a8e0873472635adad6cbd044f563780357b"
+    },
+    {
+      "archivo": "src/data/inicial.js",
+      "sha256": "ddbbb7be8084b6618b5e20ec8a2113ffde0443f075b04560b0c9e124c590d9c5"
+    },
+    {
+      "archivo": "src/data/productos.js",
+      "sha256": "fbcbf995d5bee1fa86b191016a06bb3414d421969987e7c16a9ab4c13ed5c365"
+    },
+    {
+      "archivo": "src/data/regiones.js",
+      "sha256": "023755cead1dd62a3a0a0e783e64ce23c30ec1aebb1cb271350420087a48b077"
+    },
+    {
+      "archivo": "src/data/usuarios.demo.js",
+      "sha256": "224f63b4d18f8e1239622f4acb8a62595ebae2cf10bd0b9932e8a10335eb520c"
+    },
+    {
+      "archivo": "src/domain/carrito.reducer.js",
+      "sha256": "4b3c74d2881698d63c76d2f153127af2973b164dadc9741e9c6411e84887ca59"
+    },
+    {
+      "archivo": "src/domain/compra.rules.js",
+      "sha256": "2391e5c03974152519f5d596f5d4549c95b3597a22e7dc4df05e55e30ae3c4c8"
+    },
+    {
+      "archivo": "src/domain/dominio.test.js",
+      "sha256": "f72f18c224f46d9c6252fb9c37c2504ff143163e6ec7fc6d48803514dd8fe1f4"
+    },
+    {
+      "archivo": "src/domain/errores.js",
+      "sha256": "5fd3c5261e293c027c7a0f765a300c1cdd1977b82c2f5de004fe25cbfd8b4a5b"
+    },
+    {
+      "archivo": "src/domain/esquema.js",
+      "sha256": "254bb5f226cea03909d8e813cd44865d8c0bbcd6ba87cccdf4cd8fbafc7fb203"
+    },
+    {
+      "archivo": "src/domain/precios.js",
+      "sha256": "e396a25879d7a3296ff56914a7edab092333f52d2dc034d4f9d52db408f692c5"
+    },
+    {
+      "archivo": "src/domain/validaciones.js",
+      "sha256": "809f7502421913ad28f9c6a2c399f44680ab322d26578ac2eff4e9c7ee6acf0c"
+    },
+    {
+      "archivo": "src/hooks/useApp.js",
+      "sha256": "1c9116bd142e08ac960e198c7d0b10c6f3d7c6cc4ba292c294f128e95fa33175"
+    },
+    {
+      "archivo": "src/main.jsx",
+      "sha256": "a372dc17e9b4998ebd384e0bc56a25d7b56e38d5018bf7c16f7bd2cecd093b06"
+    },
+    {
+      "archivo": "src/paginas/admin/CategoriasAdminPage.jsx",
+      "sha256": "8d348858a0d8934cf74c69b745f53e1a0b74856384b0ee7ceaf8a70dce2573dd"
+    },
+    {
+      "archivo": "src/paginas/admin/CriticosPage.jsx",
+      "sha256": "dfcf052e46c73d656c056e7e79429f528e4ea206d7bee3e06e088a2dbe5397bb"
+    },
+    {
+      "archivo": "src/paginas/admin/DashboardPage.jsx",
+      "sha256": "3b90c4b68653baba6302bdf899e014e5489094a8f6038bf100a982bc6bc3741f"
+    },
+    {
+      "archivo": "src/paginas/admin/PedidoDetallePage.jsx",
+      "sha256": "dafc0a0d44b7a1a51c09ff5bffdf9a32afb7eb0ae16a4a8c0efd584c72e70689"
+    },
+    {
+      "archivo": "src/paginas/admin/PedidosPage.jsx",
+      "sha256": "362fdc8726827508f94505f4d63ee9e5a8f41d3499bbf863aa7db669a3e7ac85"
+    },
+    {
+      "archivo": "src/paginas/admin/PerfilPage.jsx",
+      "sha256": "2b62633b1fb81addb985dc9fd85c6102898e3e00bd02a18d1c3456ad50040583"
+    },
+    {
+      "archivo": "src/paginas/admin/ProductoDetallePage.jsx",
+      "sha256": "295f320102b83816b50cc34f1630fd79307881137d9bcdb77d7c4925a0a346bf"
+    },
+    {
+      "archivo": "src/paginas/admin/ProductoFormPage.jsx",
+      "sha256": "6c19d734ddeddf2c78071f55b9c0fe7a64c06b82d2cc70240add91feafe3b1e0"
+    },
+    {
+      "archivo": "src/paginas/admin/ProductosPage.jsx",
+      "sha256": "234af799079af86cacad916a25e7bd5cd1de77a1e22f926dff01f5cec914943d"
+    },
+    {
+      "archivo": "src/paginas/admin/UsuarioDetallePage.jsx",
+      "sha256": "f9e295f7560ccff036f1cf9197e42252accc197fecdcfb3da0ea1fa2bcc84ad4"
+    },
+    {
+      "archivo": "src/paginas/admin/UsuarioFormPage.jsx",
+      "sha256": "3713cba9b81b7f8fd63e277678ca5ee0be69ce8b798f3c5f979818f86c1703fc"
+    },
+    {
+      "archivo": "src/paginas/admin/UsuariosPage.jsx",
+      "sha256": "c5cd53b645fa91881534044cabdc093bc589dd8cac6bd04d34c076f7f7aba1e8"
+    },
+    {
+      "archivo": "src/paginas/ArticuloPage.jsx",
+      "sha256": "64cc2c95c8e19efbfd66972d89cdd8d93cf6668d28d30c3c0953c8c5440ef625"
+    },
+    {
+      "archivo": "src/paginas/BlogsPage.jsx",
+      "sha256": "00fd200ed49788aef93cf3b3ac91da3c0536e4cbb65e20f8f96546335755db56"
+    },
+    {
+      "archivo": "src/paginas/CarritoPage.jsx",
+      "sha256": "576168de23fa5b472136e891d6b9887ab66ef81e0055fecdf397a777df7014ae"
+    },
+    {
+      "archivo": "src/paginas/CatalogoPage.jsx",
+      "sha256": "8ece9d0a6ff11c1c9bbc1dcbb413bcfd98ab808b375faa53abc33716dacda13a"
+    },
+    {
+      "archivo": "src/paginas/CategoriasPage.jsx",
+      "sha256": "2733f58ffcb756ce1cde60375fcde4dadaba3fb669a94ab61e11b12ab177f863"
+    },
+    {
+      "archivo": "src/paginas/CheckoutPage.jsx",
+      "sha256": "59e610f7236ba05bef866684c0e297afe3794b22cb19e056cfa202140385dc40"
+    },
+    {
+      "archivo": "src/paginas/CompraExitosaPage.jsx",
+      "sha256": "b7c84a34133bc9d4687f6ff6efab7ef3ccde1a8fd1bfe51c75042cb584fa4282"
+    },
+    {
+      "archivo": "src/paginas/CompraRechazadaPage.jsx",
+      "sha256": "54320eba85fc7271049854e957fa2a268b802980ecc160bd7c25ce26864272ed"
+    },
+    {
+      "archivo": "src/paginas/ContactoPage.jsx",
+      "sha256": "1abe16ee7d131ee1c86c9f00cc807ea81f42a919d28cac4cfdd23b460c559316"
+    },
+    {
+      "archivo": "src/paginas/DetallePage.jsx",
+      "sha256": "26ab05bbef5548e6ce64da1a45ce6fc5f324fab39df5e16faffbcac803d8930b"
+    },
+    {
+      "archivo": "src/paginas/InicioPage.jsx",
+      "sha256": "3b7bd1458c8534e9c7c6143800888e3ef433b2cb8163b4d7930205f847028934"
+    },
+    {
+      "archivo": "src/paginas/LoginPage.jsx",
+      "sha256": "8a6dd1b705273ebec7365374da1536ac4355fc39971941a6ff6b33b5b6ef9685"
+    },
+    {
+      "archivo": "src/paginas/NosotrosPage.jsx",
+      "sha256": "8fda48bf948f34affd802e5e33b7d4869729f0c25ad48746339258f48a98fafa"
+    },
+    {
+      "archivo": "src/paginas/RegistroPage.jsx",
+      "sha256": "f3c9d05ac85f19fe973f0872462968b0b58326ec7e98eb3f81ef2aeca4b214cd"
+    },
+    {
+      "archivo": "src/repositories/storage.adapter.js",
+      "sha256": "c30a2b9f17ddd79fd90d9199a3c782c93472ce9adcdf635ee52e32a97c2d2514"
+    },
+    {
+      "archivo": "src/repositories/tienda.repository.js",
+      "sha256": "ff4d8c71ca28ddbc6a6503eb4f4b11816918a3340e428824e4d71817537026b0"
+    },
+    {
+      "archivo": "src/services/servicios.test.js",
+      "sha256": "868d4609f4efd566704833f4e39d7146e09b161c26a34e9861e9c67cf1572dd2"
+    },
+    {
+      "archivo": "src/services/sesion.service.js",
+      "sha256": "a1fa9be56fc087b40aa050458afd01c0f3b0e5a557138d79902ac3191e00c111"
+    },
+    {
+      "archivo": "src/services/tienda.service.js",
+      "sha256": "effa56e24096c7b0b317ec9b1a3dee196e428797afd44eac8c2d5efd0149f720"
+    },
+    {
+      "archivo": "src/styles.css",
+      "sha256": "82078bb582d3008707c7eaad93287921a7f698cf041bb0d9be85d71d3c815005"
+    },
+    {
+      "archivo": "src/test/factories.js",
+      "sha256": "6c809ca0e390547d403828b9ffacd82f017d038f87dbac1845c9860f57d7f65b"
+    },
+    {
+      "archivo": "src/test/renderApp.jsx",
+      "sha256": "6648337e59a9edf2d8c004d4d37171c3aa32fb4228702358b73827c26ae4b723"
+    },
+    {
+      "archivo": "src/test/setup.js",
+      "sha256": "67c62b4b51e46978098d71b05fe1eea0b96e7560f0388d9967ad116a932df4f6"
+    },
+    {
+      "archivo": "src/utils/moneda.js",
+      "sha256": "279a3ea3e18d508b61de5df1935e46943da116c92910b98b26362ac43a195251"
+    },
+    {
+      "archivo": "vite.config.js",
+      "sha256": "1d2a8f981e29c04885102963390014c3b371f89cb7af64313b1710068f277a5f"
+    }
+  ]
+}

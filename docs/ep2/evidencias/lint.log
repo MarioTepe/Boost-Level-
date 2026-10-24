@@ -1,0 +1,4 @@
+
+> boost-level-frontend@2.0.0 lint
+> oxlint --deny-warnings src
+
