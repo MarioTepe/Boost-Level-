@@ -159,14 +159,14 @@ describe('TC-09/10/11: checkout y resultados', () => {
         e.carrito = [{ productoId: 'JM001', cantidad: 1 }]
       },
     })
-    pulsar('Confirmar compra simulada')
+    await act(async () => pulsar('Confirmar compra simulada'))
     await screen.findByRole('alert')
     expect(screen.getByLabelText('Nombre')).toHaveAttribute('aria-invalid', 'true')
     escribir('Nombre', 'Invitado')
     escribir('Apellidos', 'Demo')
     escribir('Correo electrónico', 'demo@gmail.com')
     fireEvent.click(screen.getByRole('radio', { name: /Retiro en tienda/ }))
-    pulsar('Confirmar compra simulada')
+    await act(async () => pulsar('Confirmar compra simulada'))
     await screen.findByRole('heading', { name: 'Tu siguiente nivel está confirmado.' })
     expect(repo.leerEstado().carrito).toEqual([])
     expect(repo.leerEstado().productos[0].stock).toBe(14)
