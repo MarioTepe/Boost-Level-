@@ -1,3 +1,10 @@
 .vscode/
 .DS_Store
 Thumbs.db
+node_modules/
+dist/
+coverage/
+.npm-cache/
+.env
+.env.*
+!.env.example
