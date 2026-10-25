@@ -1,6 +1,6 @@
 # Plan de pruebas de Boost Level
 
-**Versión:** 0.3 · **Fecha:** 24-10-2026  
+**Versión:** 0.4 · **Fecha:** 25-10-2026  
 **Estado:** escenarios implementados en pruebas de dominio/servicios y componentes; resultados locales en el informe y carpeta evidencias.  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
@@ -12,7 +12,7 @@ Hay 18 escenarios de componentes, 25 de unidad, 10 de integración y 4 de revisi
 
 ## 2. Entorno y configuración
 
-Se adopta Vitest/Testing Library/jsdom/V8 de la clase y de S5, con diferencia Jasmine/Karma documentada en la ERS. `@vitest/coverage-v8` debe tener exactamente la versión instalada de Vitest. Registrar versiones reales de Node/npm y dependencias del nuevo paquete; no copiar números de ejemplo del informe docente.
+Se adopta Vitest/Testing Library/jsdom/V8 de la clase, S5 y la [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) (S13, secciones 1 y 15). La nueva guía confirma la herramienta pese a las menciones antiguas de Jasmine/Karma en los PDF. `@vitest/coverage-v8` debe tener exactamente la versión instalada de Vitest. Registrar versiones reales de Node/npm y dependencias del nuevo paquete; no copiar números de ejemplo del informe docente.
 
 Configuración de pruebas aplicada en `frontend/vite.config.js` (extracto):
 
@@ -83,28 +83,30 @@ Usar roles/labels/texto significativo y aserciones del comportamiento. No intent
 
 TC-01, TC-06 y otros agrupan variantes para legibilidad del plan; escribir casos separados cuando un fallo pueda ocultar otra variante. La fuente S2, **página 7, IE2.2.1**, describe el nivel máximo como “Crea todas las pruebas (10/10)” y los niveles inferiores como 8/10, 5/10 y 3/10. En **página 9, IE2.2.2**, pide demostrar 10 pruebas en la presentación. Por ello se fija un objetivo de al menos diez pruebas significativas de componentes para aspirar al nivel máximo; no se interpreta como una obligación de tener exactamente diez ni como un porcentaje de cobertura.
 
-### Diez pruebas existentes para explicar en la presentación
+### Diez pruebas concretas para explicar en la presentación
 
-Son diez bloques `it` distintos de `frontend/src/App.test.jsx`, sin contar las variantes de `it.each` para alcanzar el número. La selección facilita estudiar; no elimina las demás pruebas.
+Son diez bloques `it` distintos junto a sus componentes, siguiendo S13, secciones 4–5 y 9–13. Sustituyen el antiguo caso que mezclaba render, clic, agotado y oferta. Se usa beforeEach para datos nuevos, comentarios Preparar/Actuar/Comprobar y consultas por rol o texto visible. Cada interacción lleva userEvent.setup() y await. MemoryRouter permite renderizar los enlaces del componente durante el test.
 
-| N.º | Nombre del caso en App.test.jsx | Qué explicar |
+| N.º | Archivo en frontend/src/componentes/catalogo/ | Nombre del caso y qué comprueba |
 |---|---|---|
-| 1 | tarjeta muestra nombre, precio, disponibilidad y entrega el ID por evento | Renderizado, props, mock vi.fn y callback con ID exacto. |
-| 2 | catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros | Lista, cambios por eventos y estado derivado visible. |
-| 3 | categoría enlazada filtra, puede cambiarse y el estado vacío es explícito | Navegación, selección y renderizado condicional. |
-| 4 | ofertas refleja precio configurado; detalle agrega y respeta el stock | Datos recibidos, evento y botón deshabilitado al llegar al límite. |
-| 5 | renderiza, cambia cantidades, quita y vacía sin perder consistencia | Estado del carrito y rechazo de cantidad 16 con stock 15. |
-| 6 | no considera vacío a producto gratuito, y bloquea línea inválida sin fallar | Diferencia entre total cero y carrito vacío; manejo de error. |
-| 7 | muestra validaciones y completa compra invitado con retiro | Campos, errores asociados, operación asíncrona, pedido y stock. |
-| 8 | precarga cliente, rechaza sin modificar, conserva formulario al reintentar y confirma domicilio | Estado inicial, rechazo sin mutación y reintento. |
-| 9 | registro exige datos y crea cliente utilizable en login | Validaciones, inputs, cuenta creada y sesión. |
-| 10 | no administra sin rol y el login admin sí abre dashboard | Guarda de ruta, login y logout. |
+| 1 | TarjetaProducto.test.jsx | muestra el nombre y la categoría recibidos por props |
+| 2 | TarjetaProducto.test.jsx | muestra el precio con formato de pesos chilenos |
+| 3 | TarjetaProducto.test.jsx | muestra las unidades disponibles |
+| 4 | TarjetaProducto.test.jsx | avisa una sola vez con el ID del producto al agregar |
+| 5 | TarjetaProducto.test.jsx | no permite agregar un producto sin stock |
+| 6 | TarjetaProducto.test.jsx | no permite agregar cuando el carrito alcanza el stock |
+| 7 | TarjetaProducto.test.jsx | muestra la oferta y conserva visible el precio original |
+| 8 | GrillaProductos.test.jsx | dibuja una tarjeta por producto con su enlace de detalle |
+| 9 | GrillaProductos.test.jsx | no dibuja tarjetas cuando la lista está vacía |
+| 10 | GrillaProductos.test.jsx | entrega al padre el ID del producto elegido |
 
-Ejecutar el archivo completo desde frontend/:
+Ejecutar los diez desde frontend/:
 
 ```powershell
-npm run test:ejecutar -- src/App.test.jsx --reporter=verbose
+npm run test:ejecutar -- src/componentes/catalogo --reporter=verbose
 ```
+
+No se incorporan componentes ficticios ni reglas del ejemplo docente, como sumar IVA, al negocio del proyecto. Las verificaciones ya existentes de formularios, estado, rutas, compra, cálculos y persistencia se conservan como respaldo en App.test.jsx, domain/dominio.test.js y services/servicios.test.js. Esos archivos agrupan varios módulos y algunos flujos usan fireEvent; no se afirma haber migrado toda la suite a la convención nueva. El ajuste acotado no modifica código de producción ni añade funcionalidades.
 
 La plantilla S5, **sección 3.2**, añade un criterio independiente: mínimo 80% en sentencias, ramas, funciones y líneas. También exige 0 fallos; su tabla de completitud fija 0 skip/todo. Tener diez pruebas no asegura por sí solo alcanzar la cobertura ni demostrar que las aserciones sean correctas.
 

@@ -6,155 +6,164 @@
  RUN  v5.0.5 C:/Users/jorda/OneDrive/Desktop/ProyectoFullStack/ProyectoFull/Boost-Level-/frontend
       Coverage enabled with v8
 
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > agrega sin mutar, incrementa y conserva otras líneas 84ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > carga inicial sin escribir, mantiene copia, notifica y permite cancelar suscripción 103ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos invalid 24ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos {} 4ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos null 2ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos {"schemaVersion":42,"revision":0} 1ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > falla lectura/escritura de forma recuperable sin publicar cambios 4ms
- ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > adaptador soporta lectura, escritura y eliminación 5ms
- ✓ src/services/servicios.test.js > sesión demo, registro y autorización > registra cliente normalizado, inicia sesión y cierra sesión 17ms
- ✓ src/services/servicios.test.js > sesión demo, registro y autorización > sesión malformada o storage bloqueado no se interpreta como autenticada 7ms
- ✓ src/services/servicios.test.js > sesión demo, registro y autorización > bloquea comandos sin admin o con admin desactivado 5ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > acepta exactamente el stock y rechaza 16 para stock 15 12ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 0 5ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida -1 2ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 1.5 5ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > carga inicial sin escribir, mantiene copia, notifica y permite cancelar suscripción 65ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > agrega sin mutar, incrementa y conserva otras líneas 20ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > acepta exactamente el stock y rechaza 16 para stock 15 8ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 0 1ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida -1 1ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 1.5 1ms
  ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida NaN 1ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida Infinity 9ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 2 1ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza desconocido/inactivo 2ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida Infinity 1ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza cantidad inválida 2 3ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza desconocido/inactivo 34ms
  ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza desconocido/inactivo 1ms
- ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza agotado y acción desconocida; quita y vacía 8ms
- ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita/desactiva producto, conserva catálogo y no cambia el código 15ms
- ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita categoría y bloquea vacío, duplicado, ausente y asociaciones activas 14ms
- ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita/desactiva cliente, protege admin y permite perfil con campos limitados 23ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > acepta, guarda snapshot y descuenta una vez incluso con doble llamada y recarga 27ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > rechaza pago, carrito vacío, intento inválido y entrega inválida sin modificar 16ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > revalida stock/precio después del simulador asíncrono 19ms
- ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > calcula totales independientes y formato CLP 145ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos invalid 27ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos {} 37ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos null 8ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > no sobreescribe datos inválidos {"schemaVersion":42,"revision":0} 10ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > falla lectura/escritura de forma recuperable sin publicar cambios 17ms
+ ✓ src/services/servicios.test.js > repositorio: carga, persistencia y recuperación > adaptador soporta lectura, escritura y eliminación 30ms
+ ✓ src/services/servicios.test.js > sesión demo, registro y autorización > registra cliente normalizado, inicia sesión y cierra sesión 76ms
+ ✓ src/services/servicios.test.js > sesión demo, registro y autorización > sesión malformada o storage bloqueado no se interpreta como autenticada 53ms
+ ✓ src/services/servicios.test.js > sesión demo, registro y autorización > bloquea comandos sin admin o con admin desactivado 24ms
+ ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita/desactiva producto, conserva catálogo y no cambia el código 53ms
+ ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita categoría y bloquea vacío, duplicado, ausente y asociaciones activas 27ms
+ ✓ src/services/servicios.test.js > CRUD administrativo compartido > crea/edita/desactiva cliente, protege admin y permite perfil con campos limitados 64ms
+ ✓ src/domain/dominio.test.js > TU-01 a TU-06: reglas puras del carrito > rechaza agotado y acción desconocida; quita y vacía 33ms
+ ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > calcula totales independientes y formato CLP 522ms
  ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 1ms
  ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 0ms
  ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 0ms
+ ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 32ms
  ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 0ms
  ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 0ms
- ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > no concede descuento a quien no corresponde 0ms
- ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > usa oferta, redondea, conserva productos gratuitos y señala referencias obsoletas 6ms
- ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > críticos usa umbral inclusivo, excluye null/inactivos y suma solo confirmados 5ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > normaliza identificadores y valida usuario/entrega/contacto correctos 12ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido run=X 2ms
+ ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > usa oferta, redondea, conserva productos gratuitos y señala referencias obsoletas 14ms
+ ✓ src/domain/dominio.test.js > TU-07/TU-13/TU-20/TU-21/TU-23: precios y selectores > críticos usa umbral inclusivo, excluye null/inactivos y suma solo confirmados 8ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > acepta, guarda snapshot y descuenta una vez incluso con doble llamada y recarga 112ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > rechaza pago, carrito vacío, intento inválido y entrega inválida sin modificar 96ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > normaliza identificadores y valida usuario/entrega/contacto correctos 29ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido run=X 6ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido nombre= 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido nombre=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido apellidos= 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido nombre=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido apellidos= 5ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido correo=x@otros.cl 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido claveDemo=123 0ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido claveDemo=12345678901 0ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido confirmacion=diferente 3ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido claveDemo=123 3ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido claveDemo=12345678901 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido confirmacion=diferente 1ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento=2008-10-24 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento=2026-10-24 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento=2000-02-31 0ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento= 2ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido regionId= 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento=2026-10-24 6ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento=2000-02-31 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido fechaNacimiento= 0ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido regionId= 3ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido comunaId=COMUNA INEXISTENTE 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido direccion= 3ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido direccion= 1ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > señala campo inválido direccion=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > rechaza duplicados normalizados, permite edición propia y detecta campos vacíos 6ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido codigo 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido codigo 4ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido nombre 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido descripcion 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precio 4ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido stock 5ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precioOferta 3ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precioOferta 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > rechaza duplicados normalizados, permite edición propia y detecta campos vacíos 8ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido codigo 5ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido codigo 7ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido nombre 5ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido descripcion 5ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precio 1ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido stock 8ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precioOferta 11ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido precioOferta 5ms
  ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido umbralCritico 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido categoriaId 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido imagen 1ms
- ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto duplicado y datos incompletos se rechazan 6ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > valida estado inicial y expone errores esperados/técnicos 5ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 3ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido categoriaId 7ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto inválido imagen 2ms
+ ✓ src/domain/dominio.test.js > TU-14/TU-16/TU-22/TU-25: validaciones > producto duplicado y datos incompletos se rechazan 14ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > valida estado inicial y expone errores esperados/técnicos 15ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 14ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 0ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 0ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 5ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > escritura fallida no publica una venta ni deja cambios parciales 9ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > cliente Duoc, entrega domicilio, oferta y orden histórica conservan importes 8ms
- ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > servicio carrito propaga éxito/error y puede vaciar 7ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 3ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 4ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza cabecera inválida 0ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 8ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 5ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 7ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 7ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 10ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 32ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 38ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 6ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 2ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 2ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 6ms
+ ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 2ms
  ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 3ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 4ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 1ms
- ✓ src/domain/dominio.test.js > TU-08/TU-18: esquema y errores > rechaza contenido corrupto sin confiar en su forma 5ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > tarjeta muestra nombre, precio, disponibilidad y entrega el ID por evento 1039ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros 2753ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > categoría enlazada filtra, puede cambiarse y el estado vacío es explícito 362ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > ofertas refleja precio configurado; detalle agrega y respeta el stock 551ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /productos/NO presenta estado correcto 707ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /categorias/NO presenta estado correcto 863ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /ofertas presenta estado correcto 243ms
- ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /productos/JM001 presenta estado correcto 202ms
- ✓ src/App.test.jsx > TC-06/07/08: carrito conectado a datos > renderiza, cambia cantidades, quita y vacía sin perder consistencia 4424ms
- ✓ src/App.test.jsx > TC-06/07/08: carrito conectado a datos > no considera vacío a producto gratuito, y bloquea línea inválida sin fallar 1567ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > muestra validaciones y completa compra invitado con retiro 2006ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > precarga cliente, rechaza sin modificar, conserva formulario al reintentar y confirma domicilio 1638ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > bloquea submit repetido y muestra error técnico sin navegar a éxito 568ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /checkout: Tu carrito está vacío 127ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /checkout: Revisa tu carrito 95ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /compra/exitosa/no: Pedido no encontrado 44ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /compra/rechazada: No se confirmó la compra. 50ms
- ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > comprobante persiste y muestra entrega domicilio en ruta directa 32ms
- ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > registro exige datos y crea cliente utilizable en login 794ms
- ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > no administra sin rol y el login admin sí abre dashboard 187ms
- ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > descuento de cliente Duoc desaparece tras logout 55ms
- ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > formulario de cliente permite edición con datos iniciales 41ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > producto nuevo valida y guarda oferta y stock compartidos 207ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > edita producto y desactiva con confirmación sin borrar historial 332ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > categorías valida, crea, edita, cancela y desactiva una categoría vacía 454ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > crea cliente desde admin, muestra detalle/historial y permite edición y baja 452ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > perfil guarda campos permitidos y muestra errores reales 103ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin con pedido persistido 44ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/reportes con pedido persistido 49ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/pedidos con pedido persistido 51ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/pedidos/pedido-test con pedido persistido 44ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/criticos con pedido persistido 41ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/usuarios/cliente-demo con pedido persistido 44ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/usuarios/admin-demo con pedido persistido 49ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/productos/no 38ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/productos/no/editar 39ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/no 49ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/no/editar 66ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/admin-demo/editar 36ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/pedidos/no 44ms
- ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > críticos vacío y listas sin productos muestran estado definido 35ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza / 49ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /categorias 32ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /nosotros 23ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs 28ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/mejora-tu-setup 23ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/cuida-tu-pc 21ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/no 23ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /inexistente 32ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > contacto valida y deja explícito que no envía mensajes 79ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > menú, acceso al contenido, avisos y reset son operables por UI 361ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > storage corrupto ofrece recuperar sin borrado automático 131ms
- ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > imagen ausente usa fallback e icono desconocido conserva svg 7ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > revalida stock/precio después del simulador asíncrono 29ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > escritura fallida no publica una venta ni deja cambios parciales 22ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > cliente Duoc, entrega domicilio, oferta y orden histórica conservan importes 24ms
+ ✓ src/services/servicios.test.js > TU-09 a TU-12/TU-18/TU-19 y TI-03/TI-04: confirmar compra > servicio carrito propaga éxito/error y puede vaciar 10ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra el nombre y la categoría recibidos por props 2840ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra el precio con formato de pesos chilenos 61ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra las unidades disponibles 104ms
+ ✓ src/componentes/catalogo/GrillaProductos.test.jsx > GrillaProductos > dibuja una tarjeta por producto con su enlace de detalle 3131ms
+ ✓ src/componentes/catalogo/GrillaProductos.test.jsx > GrillaProductos > no dibuja tarjetas cuando la lista está vacía 16ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > avisa una sola vez con el ID del producto al agregar 185ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > no permite agregar un producto sin stock 143ms
+ ✓ src/componentes/catalogo/GrillaProductos.test.jsx > GrillaProductos > entrega al padre el ID del producto elegido 297ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > no permite agregar cuando el carrito alcanza el stock 106ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra la oferta y conserva visible el precio original 48ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros 3010ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > categoría enlazada filtra, puede cambiarse y el estado vacío es explícito 235ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > ofertas refleja precio configurado; detalle agrega y respeta el stock 309ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /productos/NO presenta estado correcto 81ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /categorias/NO presenta estado correcto 90ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /ofertas presenta estado correcto 133ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > /productos/JM001 presenta estado correcto 121ms
+ ✓ src/App.test.jsx > TC-06/07/08: carrito conectado a datos > renderiza, cambia cantidades, quita y vacía sin perder consistencia 461ms
+ ✓ src/App.test.jsx > TC-06/07/08: carrito conectado a datos > no considera vacío a producto gratuito, y bloquea línea inválida sin fallar 268ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > muestra validaciones y completa compra invitado con retiro 805ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > precarga cliente, rechaza sin modificar, conserva formulario al reintentar y confirma domicilio 2212ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > bloquea submit repetido y muestra error técnico sin navegar a éxito 217ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /checkout: Tu carrito está vacío 51ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /checkout: Revisa tu carrito 56ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /compra/exitosa/no: Pedido no encontrado 57ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > maneja /compra/rechazada: No se confirmó la compra. 160ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > comprobante persiste y muestra entrega domicilio en ruta directa 160ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > registro exige datos y crea cliente utilizable en login 1096ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > no administra sin rol y el login admin sí abre dashboard 471ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > descuento de cliente Duoc desaparece tras logout 99ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > formulario de cliente permite edición con datos iniciales 62ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > producto nuevo valida y guarda oferta y stock compartidos 599ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > edita producto y desactiva con confirmación sin borrar historial 1347ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > categorías valida, crea, edita, cancela y desactiva una categoría vacía 1207ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > crea cliente desde admin, muestra detalle/historial y permite edición y baja 852ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > perfil guarda campos permitidos y muestra errores reales 227ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin con pedido persistido 99ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/reportes con pedido persistido 76ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/pedidos con pedido persistido 96ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/pedidos/pedido-test con pedido persistido 85ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/criticos con pedido persistido 66ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/usuarios/cliente-demo con pedido persistido 78ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > presenta /admin/usuarios/admin-demo con pedido persistido 83ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/productos/no 84ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/productos/no/editar 65ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/no 70ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/no/editar 90ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/usuarios/admin-demo/editar 129ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > no rompe con ID inválido /admin/pedidos/no 79ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > críticos vacío y listas sin productos muestran estado definido 60ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza / 94ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /categorias 119ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /nosotros 50ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs 59ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/mejora-tu-setup 64ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/cuida-tu-pc 55ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /blogs/no 67ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > renderiza /inexistente 58ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > contacto valida y deja explícito que no envía mensajes 194ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > menú, acceso al contenido, avisos y reset son operables por UI 1544ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > storage corrupto ofrece recuperar sin borrado automático 447ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > imagen ausente usa fallback e icono desconocido conserva svg 13ms
 
- Test Files  3 passed (3)
-      Tests  144 passed (144)
-   Start at  19:50:55
-   Duration  42.48s (tests 37%, environment 24%, import 18%, setup 15%, transform 4%, worker 1%)
+ Test Files  5 passed (5)
+      Tests  153 passed (153)
+   Start at  12:40:04
+   Duration  57.28s (environment 45%, import 19%, tests 15%, setup 15%, transform 5%, worker 1%)
 
 JSON report written to C:/Users/jorda/OneDrive/Desktop/ProyectoFullStack/ProyectoFull/Boost-Level-/docs/ep2/evidencias/vitest.json
  % Coverage report from v8

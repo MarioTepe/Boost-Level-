@@ -1,6 +1,6 @@
 # Plan de desarrollo y organización del equipo
 
-**Versión:** 0.3 · **Fecha:** 24-10-2026  
+**Versión:** 0.3 · **Fecha:** 25-10-2026  
 **Estado:** implementación local completada; reparto y calendario conservados como propuesta, pendientes de revisión entre los integrantes.
 
 ## 1. Responsabilidades
@@ -90,7 +90,7 @@ Los tres deben explicar una prueba, una decisión técnica, el manejo de errores
 
 ## 8. Avance comprobado del incremento
 
-- B-01 a B-08: código implementado en frontend/, con 144 pruebas automatizadas aprobadas. No implica atribución de contribuciones individuales ni revisión cruzada realizada.
+- B-01 a B-08: código implementado en frontend/, con 153 pruebas automatizadas aprobadas. No implica atribución de contribuciones individuales ni revisión cruzada realizada.
 - B-09: lint y build correctos; cuatro métricas sobre 80%; responsive local registrado. Falta completar revisión manual de teclado/formularios por otra persona.
 - B-10: ERS, arquitectura, plan, matriz, informe medido y guía de explicación preparados; código identificado por commit. Falta revisión del equipo, confirmar diferencias de pauta con docente, formatos y ZIP de entrega. El [flujo Git](10_FLUJO_GIT_Y_ENTREGA.md) organiza los incrementos posteriores.
 

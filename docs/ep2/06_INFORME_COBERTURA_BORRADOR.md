@@ -1,13 +1,13 @@
 # Informe de cobertura de pruebas de Boost Level
 
 **Código:** BL-EP2-ICP-001  
-**Versión:** 0.5, código versionado y cierre académico pendiente  
-**Fecha:** 24-10-2026  
+**Versión:** 0.6, pruebas acotadas según la guía docente S13  
+**Fecha:** 25-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez  
 **Repositorio:** [MarioTepe/Boost-Level-](https://github.com/MarioTepe/Boost-Level-)  
-**Sección:** pendiente de registrar. **Rama:** main. **Commit del código medido:** 97c23a854ce578096ad229770e1152c118c9e4e3.
+**Sección:** pendiente de registrar. **Rama:** main. **Commit del código medido:** e093648acae1d2b4851857991200a94cde654110.
 
-Los resultados corresponden al código de ese commit, con BrowserRouter y páginas/componentes separados conforme a las guías. [El manifiesto de fuentes](evidencias/fuentes-sha256.json) conserva los hashes de código, configuración, lock y recursos. Agregado SHA-256: `b348d73d598ed63d030fb76238da7e5c323bd530446e3e0f577f199b4933faff`. Este informe y las evidencias se registran después, en un commit de documentación, sin cambiar las fuentes medidas.
+Los resultados corresponden al código de ese commit, con BrowserRouter y páginas/componentes separados conforme a las guías. [El manifiesto de fuentes](evidencias/fuentes-sha256.json) conserva los hashes de código, configuración, lock y recursos. Agregado SHA-256: `88bc7e73b0df9a63ffe29fac0c23891ae21e3772be8e755eacde1e45e06cc677`. Este informe y las evidencias se registran después, en un commit de documentación, sin cambiar las fuentes medidas.
 
 ## Control del documento
 
@@ -18,10 +18,11 @@ Los resultados corresponden al código de ese commit, con BrowserRouter y págin
 | 0.3 | 24-10-2026 | Medición real de 144 pruebas, análisis de cobertura y evidencias locales. |
 | 0.4 | 24-10-2026 | Credenciales retiradas del login; mínimos de rúbrica explicitados; nueva corrida de verificación. |
 | 0.5 | 24-10-2026 | BrowserRouter y páginas/componentes por archivo; código versionado; evidencia nueva sobre el commit indicado. |
+| 0.6 | 25-10-2026 | Diez casos concretos de catálogo según S13; se conserva el resto de la suite y no cambia código de producción. |
 
 | Función | Persona / fecha | Estado |
 |---|---|---|
-| Elaboración y validación técnica | Evidencias locales del 24-10-2026 | Informe técnico para revisión del equipo |
+| Elaboración y validación técnica | Evidencias locales del 25-10-2026 | Informe técnico para revisión del equipo |
 | Revisión por otro integrante | Pendiente de asignar | No realizada |
 | Evaluación docente | Pendiente | No realizada |
 
@@ -84,8 +85,8 @@ CC: criterio de completitud; NC: elemento no cubierto; RR: riesgo residual; ICP:
 
 | Dato | Valor registrado |
 |---|---|
-| Inicio local / zona | 24-10-26, 19:50:55; America/Santiago |
-| Inicio UTC de la corrida | 2026-10-24T22:50:55.501Z |
+| Inicio local / zona | 25-10-26, 12:40:04; America/Santiago |
+| Inicio UTC de la corrida | 2026-10-25T15:40:04.873Z |
 | Sistema | Windows 11, win32 10.0.26200 |
 | Node / npm | 24.21.0 / 11.19.0 |
 | React / React DOM / Vite | 19.3.0 / 19.3.0 / 8.3.0 |
@@ -100,7 +101,7 @@ Las versiones exactas están fijadas en package.json y package-lock.json. El ser
 
 Configuración efectiva en frontend/vite.config.js: entorno jsdom, setup src/test/setup.js, provider V8 y reporters text/html/json/json-summary. Incluye src/**/*.{js,jsx} con las tres exclusiones de 1.2. Umbrales globales de sentencias, ramas, funciones y líneas: 80% cada uno. allowOnly=false; clearMocks y restoreMocks activos.
 
-El mínimo del 80% procede de S5, sección 3.2. Vitest sigue la elección del usuario, el ejercicio de clases y la plantilla revisada. La diferencia con Jasmine/Karma nombrados en S1/S2 permanece registrada; no consta aceptación docente.
+El mínimo del 80% procede de S5, sección 3.2. La guía docente S13 confirma Vitest, Testing Library, jsdom y V8; sus secciones 4–5 y 9–13 orientan los diez casos seleccionados. Las menciones antiguas de Jasmine/Karma permanecen identificadas en el diagnóstico. Compartir vocabulario no significa ejecutar Jasmine ni acreditar una evaluación docente.
 
 ### 3.3 Procedimiento de ejecución
 
@@ -139,16 +140,18 @@ Los criterios son conjuntos: el porcentaje no reemplaza la verificación funcion
 
 | Dato | Resultado |
 |---|---|
-| Corrida | 2026-10-24T22:50:55.501Z |
-| Archivos de prueba | 3 |
-| Casos ejecutados / aprobados / fallidos | 144 / 144 / 0 |
+| Corrida | 2026-10-25T15:40:04.873Z |
+| Archivos de prueba | 5 |
+| Casos ejecutados / aprobados / fallidos | 153 / 153 / 0 |
 | Omitidos / todo | 0 / 0 |
-| Duración de terminal / salida | 42,48 s / código 0 |
-| App.test.jsx | 53 casos de componentes/integración |
-| dominio.test.js | 72 casos, incluidos parámetros de validación |
-| servicios.test.js | 19 casos de servicios/persistencia |
+| Duración de terminal / salida | 57,28 s / código 0 |
+| src/App.test.jsx | 52 casos |
+| src/domain/dominio.test.js | 72 casos |
+| src/services/servicios.test.js | 19 casos |
+| src/componentes/catalogo/GrillaProductos.test.jsx | 3 casos |
+| src/componentes/catalogo/TarjetaProducto.test.jsx | 7 casos |
 
-Los 144 casos incluyen variantes parametrizadas; no equivalen a 144 requisitos diferentes. El contador de suites del JSON incluye grupos describe; los tres archivos constan en testResults.
+Los 153 casos incluyen variantes parametrizadas; no equivalen a 153 requisitos diferentes. El contador de suites del JSON incluye grupos describe; los 5 archivos constan en testResults. Los diez casos de catálogo están junto a sus componentes, usan Preparar/Actuar/Comprobar y userEvent con await. Los otros archivos conservan su organización agrupada y las interacciones anteriores.
 
 ### 5.2 Cobertura global
 
@@ -249,7 +252,7 @@ Porcentajes con dos decimales. La última columna indica sentencias no ejecutada
 | CC-04 | 97,95% | Cumple |
 | CC-05 | 100,00% | Cumple |
 | CC-06 | 99,56% | Cumple |
-| CC-07 | 53 casos de UI, con render, props, clics, formularios, rutas y estados | Cumple |
+| CC-07 | Diez casos seleccionados de componentes más 52 casos de UI/integración: props, clics, formularios, rutas y estados | Cumple |
 | CC-08 | Límite 15/16, revalidación, aceptación/rechazo, escritura fallida, intento repetido y snapshot histórico | Cumple en entorno automatizado local |
 | CC-09 | Responsive y recorrido local registrados; accesibilidad y entrega aún parciales | Pendiente de cierre |
 
@@ -279,13 +282,13 @@ Los tests contrastan cantidades/totales y el documento persistido, además de me
 
 ### 6.4 Desviaciones e impedimentos
 
-El código ya está implementado y versionado. Una corrida previa encontró una espera incompleta del test de checkout; el caso aislado y el navegador completaron la compra. Se corrigió el test con await act para esperar las actualizaciones asíncronas, conservando sus aserciones; esta corrida completa verifica la corrección. Vitest frente a Jasmine/Karma requiere contraste docente. No existe backend: la entrega actual es una demostración local conforme al alcance documentado. Falta revisión por un integrante diferente y verificación de los paquetes finales. Los resultados iniciales de clase-tienda-react pertenecen al diagnóstico y no se mezclan con estos resultados.
+El código ya está implementado y versionado. El ajuste de S13 reemplaza un caso de tarjeta que mezclaba varios comportamientos por diez casos concretos, sin cambiar código de producción ni añadir funcionalidades. La nueva guía sustenta Vitest como ejecutor. No existe backend: la entrega actual es una demostración local conforme al alcance documentado. Falta revisión por un integrante diferente y verificación de los paquetes finales. Los resultados iniciales de clase-tienda-react pertenecen al diagnóstico y no se mezclan con estos resultados.
 
 ## 7. Riesgos residuales
 
 | ID | Riesgo | Probabilidad / impacto | Tratamiento |
 |---|---|---|---|
-| RR-01 | Diferencia de herramienta sin aceptación docente registrada | Media / Alta | Contrastar S1/S2 y S5/S7 con el docente. |
+| RR-01 | Menciones antiguas de Jasmine/Karma en los PDF | Baja / Media | S13 documenta Vitest; usar esa guía como referencia técnica y mantener identificadas las fuentes. |
 | RR-02 | Estado local no compartido de forma transaccional entre pestañas o dispositivos | Alta / Alta fuera de demo | Demostración en una pestaña; futura API. |
 | RR-03 | jsdom y recorrido local no acreditan accesibilidad completa ni todos los navegadores | Media / Media | Completar TM-02 y revisión cruzada. |
 | RR-04 | Roles y claves demo en cliente no son autenticación de servidor | Alta / Alta para producción | Datos ficticios; backend futuro si se amplía alcance. |

@@ -2,7 +2,7 @@
 
 **Asignatura:** DSY1104 Desarrollo Fullstack II  
 **Versión:** 0.3, base implementada para revisión EP2  
-**Fecha:** 24-10-2026  
+**Fecha:** 25-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez  
 **Estado:** código implementado en frontend/; la verificación local se documenta con sus resultados y evidencias. La revisión del equipo y evaluación docente siguen pendientes.
 
@@ -62,7 +62,7 @@ EP1 contiene páginas HTML, estilos, catálogo JavaScript y carrito local. EP2 t
 
 - React/JavaScript/JSX, Vite y Bootstrap, en `frontend/` dentro del repositorio Boost Level.
 - Fuente de datos JavaScript y persistencia local conforme a S1 pp. 1–2.
-- Vitest, Testing Library, jsdom y V8 para pruebas, según la elección del usuario y S5/S7. S1/S2 conservan menciones a Jasmine/Karma: registrar respuesta docente antes de cerrar la entrega. La elección del usuario no acredita aprobación docente.
+- Vitest, Testing Library, jsdom y V8 para pruebas, siguiendo S5/S7 y la [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) (S13). S1/S2 conservan menciones antiguas a Jasmine/Karma; S13 documenta explícitamente la ejecución con Vitest. No se confunde compatibilidad de vocabulario con ejecutar Jasmine ni con aprobación de la entrega.
 - Umbral global de 80% para sentencias, ramas, funciones y líneas, fijado antes de medir conforme a S5 sección 3.2.
 - Las guardas React controlan navegación de la demostración. Cuentas y datos guardados deben ser ficticios.
 

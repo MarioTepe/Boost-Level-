@@ -1,6 +1,6 @@
 # Correspondencia con las guías de FullStack II
 
-**Fecha:** 24-10-2026. **Revisión:** 0.2, alineación aplicada al código. **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
+**Fecha:** 25-10-2026. **Revisión:** 0.3, pruebas según S13 y alcance acotado. **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
 ## 1. Material revisado
 
@@ -74,7 +74,24 @@ useEffect y localStorage sí forman parte de las clases. La diferencia está en 
 
 Context/useContext, repositorio único, servicios, validación completa del documento, useRef de bloqueo e idempotencia del intento de compra no aparecen desarrollados en estas guías. Son ampliaciones para los requisitos de EP2 y deben explicarse desde el código y sus pruebas.
 
-## 5. Orden de estudio entre los tres integrantes
+## 5. Pruebas según la nueva guía docente
+
+S13 es la [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas), revisada el 25-10-2026. Se toma como referencia principal para estudiar y escribir las pruebas. Se mantiene el alcance requerido y no se incorporan funciones nuevas a la tienda.
+
+| Guía S13 | Aplicación acotada |
+|---|---|
+| Sección 1: Vitest, jsdom, setup y scripts | La configuración ya usa esas herramientas; Vitest y coverage-v8 tienen la misma versión. |
+| Secciones 4–5: prueba junto al código y Preparar/Actuar/Comprobar | TarjetaProducto.test.jsx y GrillaProductos.test.jsx están junto a sus componentes y separan los tres pasos. |
+| Sección 9: aislamiento | beforeEach crea datos nuevos en los diez casos; el setup limpia el DOM. |
+| Secciones 10–12: espías, render y consultas | vi.fn(), render, screen y consultas por rol/texto visible. |
+| Sección 13: interacción | userEvent.setup() por caso y await para cada clic en los dos archivos seleccionados. |
+| Secciones 15 y 17: cobertura y conducta observable | Se conservan las cuatro métricas y las aserciones del comportamiento. No se añaden pruebas de estilos, constantes o detalles internos. |
+
+La guía no fija por sí sola el mínimo de diez ni el umbral del 80%: proceden de S2 y S5 respectivamente. Los ejemplos de IVA y formularios sirven para aprender el método; no reemplazan las reglas de Boost Level. Vitest ejecuta nuestras pruebas con su API; la comparación con Jasmine es de vocabulario.
+
+El ajuste reemplaza un test de tarjeta que mezclaba varios comportamientos por diez casos concretos. El resto de la suite agrupada se conserva sin refactorizar; no se afirma una migración total a userEvent. No se cambian componentes, arquitectura ni reglas de negocio.
+
+## 6. Orden de estudio entre los tres integrantes
 
 1. S9, clases 2–4: explicar tarjeta, props, eventos y actualización inmutable comparando con el catálogo/carrito del proyecto.
 2. S9, clase 5: explicar formularios controlados, datos derivados, efecto y persistencia; distinguir el guardado del ejemplo del repositorio implementado.

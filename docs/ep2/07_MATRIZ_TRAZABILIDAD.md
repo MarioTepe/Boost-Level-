@@ -1,9 +1,9 @@
 # Matriz de requisitos, desarrollo y pruebas
 
-**Versión:** 0.3 · **Fecha:** 24-10-2026  
+**Versión:** 0.3 · **Fecha:** 25-10-2026  
 **Estado:** RF-01 a RF-22 implementados y verificados mediante los casos automatizados asociados. RNF sujetos a revisión manual conservan el estado detallado al final. Fuentes S1–S8 en diagnóstico, paquetes B en backlog y casos TU/TC/TI/TM en plan de pruebas.
 
-La evidencia común de las filas automatizadas es la corrida del 24-10-2026 22:50:55 UTC: **144 aprobadas, 0 fallos, 0 skip/todo**, en [vitest.json](evidencias/vitest.json). Los nombres agrupan los IDs del plan; sus variantes parametrizadas comprueban límites y alternativas. [El informe](06_INFORME_COBERTURA_BORRADOR.md) y [el manifiesto](evidencias/fuentes-sha256.json) identifican métricas y commit del código medido. La columna de evidencia describe el comportamiento comprobado o la revisión manual requerida, según el estado de cierre.
+La evidencia común de las filas automatizadas es la corrida del 25-10-2026 15:40:04 UTC: **153 aprobadas, 0 fallos, 0 skip/todo**, en [vitest.json](evidencias/vitest.json). Los nombres agrupan los IDs del plan; sus variantes parametrizadas comprueban límites y alternativas. [El informe](06_INFORME_COBERTURA_BORRADOR.md) y [el manifiesto](evidencias/fuentes-sha256.json) identifican métricas y commit del código medido. La columna de evidencia describe el comportamiento comprobado o la revisión manual requerida, según el estado de cierre.
 
 ## Funcionales
 
@@ -50,7 +50,7 @@ La evidencia común de las filas automatizadas es la corrida del 24-10-2026 22:5
 ## Control de criterios de cierre
 
 1. Cada RF/RNF tiene caso o revisión explícita.
-2. Cada caso citado está definido en el plan; sus grupos de pruebas están en dominio.test.js, servicios.test.js y App.test.jsx. Las revisiones manuales tienen su registro separado.
+2. Cada caso citado está definido en el plan; sus grupos de pruebas están en dominio.test.js, servicios.test.js, App.test.jsx y los dos archivos .test.jsx junto a los componentes del catálogo. Las revisiones manuales tienen su registro separado.
 3. El reporte usa una sola ejecución sobre código versionado y un manifiesto de fuentes. Los porcentajes no sustituyen esta verificación funcional; repetir la medición si cambia el código/configuración.
 4. Si cambian reglas de precios, entrega o sesión, actualizar ERS, contratos, casos y esta matriz en el mismo cambio.
 

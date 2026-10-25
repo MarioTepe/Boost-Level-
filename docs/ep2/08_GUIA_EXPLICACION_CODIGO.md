@@ -1,6 +1,6 @@
 # Guía para explicar el código de Boost Level
 
-**Fecha:** 24-10-2026  
+**Fecha:** 25-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.  
 **Propósito:** recorrer el código implementado relacionándolo con las instrucciones de la evaluación, el ejercicio de clases y las guías de FullStack II. Esta guía sirve para estudiar y comprobar cada explicación sobre el proyecto real.
 
@@ -14,6 +14,8 @@ La carpeta FullStack II amplía el material de referencia: su guía de React, cl
 
 ## 2. Recorrido de diez minutos por el código
 
+Prioridad de estudio: componentes, props, map/key, useState, eventos, formularios, rutas y las diez pruebas seleccionadas. Los módulos de guardado y compra ya existentes se explican por su función en el recorrido; este ajuste no añade nuevos patrones ni funcionalidades.
+
 | Paso | Archivo relativo a frontend/ | Relación con clases y evaluación | Qué demostrar |
 |---|---|---|---|
 | 1 | src/main.jsx | Montaje React, StrictMode e importación de Bootstrap, como en main.jsx de clases | Explicar dónde comienza la aplicación y qué monta React. |
@@ -25,7 +27,7 @@ La carpeta FullStack II amplía el material de referencia: su guía de React, cl
 | 7 | src/domain/precios.js | reduce y formateo separado, como el total de clases | Calcular subtotal, descuento y total sin guardar contadores duplicados. |
 | 8 | src/repositories/tienda.repository.js | localStorage/JSON de clase 5, con repositorio propio | Explicar leer, validar y guardar un documento completo; distinguirlo del efecto de escritura del ejemplo. |
 | 9 | src/paginas/CheckoutPage.jsx y services/tienda.service.js | Checkout y vistas éxito/error de EP2 | Datos de entrega, pago simulado, nueva validación, pedido, stock y carrito. |
-| 10 | src/App.test.jsx y domain/dominio.test.js | Render, props, estado, eventos y mocks de la pauta | Ejecutar pruebas y abrir un caso del límite stock y uno de clic de tarjeta. |
+| 10 | src/componentes/catalogo/TarjetaProducto.test.jsx y GrillaProductos.test.jsx | Diez pruebas según la guía docente S13 | Ejecutar, abrir el caso del clic y explicar qué comprueba vi.fn(). |
 
 Cada componente y página JSX está en un archivo con su nombre y exportación por defecto. App.jsx importa las páginas y declara el mapa de rutas; componentes/ contiene las piezas reutilizables, como propone la guía Router.
 
@@ -79,6 +81,8 @@ Las nuevas guías corrigen la comparación inicial basada solo en clase-tienda-r
 
 ## 5. Cómo explicar las pruebas
 
+La referencia principal es S13, la guía de pruebas indicada por el profesor. Para estudiar se ejecutan solo los diez casos del catálogo identificados en el plan. El resto de la suite se conserva como respaldo. No se añaden librerías, capas o funcionalidades para la exposición.
+
 1. **Preparar:** crear un producto o estado ficticio conocido.
 2. **Actuar:** renderizar el componente, hacer clic o ejecutar una regla.
 3. **Comprobar:** usar `expect` sobre un resultado visible y, para compra, sobre pedido/stock/carrito.
@@ -87,7 +91,7 @@ Las nuevas guías corrigen la comparación inicial basada solo en clase-tienda-r
 
 La cobertura indica qué código se ejecutó. No garantiza ausencia de errores. Se fijó el 80% de sentencias, ramas, funciones y líneas antes de medir, según la plantilla revisada; abrir el detalle de ramas es tan importante como leer el total.
 
-Se utiliza Vitest como en la clase y la plantilla revisada. Los PDF todavía nombran Jasmine/Karma: esa diferencia está registrada para contrastarla con el docente. Vitest no se presenta como otra forma de ejecutar Jasmine/Karma.
+Se utiliza Vitest como enseña la [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas), sección 1. describe agrupa, it define un caso y expect comprueba el resultado. vi.fn() registra las llamadas; no es un servicio real. userEvent.setup() crea un usuario simulado y await usuario.click(...) espera la interacción. beforeEach prepara un producto nuevo para cada caso. No se instala Jasmine/Karma: la guía compara su vocabulario con el de Vitest.
 
 ## 6. Recorrido funcional para exposición
 

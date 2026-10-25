@@ -1,10 +1,10 @@
 {
-  "ejecucionUTC": "2026-10-24T22:50:55.501Z",
-  "commitCodigo": "97c23a854ce578096ad229770e1152c118c9e4e3",
+  "ejecucionUTC": "2026-10-25T15:40:04.873Z",
+  "commitCodigo": "e093648acae1d2b4851857991200a94cde654110",
   "rama": "main",
   "estado": "Código medido versionado; documentación y evidencia se registran en un commit posterior.",
   "algoritmo": "SHA-256 de bytes de cada archivo; agregado de filas hash + dos espacios + ruta separadas por LF.",
-  "agregado": "b348d73d598ed63d030fb76238da7e5c323bd530446e3e0f577f199b4933faff",
+  "agregado": "88bc7e73b0df9a63ffe29fac0c23891ae21e3772be8e755eacde1e45e06cc677",
   "archivos": [
     {
       "archivo": ".gitignore",
@@ -120,7 +120,7 @@
     },
     {
       "archivo": "src/App.test.jsx",
-      "sha256": "34f4789a64aaf3aec4474a054f2fe579ae2ae6879c0b936d7a6ac5da8753e8c5"
+      "sha256": "17624bac49dfbfe23f7e55b38de89042192a5a491de6e16acd6d2f2139709343"
     },
     {
       "archivo": "src/componentes/administracion/BajaButton.jsx",
@@ -143,8 +143,16 @@
       "sha256": "aea6a90160b295add9fb73c4cd55f2f3e62c02a6c0d21c52ac47e91a5ab4b0b1"
     },
     {
+      "archivo": "src/componentes/catalogo/GrillaProductos.test.jsx",
+      "sha256": "819dc69b3b972f683809d28d82893c7ca87ab4040b891ca3582e03ccf2440fa5"
+    },
+    {
       "archivo": "src/componentes/catalogo/TarjetaProducto.jsx",
       "sha256": "4d9ec9f12791d5dc353c93c23dd4aafbc4dfe2aeee6e5146d926d0fc184644e5"
+    },
+    {
+      "archivo": "src/componentes/catalogo/TarjetaProducto.test.jsx",
+      "sha256": "46070427ea8f3eeb33ef52e544528715695513bbcd4714a20f9ca9f35ea9ccb0"
     },
     {
       "archivo": "src/componentes/contenido/BlogCards.jsx",

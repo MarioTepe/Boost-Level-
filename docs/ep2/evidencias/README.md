@@ -1,10 +1,10 @@
 # Registro de evidencias locales
 
-**Fecha:** 24-10-2026. **Paquete:** frontend de Boost Level. Las evidencias corresponden a comprobaciones técnicas locales; falta la revisión cruzada del equipo y el cierre de entrega.
+**Fecha:** 25-10-2026. **Paquete:** frontend de Boost Level. Las evidencias corresponden a comprobaciones técnicas locales; falta la revisión cruzada del equipo y el cierre de entrega.
 
 ## Ejecución automatizada
 
-La corrida iniciada el **24-10-2026 a las 19:50:55 CLST (22:50:55 UTC)** produjo 144 pruebas aprobadas, 0 fallidas, 0 omitidas y 0 todo en tres archivos. Duración de terminal: 42,48 s. Código de salida: 0. Esta ejecución corresponde al commit de código **97c23a8**, con BrowserRouter y páginas/componentes separados. Sustituye la medición anterior; el informe registra también la corrección de sincronización de la prueba de checkout durante esta iteración.
+La corrida iniciada el **25-10-2026 a las 12:40:04 CLST (15:40:04 UTC)** produjo 153 pruebas aprobadas, 0 fallidas, 0 omitidas y 0 todo en cinco archivos. Duración de terminal: 57,28 s. Código de salida: 0. Corresponde al commit de pruebas **e093648**, que separa diez casos de catálogo según S13 y conserva la aplicación. El informe registra los resultados de esta corrida; las capturas mantienen las fechas de sus recorridos anteriores.
 
 | Evidencia | Contenido |
 |---|---|

@@ -1,6 +1,6 @@
 # Documentación de Boost Level EP2
 
-**Revisión:** 0.5 · **Fecha:** 24-10-2026  
+**Revisión:** 0.6 · **Fecha:** 25-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
 Esta carpeta reúne problemas detectados, requisitos, arquitectura, organización del equipo y pruebas. La migración React está implementada en `frontend/`; las páginas HTML se conservan como referencia de EP1. El estado de verificación se registra junto a las evidencias de ejecución.
@@ -28,7 +28,7 @@ Esta carpeta reúne problemas detectados, requisitos, arquitectura, organizació
 - Ofertas editables y descuento institucional con reglas de cálculo explícitas en la ERS.
 - Conservación de EP1 y del ejercicio independiente de clases; responsables del backlog son una propuesta, no atribución de trabajo ya realizado.
 
-Los paquetes de implementación se verifican mediante pruebas, lint, build y revisión del navegador. Queda contrastar con el docente la diferencia Vitest/Jasmine-Karma y la frase sobre backend; las reglas de entrega/descuento requieren revisión del equipo. Estos puntos se registran sin atribuir aprobación docente.
+Los paquetes se verifican con pruebas, lint, build y revisión del navegador. La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) (S13) confirma Vitest. Queda contrastar la frase sobre backend; las reglas de entrega/descuento requieren revisión del equipo. No se atribuye una revisión docente de la entrega.
 
 ## Estado de los documentos
 
@@ -41,3 +41,5 @@ La revisión 0.3 incorpora el código React y una guía para estudiarlo: useStat
 La revisión 0.4 incorporó FullStack II como fuentes S9–S12 y corrigió esa clasificación inicial: useEffect, localStorage y Router ya están desarrollados en el material de clase. Identificó dos diferencias que aún estaban pendientes en esa revisión: router y organización de archivos.
 
 La revisión 0.5 aplica BrowserRouter, traslada App.jsx a src/, separa páginas/componentes por archivo y pasa datos/callbacks a la grilla y tarjetas. Context, servicios y consistencia de compra siguen siendo decisiones adicionales. La nueva corrida sobre código versionado conserva 144 pruebas aprobadas: 99,37% sentencias, 97,95% ramas, 100% funciones y 99,56% líneas. El informe registra el SHA exacto; las capturas antiguas se distinguen del recorrido nuevo con BrowserRouter.
+
+La revisión 0.6 incorpora la guía de pruebas del profesor como S13 y limita el ajuste a diez casos concretos de catálogo: datos nuevos por caso, Preparar/Actuar/Comprobar y userEvent con await. No cambia código de producción ni añade funcionalidades. La suite completa tiene 153 pruebas aprobadas; las cuatro métricas conservan los porcentajes de la revisión anterior. Para estudiar, comenzar por esos diez casos y el recorrido de fundamentos de la guía de explicación.

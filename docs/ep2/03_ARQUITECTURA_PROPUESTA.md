@@ -1,6 +1,6 @@
 # Arquitectura de Boost Level para EP2
 
-**Versión:** 0.3 · **Fecha:** 24-10-2026  
+**Versión:** 0.3 · **Fecha:** 25-10-2026  
 **Estado:** arquitectura implementada en `ProyectoFull/Boost-Level-/frontend/`, pendiente de revisión del equipo.  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
@@ -70,6 +70,7 @@ frontend/src/
   componentes/
     layout/{Layout,AdminLayout}.jsx
     catalogo/{TarjetaProducto,GrillaProductos}.jsx
+    catalogo/{TarjetaProducto,GrillaProductos}.test.jsx
     carrito/LineaCarrito.jsx
     formularios/{UsuarioForm,Direccion}.jsx
     navegacion/RutaAdmin.jsx
@@ -258,6 +259,6 @@ IDs/slugs desconocidos muestran estado no encontrado y regreso. Las guardas veri
 
 ## 10. Decisiones pendientes de contraste
 
-La implementación sigue esta base, con tres puntos por contrastar con docente/equipo: aceptación de Vitest frente al texto Jasmine/Karma; frase aislada de integración con backend; y validación de las elecciones de negocio (descuento, ofertas, entrega gratuita demo). Cambios se registran en ERS, pruebas y matriz. La etiqueta “Editar usuario” dentro de categoría del diagrama S1 p. 10 se interpreta como “Editar categoría” en esta propuesta.
+La implementación sigue esta base. La guía docente S13 confirma el uso de Vitest para las pruebas. Quedan por contrastar con docente/equipo la frase aislada de integración con backend y las elecciones de negocio (descuento, ofertas, entrega gratuita demo). Cambios se registran en ERS, pruebas y matriz. La etiqueta “Editar usuario” dentro de categoría del diagrama S1 p. 10 se interpreta como “Editar categoría” en esta propuesta.
 
 La referencia S10 se aplica con BrowserRouter y separación de páginas/componentes. La [correspondencia docente](09_CORRESPONDENCIA_GUIAS_CLASE.md) identifica los conceptos enseñados y las decisiones adicionales, sin atribuir Context, servicios o consistencia de compra al ejemplo de clases.

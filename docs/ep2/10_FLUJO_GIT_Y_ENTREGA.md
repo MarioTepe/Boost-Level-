@@ -1,6 +1,6 @@
 # Flujo Git y preparación de entrega
 
-**Fecha:** 24-10-2026. **Equipo:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
+**Fecha:** 25-10-2026. **Equipo:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
 Repositorio compartido: [MarioTepe/Boost-Level-](https://github.com/MarioTepe/Boost-Level-), rama principal main. README raíz presenta EP2 y conserva EP1 como referencia. El incremento React está en frontend/ y la documentación en docs/ep2/.
 
@@ -9,8 +9,9 @@ Repositorio compartido: [MarioTepe/Boost-Level-](https://github.com/MarioTepe/Bo
 | Commit | Trabajo registrado |
 |---|---|
 | 9ed9401 | Implementación React: tienda, administración, pruebas, BrowserRouter, páginas/componentes separados, README y validación de frontend en GitHub Actions. |
-| 97c23a8 | Sincronización explícita de las actualizaciones asíncronas en la prueba de compra. Es el commit de código de la medición completa del informe. |
+| 97c23a8 | Sincronización explícita de las actualizaciones asíncronas en la prueba de compra. Fue el commit medido en la revisión 0.5 del informe. |
 | Commit de documentación posterior | ERS, arquitectura, casos, matriz, correspondencia con clases, guía de explicación y evidencias de esa medición. Su SHA se consulta en el historial del repositorio. |
+| e093648 | Ajuste acotado según la guía de pruebas S13: diez casos de catálogo, junto a los componentes y con userEvent/await. Código medido en la revisión 0.6. |
 
 Son cambios realizados en este incremento, con las fechas e identidad configuradas en Git. Las responsabilidades del backlog siguen siendo una propuesta de organización; no acreditan revisión cruzada realizada. El informe conserva el SHA del código medido aunque después se agregue documentación.
 
@@ -27,7 +28,7 @@ El workflow de frontend se ejecuta cuando cambian frontend/ o su configuración.
 ## Qué falta para la entrega académica
 
 - Revisar entre los tres la guía de explicación y los diez casos seleccionados; cada integrante debe poder explicar el flujo completo.
-- Contrastar Vitest/Jasmine-Karma y alcance backend con el profesor, sin atribuir una aprobación no registrada.
+- Revisar el alcance backend con el profesor. La guía de pruebas S13 ya documenta Vitest; no equivale a una aprobación de la entrega.
 - Completar revisión manual de teclado/formularios y lectura del README por otra persona.
 - Emitir los formatos académicos finales y preparar fuente y coverage.zip según la pauta.
 - Verificar instalación desde una copia limpia del paquete y ensayar la presentación.
