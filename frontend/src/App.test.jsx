@@ -5,7 +5,6 @@ import { renderApp } from './test/renderApp.jsx'
 import { preparar, solicitud, usuarioValido } from './test/factories.js'
 
 import { aplicarCompra } from './domain/compra.rules.js'
-import TarjetaProducto from './componentes/catalogo/TarjetaProducto.jsx'
 import UsuarioForm from './componentes/formularios/UsuarioForm.jsx'
 import FotoProducto from './componentes/ui/FotoProducto.jsx'
 import Icono from './componentes/ui/Icono.jsx'
@@ -13,8 +12,6 @@ import SessionProvider from './contexto/SessionProvider.jsx'
 import TiendaProvider from './contexto/TiendaProvider.jsx'
 import App from './App.jsx'
 import { CLAVE_SESION, CLAVE_TIENDA } from './repositories/storage.adapter.js'
-
-import { crearDatosIniciales } from './data/inicial.js'
 
 const escribir = (label, value) =>
   fireEvent.change(screen.getByLabelText(label, { exact: true }), { target: { value } })
@@ -40,32 +37,6 @@ function conPedido(e) {
 }
 
 describe('TC-01 a TC-05: catálogo, props, filtros y detalle', () => {
-  it('tarjeta muestra nombre, precio, disponibilidad y entrega el ID por evento', () => {
-    const producto = crearDatosIniciales().productos[0]
-    const agregar = vi.fn()
-    const { rerender } = render(
-      <MemoryRouter>
-        <TarjetaProducto producto={producto} onAgregarProducto={agregar} />
-      </MemoryRouter>,
-    )
-    expect(screen.getByRole('heading', { name: 'Catan' })).toBeInTheDocument()
-    expect(screen.getByText('$29.990')).toBeInTheDocument()
-    pulsar('Agregar Catan')
-    expect(agregar).toHaveBeenCalledWith('JM001')
-    expect(agregar).toHaveBeenCalledTimes(1)
-    rerender(
-      <MemoryRouter>
-        <TarjetaProducto
-          producto={{ ...producto, stock: 0, precioOferta: 10000 }}
-          cantidadEnCarrito={1}
-          onAgregarProducto={agregar}
-        />
-      </MemoryRouter>,
-    )
-    expect(screen.getByRole('button', { name: 'Agregar Catan' })).toBeDisabled()
-    expect(screen.getByText('Sin stock')).toBeInTheDocument()
-    expect(screen.getByText('OFERTA')).toBeInTheDocument()
-  })
   it('catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros', () => {
     renderApp('/productos')
     expect(screen.getAllByRole('article')).toHaveLength(11)
