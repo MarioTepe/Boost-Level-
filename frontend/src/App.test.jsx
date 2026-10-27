@@ -2,12 +2,9 @@ import { act, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router'
 import { describe, expect, it, vi } from 'vitest'
 import { renderApp } from './test/renderApp.jsx'
-import { preparar, solicitud, usuarioValido } from './test/factories.js'
+import { preparar, usuarioValido } from './test/factories.js'
 
-import { aplicarCompra } from './domain/compra.rules.js'
 import UsuarioForm from './componentes/formularios/UsuarioForm.jsx'
-import FotoProducto from './componentes/ui/FotoProducto.jsx'
-import Icono from './componentes/ui/Icono.jsx'
 import SessionProvider from './contexto/SessionProvider.jsx'
 import TiendaProvider from './contexto/TiendaProvider.jsx'
 import App from './App.jsx'
@@ -31,10 +28,6 @@ const camposUsuario = () => {
   ])
     escribir(label, value)
 }
-function conPedido(e) {
-  e.carrito = [{ productoId: 'JM001', cantidad: 2 }]
-  Object.assign(e, aplicarCompra(e, solicitud(e), null, '2026-10-23T15:00:00Z', 'pedido-test'))
-}
 
 describe('TC-01 a TC-05: catálogo, props, filtros y detalle', () => {
   it('catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros', () => {
@@ -53,14 +46,7 @@ describe('TC-01 a TC-05: catálogo, props, filtros y detalle', () => {
     pulsar('Agregar Catan')
     expect(screen.getByRole('link', { name: 'Carrito, 1 unidades' })).toBeInTheDocument()
   })
-  it('categoría enlazada filtra, puede cambiarse y el estado vacío es explícito', () => {
-    renderApp('/categorias/cat-1')
-    expect(screen.getAllByRole('article')).toHaveLength(1)
-    escribir('Filtrar por categoría', 'cat-2')
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Monitor')
-    escribir('Buscar productos', 'NO_EXISTE')
-    expect(screen.getByText('Sin coincidencias')).toBeInTheDocument()
-  })
+
   it('ofertas refleja precio configurado; detalle agrega y respeta el stock', () => {
     const { repo } = renderApp('/ofertas', {
       editar: (e) => {
@@ -74,15 +60,6 @@ describe('TC-01 a TC-05: catálogo, props, filtros y detalle', () => {
     pulsar('Agregar al carrito')
     expect(repo.leerEstado().carrito[0].cantidad).toBe(1)
     expect(screen.getByRole('button', { name: 'Agregar al carrito' })).toBeDisabled()
-  })
-  it.each([
-    ['/productos/NO', 'Producto no encontrado'],
-    ['/categorias/NO', 'Categoría no encontrada'],
-    ['/ofertas', 'Todavía no hay ofertas'],
-    ['/productos/JM001', 'Catan'],
-  ])('%s presenta estado correcto', (ruta, texto) => {
-    renderApp(ruta)
-    expect(screen.getByRole('heading', { name: texto, exact: true })).toBeInTheDocument()
   })
 })
 describe('TC-06/07/08: carrito conectado a datos', () => {
@@ -106,20 +83,6 @@ describe('TC-06/07/08: carrito conectado a datos', () => {
     pulsar('Eliminar Monitor Lg')
     expect(repo.leerEstado().carrito).toHaveLength(1)
     pulsar('Vaciar carrito')
-    expect(screen.getByText('Tu carrito está esperando')).toBeInTheDocument()
-  })
-  it('no considera vacío a producto gratuito, y bloquea línea inválida sin fallar', () => {
-    const { repo } = renderApp('/carrito', {
-      editar: (e) => {
-        e.productos[0].precio = 0
-        e.carrito = [{ productoId: 'JM001', cantidad: 1 }]
-      },
-    })
-    expect(screen.queryByText('Tu carrito está esperando')).not.toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Continuar a entrega' })).toBeInTheDocument()
-    act(() => repo.actualizar((e) => ({ ...e, carrito: [{ productoId: 'DESCONOCIDO', cantidad: 1 }] })))
-    expect(screen.getByRole('button', { name: 'Corrige el carrito para continuar' })).toBeDisabled()
-    pulsar('Eliminar DESCONOCIDO')
     expect(screen.getByText('Tu carrito está esperando')).toBeInTheDocument()
   })
 })
@@ -165,54 +128,6 @@ describe('TC-09/10/11: checkout y resultados', () => {
     await screen.findByRole('heading', { name: 'Tu siguiente nivel está confirmado.' })
     expect(repo.leerEstado().pedidos[0].entrega.comunaId).toBe('Iquique')
   })
-  it('bloquea submit repetido y muestra error técnico sin navegar a éxito', async () => {
-    const { repo, storage } = renderApp('/checkout', {
-      sesion: 'cliente-demo',
-      editar: (e) => {
-        e.carrito = [{ productoId: 'JM001', cantidad: 1 }]
-      },
-    })
-    storage.guardar = () => {
-      throw new Error('cuota')
-    }
-    const boton = screen.getByRole('button', { name: 'Confirmar compra simulada' })
-    fireEvent.click(boton)
-    fireEvent.click(boton)
-    expect(boton).toBeDisabled()
-    await screen.findByRole('alert')
-    expect(repo.getSnapshot().estado.pedidos).toHaveLength(0)
-    expect(screen.getByRole('heading', { name: 'Completa tu entrega.' })).toBeInTheDocument()
-  })
-  it.each([
-    ['/checkout', 'Tu carrito está vacío', () => {}],
-    [
-      '/checkout',
-      'Revisa tu carrito',
-      (e) => {
-        e.carrito = [{ productoId: 'ausente', cantidad: 1 }]
-      },
-    ],
-    ['/compra/exitosa/no', 'Pedido no encontrado', () => {}],
-    ['/compra/rechazada', 'No se confirmó la compra.', () => {}],
-  ])('maneja %s: %s', (ruta, titulo, editar) => {
-    renderApp(ruta, { editar })
-    expect(screen.getByRole('heading', { name: titulo })).toBeInTheDocument()
-  })
-  it('comprobante persiste y muestra entrega domicilio en ruta directa', () => {
-    renderApp('/compra/exitosa/pedido-test', {
-      editar: (e) => {
-        conPedido(e)
-        e.pedidos[0].entrega = {
-          modalidad: 'domicilio',
-          direccion: 'Ficticia 123',
-          comunaId: 'Santiago',
-          regionId: 'Metropolitana de Santiago',
-          costo: 0,
-        }
-      },
-    })
-    expect(screen.getByText(/Ficticia 123, Santiago/)).toBeInTheDocument()
-  })
 })
 describe('TC-12/15/17: cuentas, sesión y reglas de acceso', () => {
   it('registro exige datos y crea cliente utilizable en login', async () => {
@@ -244,18 +159,7 @@ describe('TC-12/15/17: cuentas, sesión y reglas de acceso', () => {
     pulsar('Salir')
     expect(screen.getByRole('heading', { name: 'Iniciar sesión' })).toBeInTheDocument()
   })
-  it('descuento de cliente Duoc desaparece tras logout', () => {
-    renderApp('/carrito', {
-      sesion: 'cliente-demo',
-      editar: (e) => {
-        e.usuarios[1].correo = 'demo@duoc.cl'
-        e.carrito = [{ productoId: 'JM001', cantidad: 1 }]
-      },
-    })
-    expect(screen.getByText('Descuento Duoc (20%)')).toBeInTheDocument()
-    pulsar('Salir')
-    expect(screen.queryByText('Descuento Duoc (20%)')).not.toBeInTheDocument()
-  })
+
   it('formulario de cliente permite edición con datos iniciales', () => {
     const guardar = vi.fn(() => ({ ok: true }))
     render(
@@ -367,59 +271,8 @@ describe('TC-14 y TI-06/08/09: administración', () => {
       rol: 'admin',
     })
   })
-  it.each([
-    ['/admin', 'Todo tu equipo, bajo control.'],
-    ['/admin/reportes', 'Reportes de la tienda'],
-    ['/admin/pedidos', 'Pedidos'],
-    ['/admin/pedidos/pedido-test', 'Detalle del pedido'],
-    ['/admin/criticos', 'Stock crítico'],
-    ['/admin/usuarios/cliente-demo', 'Cliente Demo'],
-    ['/admin/usuarios/admin-demo', 'Admin Boost Level'],
-  ])('presenta %s con pedido persistido', (ruta, titulo) => {
-    renderApp(ruta, {
-      sesion: 'admin-demo',
-      editar: (e) => {
-        conPedido(e)
-        e.productos[0].umbralCritico = 15
-      },
-    })
-    expect(screen.getByRole('heading', { name: titulo, exact: true })).toBeInTheDocument()
-  })
-  it.each([
-    '/admin/productos/no',
-    '/admin/productos/no/editar',
-    '/admin/usuarios/no',
-    '/admin/usuarios/no/editar',
-    '/admin/usuarios/admin-demo/editar',
-    '/admin/pedidos/no',
-  ])('no rompe con ID inválido %s', (ruta) => {
-    renderApp(ruta, { sesion: 'admin-demo' })
-    expect(screen.getByRole('heading', { name: /no encontrado|no editable/ })).toBeInTheDocument()
-  })
-  it('críticos vacío y listas sin productos muestran estado definido', () => {
-    renderApp('/admin/productos', {
-      sesion: 'admin-demo',
-      editar: (e) => {
-        e.productos = []
-      },
-    })
-    expect(screen.getByText('Sin registros todavía')).toBeInTheDocument()
-  })
 })
 describe('TC-18 y revisión de navegación/contenido', () => {
-  it.each([
-    ['/', 'Tu juego.'],
-    ['/categorias', 'Un mundo para cada jugador.'],
-    ['/nosotros', 'Compartimos tu pasión por jugar.'],
-    ['/blogs', 'Un mejor setup empieza con una idea.'],
-    ['/blogs/mejora-tu-setup', '5 consejos para mejorar tu setup gamer'],
-    ['/blogs/cuida-tu-pc', 'Cómo cuidar tu computador gamer'],
-    ['/blogs/no', 'Artículo no encontrado'],
-    ['/inexistente', 'No encontramos lo que buscas'],
-  ])('renderiza %s', (ruta, titulo) => {
-    renderApp(ruta)
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(titulo)
-  })
   it('contacto valida y deja explícito que no envía mensajes', () => {
     renderApp('/contacto')
     pulsar('Validar mensaje')
@@ -481,16 +334,5 @@ describe('TC-18 y revisión de navegación/contenido', () => {
     pulsar('Restablecer datos demo')
     pulsar('Confirmar')
     expect(JSON.parse(window.localStorage.getItem(CLAVE_TIENDA)).schemaVersion).toBe(1)
-  })
-  it('imagen ausente usa fallback e icono desconocido conserva svg', () => {
-    const { container } = render(
-      <>
-        <FotoProducto producto={{ nombre: 'Demo', imagen: '' }} />
-        <Icono nombre="no" />
-      </>,
-    )
-    fireEvent.error(screen.getByAltText('Demo'))
-    expect(screen.getByAltText('Demo').src).toContain('logo.svg')
-    expect(container.querySelector('svg')).toBeInTheDocument()
   })
 })

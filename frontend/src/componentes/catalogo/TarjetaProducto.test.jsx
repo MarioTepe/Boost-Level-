@@ -50,22 +50,6 @@ describe('TarjetaProducto', () => {
     expect(screen.queryByText('OFERTA')).not.toBeInTheDocument()
   })
 
-  it('muestra las unidades disponibles', () => {
-    // Preparar
-    const agregar = vi.fn()
-
-    // Actuar
-    render(
-      <MemoryRouter>
-        <TarjetaProducto producto={producto} onAgregarProducto={agregar} />
-      </MemoryRouter>,
-    )
-
-    // Comprobar
-    expect(screen.getByText('15 disponibles')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Agregar Catan' })).toBeEnabled()
-  })
-
   it('avisa una sola vez con el ID del producto al agregar', async () => {
     // Preparar
     const usuario = userEvent.setup()

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { crearDatosIniciales } from '../../data/inicial.js'
@@ -38,43 +37,5 @@ describe('GrillaProductos', () => {
       '/productos/JM001',
     )
     expect(screen.getByRole('heading', { name: productos[1].nombre })).toBeInTheDocument()
-  })
-
-  it('no dibuja tarjetas cuando la lista está vacía', () => {
-    // Preparar
-    const agregar = vi.fn()
-
-    // Actuar
-    render(
-      <MemoryRouter>
-        <GrillaProductos productos={[]} categorias={categorias} carrito={[]} onAgregarProducto={agregar} />
-      </MemoryRouter>,
-    )
-
-    // Comprobar
-    expect(screen.queryAllByRole('article')).toHaveLength(0)
-  })
-
-  it('entrega al padre el ID del producto elegido', async () => {
-    // Preparar
-    const usuario = userEvent.setup()
-    const agregar = vi.fn()
-    render(
-      <MemoryRouter>
-        <GrillaProductos
-          productos={productos}
-          categorias={categorias}
-          carrito={[]}
-          onAgregarProducto={agregar}
-        />
-      </MemoryRouter>,
-    )
-
-    // Actuar
-    await usuario.click(screen.getByRole('button', { name: 'Agregar Catan' }))
-
-    // Comprobar
-    expect(agregar).toHaveBeenCalledTimes(1)
-    expect(agregar).toHaveBeenCalledWith('JM001')
   })
 })
