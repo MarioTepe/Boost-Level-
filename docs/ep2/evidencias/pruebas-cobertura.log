@@ -1,0 +1,106 @@
+
+> boost-level-frontend@2.0.0 test:cobertura
+> vitest run --coverage --reporter=verbose --reporter=json --outputFile=../../../tmp/reduccion_pruebas/segunda-medicion.json
+
+
+ RUN  v5.0.5 C:/Users/jorda/OneDrive/Desktop/ProyectoFullStack/ProyectoFull/Boost-Level-/frontend
+      Coverage enabled with v8
+
+ ✓ src/domain/dominio.test.js > Reglas principales del carrito > agrega unidades sin modificar el carrito anterior 13ms
+ ✓ src/domain/dominio.test.js > Reglas principales del carrito > acepta el stock máximo y rechaza una unidad adicional 5ms
+ ✓ src/domain/dominio.test.js > Reglas principales del carrito > calcula el total y aplica el descuento al cliente Duoc 5ms
+ ✓ src/domain/dominio.test.js > Validación y reportes > normaliza el RUN y correo de un usuario válido 3ms
+ ✓ src/domain/dominio.test.js > Validación y reportes > rechaza el registro de un menor de edad 1ms
+ ✓ src/domain/dominio.test.js > Validación y reportes > calcula ventas confirmadas y productos con stock crítico 3ms
+ ✓ src/services/servicios.test.js > Compra simulada > confirma el pedido y no descuenta stock al repetir el mismo intento 24ms
+ ✓ src/services/servicios.test.js > Compra simulada > conserva el estado cuando se rechaza el pago 5ms
+ ✓ src/services/servicios.test.js > Compra simulada > conserva el estado cuando falla el guardado 4ms
+ ✓ src/services/servicios.test.js > Compra simulada > impide administrar categorías sin una sesión de administrador 8ms
+ ✓ src/componentes/catalogo/GrillaProductos.test.jsx > GrillaProductos > dibuja una tarjeta por producto con su enlace de detalle 1285ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra el nombre y la categoría recibidos por props 564ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra el precio con formato de pesos chilenos 23ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > avisa una sola vez con el ID del producto al agregar 128ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > no permite agregar un producto sin stock 80ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > no permite agregar cuando el carrito alcanza el stock 74ms
+ ✓ src/componentes/catalogo/TarjetaProducto.test.jsx > TarjetaProducto > muestra la oferta y conserva visible el precio original 76ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > catálogo renderiza los once activos y permite combinar, ordenar y limpiar filtros 2275ms
+ ✓ src/App.test.jsx > TC-01 a TC-05: catálogo, props, filtros y detalle > ofertas refleja precio configurado; detalle agrega y respeta el stock 386ms
+ ✓ src/App.test.jsx > TC-06/07/08: carrito conectado a datos > renderiza, cambia cantidades, quita y vacía sin perder consistencia 594ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > muestra validaciones y completa compra invitado con retiro 829ms
+ ✓ src/App.test.jsx > TC-09/10/11: checkout y resultados > precarga cliente, rechaza sin modificar, conserva formulario al reintentar y confirma domicilio 1572ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > registro exige datos y crea cliente utilizable en login 2829ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > no administra sin rol y el login admin sí abre dashboard 608ms
+ ✓ src/App.test.jsx > TC-12/15/17: cuentas, sesión y reglas de acceso > formulario de cliente permite edición con datos iniciales 105ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > producto nuevo valida y guarda oferta y stock compartidos 1519ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > edita producto y desactiva con confirmación sin borrar historial 1672ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > categorías valida, crea, edita, cancela y desactiva una categoría vacía 2279ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > crea cliente desde admin, muestra detalle/historial y permite edición y baja 1638ms
+ ✓ src/App.test.jsx > TC-14 y TI-06/08/09: administración > perfil guarda campos permitidos y muestra errores reales 298ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > contacto valida y deja explícito que no envía mensajes 141ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > menú, acceso al contenido, avisos y reset son operables por UI 1896ms
+ ✓ src/App.test.jsx > TC-18 y revisión de navegación/contenido > storage corrupto ofrece recuperar sin borrado automático 461ms
+
+ Test Files  5 passed (5)
+      Tests  33 passed (33)
+   Start at  22:39:58
+   Duration  44.59s (environment 55%, tests 18%, import 12%, setup 11%, transform 2%, worker 1%)
+
+JSON report written to C:/Users/jorda/OneDrive/Desktop/ProyectoFullStack/tmp/reduccion_pruebas/segunda-medicion.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |      93 |    90.23 |   94.25 |   94.11 |                   
+ ...nentes/carrito |     100 |       75 |     100 |     100 |                   
+  LineaCarrito.jsx |     100 |       75 |     100 |     100 | 5,13              
+ ...es/formularios |     100 |    93.33 |     100 |     100 |                   
+  UsuarioForm.jsx  |     100 |    91.66 |     100 |     100 | 22                
+ ...onentes/layout |     100 |    94.73 |     100 |     100 |                   
+  Layout.jsx       |     100 |    94.11 |     100 |     100 | 105               
+ ...componentes/ui |      90 |    79.16 |   84.61 |   89.28 |                   
+  Confirmacion.jsx |     100 |    91.66 |     100 |     100 | 17                
+  ErrorMensaje.jsx |     100 |       75 |     100 |     100 | 4                 
+  FotoProducto.jsx |   33.33 |       25 |      50 |   33.33 | 10-11             
+  Icono.jsx        |     100 |    66.66 |     100 |     100 | 27                
+  NoEncontrado.jsx |       0 |        0 |       0 |       0 | 4                 
+  Resumen.jsx      |     100 |       50 |     100 |     100 | 14-15             
+  Vacio.jsx        |     100 |     87.5 |     100 |     100 | 11                
+ src/contexto      |     100 |    91.66 |     100 |     100 |                   
+  ...nProvider.jsx |     100 |       90 |     100 |     100 | 21                
+ src/domain        |   94.35 |     94.8 |     100 |   95.48 |                   
+  precios.js       |   92.85 |    80.95 |     100 |   95.45 | 11                
+  validaciones.js  |    90.1 |    91.96 |     100 |   91.54 | 25,42,77,90,92,96 
+ src/hooks         |   85.71 |    83.33 |     100 |   91.66 |                   
+  useApp.js        |   85.71 |    83.33 |     100 |   91.66 | 24                
+ src/paginas       |   86.33 |    83.33 |   83.87 |   87.67 |                   
+  ArticuloPage.jsx |       0 |        0 |       0 |       0 | 8-25              
+  BlogsPage.jsx    |       0 |      100 |       0 |       0 | 5                 
+  CarritoPage.jsx  |     100 |     87.5 |     100 |     100 | 54                
+  CatalogoPage.jsx |   88.57 |       80 |   92.85 |   92.59 | 21,29             
+  ...oriasPage.jsx |       0 |        0 |       0 |       0 | 7-21              
+  CheckoutPage.jsx |   94.87 |    93.75 |     100 |   97.29 | 71                
+  ...itosaPage.jsx |   85.71 |       50 |     100 |   83.33 | 12                
+  ...azadaPage.jsx |     100 |       50 |     100 |     100 | 15                
+  DetallePage.jsx  |    90.9 |    83.33 |     100 |   88.88 | 15                
+  NosotrosPage.jsx |       0 |      100 |       0 |       0 | 5                 
+ src/paginas/admin |    87.7 |    84.53 |   88.67 |   90.82 |                   
+  CriticosPage.jsx |       0 |      100 |       0 |       0 | 8-18              
+  ...boardPage.jsx |     100 |    66.66 |     100 |     100 | 16                
+  ...tallePage.jsx |       0 |        0 |       0 |       0 | 8-11              
+  PedidosPage.jsx  |      60 |     37.5 |   33.33 |      60 | 11,19             
+  ...tallePage.jsx |    87.5 |    83.33 |     100 |     100 | 14                
+  ...oFormPage.jsx |   97.05 |    97.43 |     100 |     100 | 28                
+  ...uctosPage.jsx |     100 |       75 |     100 |     100 | 40                
+  ...tallePage.jsx |   85.71 |    66.66 |     100 |     100 | 13,33             
+  ...oFormPage.jsx |    92.3 |    84.61 |     100 |     100 | 13,16             
+ src/services      |   97.61 |     97.1 |   98.07 |   98.21 |                   
+  ...on.service.js |   94.73 |      100 |     100 |   94.44 | 38                
+  ...da.service.js |   98.13 |    96.87 |   97.91 |   98.93 | 116               
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 93% ( 744/800 )
+Branches     : 90.23% ( 619/686 )
+Functions    : 94.25% ( 312/331 )
+Lines        : 94.11% ( 656/697 )
+================================================================================

@@ -57,10 +57,10 @@ npm run preview
 npm run format:check
 ```
 
-Para ejecutar solo las pruebas de interfaz:
+Para ejecutar las siete pruebas pequeñas del catálogo:
 
 ```powershell
-npm run test:ejecutar -- src/App.test.jsx --reporter=verbose
+npm run test:ejecutar -- src/componentes/catalogo --reporter=verbose
 ```
 
 Vitest y `@vitest/coverage-v8` usan la misma versión. La cobertura incluye el código de producción y exige 80% en sentencias, ramas, funciones y líneas, siguiendo la plantilla revisada del profesor. El HTML se genera en `coverage/index.html` y se regenera al ejecutar las pruebas.
@@ -73,7 +73,7 @@ Leer la [guía de explicación](../docs/ep2/08_GUIA_EXPLICACION_CODIGO.md) y la 
 
 La [correspondencia con FullStack II](../docs/ep2/09_CORRESPONDENCIA_GUIAS_CLASE.md) incorpora las nuevas guías React/Router. Confirma que efectos, almacenamiento local, rutas, parámetros, filtros en URL y Navigate ya forman parte de clases. BrowserRouter y la separación de páginas/componentes están aplicados. Context, repositorio y servicios se justifican como decisiones adicionales.
 
-La diferencia entre el PDF que menciona Jasmine/Karma y la clase/plantilla revisada que usan Vitest queda registrada en ERS. La aplicación implementa Vitest según lo acordado; la aceptación docente debe confirmarse al preparar la entrega.
+La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) confirma Vitest, Testing Library, jsdom y V8. Las siete pruebas del catálogo están al lado de TarjetaProducto y GrillaProductos, con Preparar/Actuar/Comprobar, beforeEach, vi.fn() y userEvent con await. El plan conserva la referencia histórica a Jasmine/Karma sin afirmar que Vitest ejecute esas herramientas.
 
 ## Publicación y próximos cambios
 
@@ -90,3 +90,5 @@ Remove-Item Env:VITE_BASE_PATH
 GitHub Pages necesita además su tratamiento de fallback; subir código a GitHub no configura ese alojamiento. La guía docente, sección 18, explica ese requisito.
 
 El workflow `.github/workflows/frontend.yml` ejecuta instalación, formato, lint, cobertura y compilación en cada cambio del frontend enviado a main o a una solicitud de cambios. Los incrementos posteriores deben tener un objetivo pequeño, su prueba y un commit que describa el cambio real. La entrega formal aún requiere revisión del equipo y los adjuntos académicos.
+
+Suite vigente: **33 casos**, distribuidos en 16 de interfaz, 7 de catálogo, 6 de dominio y 4 de servicios. Diez casos de componentes para ensayar se identifican en el plan. Ejecutar la suite completa con `npm run test:ejecutar` y medir con `npm run test:cobertura`. El 80% se exige en las cuatro métricas globales; los caminos retirados quedan documentados.
