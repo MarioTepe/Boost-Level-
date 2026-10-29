@@ -4,7 +4,7 @@ import FotoProducto from '../ui/FotoProducto.jsx'
 
 import Icono from '../ui/Icono.jsx'
 import { moneda } from '../../utils/moneda.js'
-import { precioVigente } from '../../domain/precios.js'
+import { porcentajeOferta, precioVigente } from '../../domain/precios.js'
 
 export default function TarjetaProducto({
   producto,
@@ -40,6 +40,9 @@ export default function TarjetaProducto({
           <div>
             {producto.precioOferta !== null && <del>{moneda(producto.precio)}</del>}
             <strong>{moneda(precioVigente(producto))}</strong>
+            {producto.precioOferta !== null && (
+              <span className="discount-percentage">−{porcentajeOferta(producto)}%</span>
+            )}
           </div>
           <Button
             variant=""

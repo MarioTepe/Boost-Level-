@@ -1,8 +1,8 @@
 # Especificación de requisitos de Boost Level V2
 
 **Asignatura:** DSY1104 Desarrollo Fullstack II  
-**Versión:** 0.3, base implementada para revisión EP2  
-**Fecha:** 25-10-2026  
+**Versión:** 0.4, cierre técnico de EP2  
+**Fecha:** 29-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez  
 **Estado:** código implementado en frontend/; la verificación local se documenta con sus resultados y evidencias. La revisión del equipo y evaluación docente siguen pendientes.
 
@@ -11,6 +11,7 @@
 | 0.1 | 23-10-2026 | Diagnóstico y propuesta inicial. |
 | 0.2 | 23-10-2026 | Alcance completo, ofertas y descuento, reglas verificables y contratos alineados con arquitectura y pruebas. |
 | 0.3 | 24-10-2026 | Implementación React y guía de explicación vinculada a clases; resultados locales documentados aparte. |
+| 0.4 | 29-10-2026 | Ofertas iniciales, persistencia y checkout compatible con HTTP; cierre de pruebas. |
 
 ## 1. Introducción
 
@@ -41,13 +42,13 @@ El [diagnóstico](01_DIAGNOSTICO_Y_FUENTES.md) identifica fuentes S1–S8: instr
 
 ### 1.5 Documentos relacionados
 
-La [arquitectura](03_ARQUITECTURA_PROPUESTA.md) fija módulos, datos y contratos. El [backlog](04_BACKLOG_Y_ROLES.md) ordena el trabajo. El [plan de pruebas](05_PLAN_PRUEBAS.md) y la [matriz](07_MATRIZ_TRAZABILIDAD.md) vinculan requisitos y verificaciones. El [informe de cobertura](06_INFORME_COBERTURA_BORRADOR.md) se completará después de implementar.
+La [arquitectura](03_ARQUITECTURA_PROPUESTA.md) fija módulos, datos y contratos. El [backlog](04_BACKLOG_Y_ROLES.md) ordena el trabajo. El [plan de pruebas](05_PLAN_PRUEBAS.md) y la [matriz](07_MATRIZ_TRAZABILIDAD.md) vinculan requisitos y verificaciones. El [informe de cobertura](06_INFORME_COBERTURA_BORRADOR.md) contiene la ejecución vigente y las alternativas pendientes.
 
 ## 2. Descripción general
 
 ### 2.1 Perspectiva
 
-EP1 contiene páginas HTML, estilos, catálogo JavaScript y carrito local. EP2 transformará esa base en una SPA con React, Bootstrap y React Router. Las vistas compartirán catálogo, inventario y pedidos mediante un repositorio local. `clase-tienda-react` se conserva como referencia de los patrones enseñados.
+EP1 contiene páginas HTML, estilos, catálogo JavaScript y carrito local. EP2 transforma esa base en una SPA con React, Bootstrap y React Router. Las vistas compartirán catálogo, inventario y pedidos mediante un repositorio local. `clase-tienda-react` se conserva como referencia de los patrones enseñados.
 
 ### 2.2 Funciones y usuarios
 
@@ -68,9 +69,9 @@ EP1 contiene páginas HTML, estilos, catálogo JavaScript y carrito local. EP2 t
 
 ### 2.4 Suposiciones y decisiones de diseño
 
-Se conservan los once productos y la marca de EP1. Se propone mantener la promesa de 20% de descuento a clientes `@duoc.cl` e implementar su cálculo, ausente en EP1. Para concretar checkout se proponen retiro y domicilio sin costo en esta demostración. Las ofertas se configuran desde administración; el catálogo original se importa sin rebajas inventadas. Estas son decisiones de diseño revisables por el equipo, no instrucciones atribuidas al docente.
+Se conservan los once productos y la marca de EP1. Se propone mantener la promesa de 20% de descuento a clientes `@duoc.cl` e implementar su cálculo, ausente en EP1. Para concretar checkout se proponen retiro y domicilio sin costo en esta demostración. Se configuran cuatro descuentos de demostración sobre productos existentes: AC001, AC002 y MS001 con 20%, y CO001 con 10%. Administración permite modificarlos; no se añaden productos. Estas son decisiones de diseño revisables por el equipo, no instrucciones atribuidas al docente.
 
-S1 p. 12 incluye una frase sobre presentación integrada con backend, aunque el resto especifica frontend y fuente JS simulada. Confirmar esa frase con el docente; la base disponible no contiene un backend.
+El 28-10-2026 el equipo confirmó que el profesor indicó que esta entrega exige solo frontend. La frase sobre backend de S1, página 12, no amplía el alcance de esta evaluación; se mantienen datos JavaScript y persistencia local.
 
 ### 2.5 Evolución prevista
 
@@ -113,7 +114,7 @@ FU = funcional de usuario; FS = funcional de sistema.
 | RF-18 | Críticos e historial / P1 | FU, admin | Críticos: activos con umbral configurado y stock <= umbral. Historial filtra por clienteId; no mezcla invitados u otros clientes. | S1 p. 10; S6 |
 | RF-19 | Reportes y perfil / P1 | FU, admin | Dashboard/reportes muestran número de pedidos confirmados, suma de totales y productos críticos desde datos guardados. Perfil edita nombre/apellidos/dirección sin alterar ID/correo/rol/clave del admin inicial. | S1 pp. 9–10; diseño |
 | RF-20 | Contenido y contacto / P1 | FU, visitante | Migra inicio, nosotros, listado de blogs y dos artículos. Contacto valida nombre/correo/comentario y muestra que la demostración no envía mensajes. | S6; S1 p. 3 |
-| RF-21 | Ofertas / P1 | FU, visitante/admin | /ofertas lista activos con precioOferta menor a precio; muestra precio anterior/actual. Detalle y carrito usan el vigente. Admin fija/retira oferta; sin ofertas muestra vacío. | S1 p. 8; diseño |
+| RF-21 | Ofertas / P1 | FU, visitante/admin | Mostrar cuatro productos iniciales en oferta (AC001, AC002, CO001 y MS001), con fotografía, precio original, precio rebajado y porcentaje. Permitir agregarlos al carrito al precio vigente. Mantener las ofertas editables desde administración y conservar cambios locales después de recargar. | S1 p. 8; diseño |
 | RF-22 | Descuento / P1 | FS, cliente | Cliente autenticado activo con dominio exacto duoc.cl recibe 20% sobre subtotal vigente. Visitante, gmail.com y profesor.duoc.cl no. Se muestran y guardan subtotal/descuento/total. | Promesa S6; regla precisada |
 
 ### 3.3 Reglas de datos y negocio
@@ -144,7 +145,7 @@ NP = no funcional de producto; NO = no funcional de organización.
 | RNF-03 | Pruebas / NO | Al menos 10 casos significativos de componentes: render, props, eventos, estado y condiciones. Ejecución final con 0 fallos/omitidas/pendientes. Casos críticos verifican integridad, no solo mensajes. | P0 |
 | RNF-04 | Cobertura / NO | >=80% global en sentencias/ramas/funciones/líneas; glob explícito incluye código no importado por tests. Informe registra cubiertos/total y detalle por archivo, exclusiones justificadas y misma corrida. | P0 |
 | RNF-05 | Accesibilidad básica / NP | Teclado, etiquetas, foco visible, errores asociados y alt de imágenes revisados en flujos principales. | P1 |
-| RNF-06 | Documentación / NO | README permite abrir EP1 y, cuando exista, instalar/iniciar frontend/, encontrar cuentas, rutas y docs. Comandos planeados se identifican como pendientes. | P0 |
+| RNF-06 | Documentación / NO | README permite abrir EP1 e instalar/iniciar frontend/, encontrar cuentas, rutas y docs. Comandos planeados se identifican como pendientes. | P0 |
 | RNF-07 | Datos demo / NP | UI de login/checkout y README identifican simulación. Datos ficticios, sin claves reales ni tarjetas; roles locales no se presentan como seguridad de servidor. | P0 |
 | RNF-08 | Fiabilidad / NP | Totales finitos, enteros y no negativos; resumen y pedido coinciden; escritura fallida no produce éxito ni cambios parciales. | P0 |
 | RNF-09 | Ejecución/rutas / NP | npm ci, lint y build funcionan desde frontend/; enlaces y refresco funcionan con base/router del alojamiento documentado; sin errores de consola en flujos revisados. | P1 |

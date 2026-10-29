@@ -77,7 +77,7 @@ La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#
 
 ## Publicación y próximos cambios
 
-`npm run build` genera dist/. Al usar BrowserRouter, el alojamiento debe devolver index.html para las rutas de la SPA. `public/_redirects` prepara esa regla para un alojamiento compatible como Netlify. Vite y su preview sirven las rutas al ejecutar localmente; esto no acredita que ya exista un sitio público desplegado.
+`npm run build` genera dist/. Al usar BrowserRouter, el alojamiento debe devolver index.html para las rutas de la SPA. `public/_redirects` prepara esa regla para un alojamiento compatible como Netlify. Vite y su preview sirven las rutas al ejecutar localmente; AWS EC2 ya fue publicado; la revisión final del servidor se registra por separado.
 
 Por defecto se publica en la raíz. Si el alojamiento usa una subcarpeta, definir su ruta durante la compilación; el router usa la misma base para los enlaces:
 
@@ -92,3 +92,5 @@ GitHub Pages necesita además su tratamiento de fallback; subir código a GitHub
 El workflow `.github/workflows/frontend.yml` ejecuta instalación, formato, lint, cobertura y compilación en cada cambio del frontend enviado a main o a una solicitud de cambios. Los incrementos posteriores deben tener un objetivo pequeño, su prueba y un commit que describa el cambio real. La entrega formal aún requiere revisión del equipo y los adjuntos académicos.
 
 Suite vigente: **33 casos**, distribuidos en 16 de interfaz, 7 de catálogo, 6 de dominio y 4 de servicios. Diez casos de componentes para ensayar se identifican en el plan. Ejecutar la suite completa con `npm run test:ejecutar` y medir con `npm run test:cobertura`. El 80% se exige en las cuatro métricas globales; los caminos retirados quedan documentados.
+
+AWS Academy / Learner Lab ya tiene una instancia publicada: http://3.80.59.90:5173/. El checkout final utiliza crearId (Math.random y Date.now) y funciona por HTTP. Actualizar el build en esa misma instancia y repetir el recorrido público; la conexión no respondió durante la revisión final del 29-10-2026. Vite permanece en 8.3.5.

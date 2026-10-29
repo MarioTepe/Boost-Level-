@@ -1,7 +1,7 @@
 {
-  "ejecucionUTC": "2026-10-27T01:39:58.065Z",
-  "algoritmo": "SHA-256 de bytes de cada archivo; agregado de filas hash + dos espacios + ruta separadas por LF.",
-  "agregado": "4dd8e5634fae49dead508d889cec7489f9e8a77d0dbd566170a90f9295dd495b",
+  "ejecucionUTC": "2026-10-29T08:19:19.948Z",
+  "algoritmo": "SHA-256 de bytes de cada archivo; agregado de filas hash + dos espacios + ruta separadas por LF y LF final.",
+  "agregado": "3104eeac14c1a1ed3c73ebf5a521f259495260fd08137643da8c4e65f848fb97",
   "archivos": [
     {
       "archivo": ".gitignore",
@@ -17,15 +17,19 @@
     },
     {
       "archivo": "package-lock.json",
-      "sha256": "e74875a65d2af4fb4ad5c500baf471f6366e1d10a6401f52130bde12bf296df3"
+      "sha256": "ce56d5889b16c8ed0188dbb8b4f97148513f216041a0f4a4c7f4ae1e3e8f6cf8"
     },
     {
       "archivo": "package.json",
-      "sha256": "981d3e90dd1134210087718da44c9916400dec61c054591e16f64d46c71caaa2"
+      "sha256": "6682e4228ba9adb646270820f9cd484890865c7192398eda1ebdd6c10a2ab9fc"
     },
     {
       "archivo": "public/_redirects",
       "sha256": "6036983e5fc00f0169c9e939b1816ed771eee00e27f2fcc517b819041460b9ef"
+    },
+    {
+      "archivo": "public/img/Mousse.webp",
+      "sha256": "5c47bef6923b9b7b2fe08301ccebbd20ee8b7a0d8e90b68239c711b451cb1317"
     },
     {
       "archivo": "public/img/audifonosGaming.webp",
@@ -88,10 +92,6 @@
       "sha256": "0cb16b10f4a3a6862978c335cb449ccca8e39abbbc5ba525ddcd8a1990921b75"
     },
     {
-      "archivo": "public/img/Mousse.webp",
-      "sha256": "5c47bef6923b9b7b2fe08301ccebbd20ee8b7a0d8e90b68239c711b451cb1317"
-    },
-    {
       "archivo": "public/img/pcGamer.jpg",
       "sha256": "326c2c4b9f59cbe8b728f5da58eb62ba01cb70b76cbc7fb3806787883522bc86"
     },
@@ -117,7 +117,7 @@
     },
     {
       "archivo": "src/App.test.jsx",
-      "sha256": "c33ca0d77002cae8dcafc90cb6e9bb676eb7a47931501352375e9946b27a0a26"
+      "sha256": "37704062c6d3f611b527fa915041c041a4344770c5e873c7ad372a59bf124e40"
     },
     {
       "archivo": "src/componentes/administracion/BajaButton.jsx",
@@ -145,7 +145,7 @@
     },
     {
       "archivo": "src/componentes/catalogo/TarjetaProducto.jsx",
-      "sha256": "4d9ec9f12791d5dc353c93c23dd4aafbc4dfe2aeee6e5146d926d0fc184644e5"
+      "sha256": "6718adf57fed972f0e1904e134d2f5f8405e9df6bf67b9142b7b1b32cec1dfce"
     },
     {
       "archivo": "src/componentes/catalogo/TarjetaProducto.test.jsx",
@@ -241,11 +241,11 @@
     },
     {
       "archivo": "src/data/inicial.js",
-      "sha256": "ddbbb7be8084b6618b5e20ec8a2113ffde0443f075b04560b0c9e124c590d9c5"
+      "sha256": "9b715881f386f1267f1233736f50dad679e98b9e2463994110f7674e37dbf15f"
     },
     {
       "archivo": "src/data/productos.js",
-      "sha256": "fbcbf995d5bee1fa86b191016a06bb3414d421969987e7c16a9ab4c13ed5c365"
+      "sha256": "5470c85137ac55e9ab34b520eeb65b09af4634295f15f1dc5fd1a65ce8152d67"
     },
     {
       "archivo": "src/data/regiones.js",
@@ -277,7 +277,7 @@
     },
     {
       "archivo": "src/domain/precios.js",
-      "sha256": "e396a25879d7a3296ff56914a7edab092333f52d2dc034d4f9d52db408f692c5"
+      "sha256": "4db85637b6dbee68ddedf0716e5cf242216bf85a7911d2d1feecc0f2f6254789"
     },
     {
       "archivo": "src/domain/validaciones.js",
@@ -290,6 +290,62 @@
     {
       "archivo": "src/main.jsx",
       "sha256": "a372dc17e9b4998ebd384e0bc56a25d7b56e38d5018bf7c16f7bd2cecd093b06"
+    },
+    {
+      "archivo": "src/paginas/ArticuloPage.jsx",
+      "sha256": "64cc2c95c8e19efbfd66972d89cdd8d93cf6668d28d30c3c0953c8c5440ef625"
+    },
+    {
+      "archivo": "src/paginas/BlogsPage.jsx",
+      "sha256": "00fd200ed49788aef93cf3b3ac91da3c0536e4cbb65e20f8f96546335755db56"
+    },
+    {
+      "archivo": "src/paginas/CarritoPage.jsx",
+      "sha256": "576168de23fa5b472136e891d6b9887ab66ef81e0055fecdf397a777df7014ae"
+    },
+    {
+      "archivo": "src/paginas/CatalogoPage.jsx",
+      "sha256": "8ece9d0a6ff11c1c9bbc1dcbb413bcfd98ab808b375faa53abc33716dacda13a"
+    },
+    {
+      "archivo": "src/paginas/CategoriasPage.jsx",
+      "sha256": "2733f58ffcb756ce1cde60375fcde4dadaba3fb669a94ab61e11b12ab177f863"
+    },
+    {
+      "archivo": "src/paginas/CheckoutPage.jsx",
+      "sha256": "2c7c5ce23a9422344600da1b80d92d7de43c4a601215bdb68aea9e056246b26e"
+    },
+    {
+      "archivo": "src/paginas/CompraExitosaPage.jsx",
+      "sha256": "b7c84a34133bc9d4687f6ff6efab7ef3ccde1a8fd1bfe51c75042cb584fa4282"
+    },
+    {
+      "archivo": "src/paginas/CompraRechazadaPage.jsx",
+      "sha256": "54320eba85fc7271049854e957fa2a268b802980ecc160bd7c25ce26864272ed"
+    },
+    {
+      "archivo": "src/paginas/ContactoPage.jsx",
+      "sha256": "1abe16ee7d131ee1c86c9f00cc807ea81f42a919d28cac4cfdd23b460c559316"
+    },
+    {
+      "archivo": "src/paginas/DetallePage.jsx",
+      "sha256": "a59a0de63c9403cd8c3f88947ed33bd686765d009b8ba8653cae64afb1fc55bf"
+    },
+    {
+      "archivo": "src/paginas/InicioPage.jsx",
+      "sha256": "3b7bd1458c8534e9c7c6143800888e3ef433b2cb8163b4d7930205f847028934"
+    },
+    {
+      "archivo": "src/paginas/LoginPage.jsx",
+      "sha256": "8a6dd1b705273ebec7365374da1536ac4355fc39971941a6ff6b33b5b6ef9685"
+    },
+    {
+      "archivo": "src/paginas/NosotrosPage.jsx",
+      "sha256": "8fda48bf948f34affd802e5e33b7d4869729f0c25ad48746339258f48a98fafa"
+    },
+    {
+      "archivo": "src/paginas/RegistroPage.jsx",
+      "sha256": "f3c9d05ac85f19fe973f0872462968b0b58326ec7e98eb3f81ef2aeca4b214cd"
     },
     {
       "archivo": "src/paginas/admin/CategoriasAdminPage.jsx",
@@ -340,68 +396,12 @@
       "sha256": "c5cd53b645fa91881534044cabdc093bc589dd8cac6bd04d34c076f7f7aba1e8"
     },
     {
-      "archivo": "src/paginas/ArticuloPage.jsx",
-      "sha256": "64cc2c95c8e19efbfd66972d89cdd8d93cf6668d28d30c3c0953c8c5440ef625"
-    },
-    {
-      "archivo": "src/paginas/BlogsPage.jsx",
-      "sha256": "00fd200ed49788aef93cf3b3ac91da3c0536e4cbb65e20f8f96546335755db56"
-    },
-    {
-      "archivo": "src/paginas/CarritoPage.jsx",
-      "sha256": "576168de23fa5b472136e891d6b9887ab66ef81e0055fecdf397a777df7014ae"
-    },
-    {
-      "archivo": "src/paginas/CatalogoPage.jsx",
-      "sha256": "8ece9d0a6ff11c1c9bbc1dcbb413bcfd98ab808b375faa53abc33716dacda13a"
-    },
-    {
-      "archivo": "src/paginas/CategoriasPage.jsx",
-      "sha256": "2733f58ffcb756ce1cde60375fcde4dadaba3fb669a94ab61e11b12ab177f863"
-    },
-    {
-      "archivo": "src/paginas/CheckoutPage.jsx",
-      "sha256": "59e610f7236ba05bef866684c0e297afe3794b22cb19e056cfa202140385dc40"
-    },
-    {
-      "archivo": "src/paginas/CompraExitosaPage.jsx",
-      "sha256": "b7c84a34133bc9d4687f6ff6efab7ef3ccde1a8fd1bfe51c75042cb584fa4282"
-    },
-    {
-      "archivo": "src/paginas/CompraRechazadaPage.jsx",
-      "sha256": "54320eba85fc7271049854e957fa2a268b802980ecc160bd7c25ce26864272ed"
-    },
-    {
-      "archivo": "src/paginas/ContactoPage.jsx",
-      "sha256": "1abe16ee7d131ee1c86c9f00cc807ea81f42a919d28cac4cfdd23b460c559316"
-    },
-    {
-      "archivo": "src/paginas/DetallePage.jsx",
-      "sha256": "26ab05bbef5548e6ce64da1a45ce6fc5f324fab39df5e16faffbcac803d8930b"
-    },
-    {
-      "archivo": "src/paginas/InicioPage.jsx",
-      "sha256": "3b7bd1458c8534e9c7c6143800888e3ef433b2cb8163b4d7930205f847028934"
-    },
-    {
-      "archivo": "src/paginas/LoginPage.jsx",
-      "sha256": "8a6dd1b705273ebec7365374da1536ac4355fc39971941a6ff6b33b5b6ef9685"
-    },
-    {
-      "archivo": "src/paginas/NosotrosPage.jsx",
-      "sha256": "8fda48bf948f34affd802e5e33b7d4869729f0c25ad48746339258f48a98fafa"
-    },
-    {
-      "archivo": "src/paginas/RegistroPage.jsx",
-      "sha256": "f3c9d05ac85f19fe973f0872462968b0b58326ec7e98eb3f81ef2aeca4b214cd"
-    },
-    {
       "archivo": "src/repositories/storage.adapter.js",
       "sha256": "c30a2b9f17ddd79fd90d9199a3c782c93472ce9adcdf635ee52e32a97c2d2514"
     },
     {
       "archivo": "src/repositories/tienda.repository.js",
-      "sha256": "ff4d8c71ca28ddbc6a6503eb4f4b11816918a3340e428824e4d71817537026b0"
+      "sha256": "501dfe24fb1c03b13f5451cf08e7b8075ac8c146a3ef7b88aede2fc83f1f9d03"
     },
     {
       "archivo": "src/services/servicios.test.js",
@@ -413,11 +413,11 @@
     },
     {
       "archivo": "src/services/tienda.service.js",
-      "sha256": "effa56e24096c7b0b317ec9b1a3dee196e428797afd44eac8c2d5efd0149f720"
+      "sha256": "ad1d166b8ac5e447e5c56a8073348aceacb1a1f4693a83d128f6c96fababd7fc"
     },
     {
       "archivo": "src/styles.css",
-      "sha256": "82078bb582d3008707c7eaad93287921a7f698cf041bb0d9be85d71d3c815005"
+      "sha256": "67aeb434b5abb45f8df0c60b95b7557eea6eaa0565b86cea9fbab5319835a7f9"
     },
     {
       "archivo": "src/test/factories.js",
@@ -429,7 +429,11 @@
     },
     {
       "archivo": "src/test/setup.js",
-      "sha256": "67c62b4b51e46978098d71b05fe1eea0b96e7560f0388d9967ad116a932df4f6"
+      "sha256": "9ec0ee3bf8c103b81f039e97d54d00d0278e54b1b6cbb501e6727b02cf41d117"
+    },
+    {
+      "archivo": "src/utils/identificador.js",
+      "sha256": "b7b08ecccefdd7e87b8a7b2e841f07636011f970ce10fb4303b51a5f68bd5dc6"
     },
     {
       "archivo": "src/utils/moneda.js",
@@ -439,6 +443,5 @@
       "archivo": "vite.config.js",
       "sha256": "1d2a8f981e29c04885102963390014c3b371f89cb7af64313b1710068f277a5f"
     }
-  ],
-  "estado": "Identidad de las fuentes realmente medidas en la corrida local de 33 pruebas."
+  ]
 }

@@ -1,18 +1,19 @@
 # Registro de evidencias locales
 
-**Fecha:** 26-10-2026. **Paquete:** frontend de Boost Level. Las evidencias corresponden a comprobaciones técnicas locales; falta la revisión cruzada del equipo y el cierre de entrega.
+**Fecha:** 29-10-2026. **Paquete:** frontend de Boost Level. Las evidencias corresponden a comprobaciones técnicas locales; falta la revisión cruzada del equipo y el cierre de entrega.
 
 ## Ejecución automatizada
 
-La corrida iniciada el **26-10-2026 a las 22:39:58 CLST (27-10-2026 01:39:58 UTC)** produjo **33 pruebas aprobadas**, 0 fallidas, omitidas y todo en cinco archivos. Duración: 44,59 s, salida 0. Cobertura: 93,00% sentencias, 90,23% ramas, 94,25% funciones y 94,11% líneas. Se redujeron 153 casos sin modificar producción ni configuración. Los cinco tests reducidos y sus dependencias se identifican mediante hashes de las fuentes medidas. Las capturas funcionales antiguas conservan las fechas de sus recorridos; las imágenes del informe de cobertura corresponden a esta corrida.
+La corrida final comenzó el **29-10-2026 05:19:19 CLST (2026-10-29T08:19:19.948Z)**: **33 aprobadas**, cero fallos/skip/todo y cinco archivos; 23,97 s, salida 0. Cobertura: 93,12% sentencias; 90,46% ramas; 94,32% funciones; 94,22% líneas. Se conservan los umbrales del 80% y las exclusiones. El manifiesto identifica 110 archivos fuente, incluido utils/identificador.js. Las capturas del informe se obtienen del HTML de esta misma corrida.
 
 | Evidencia | Contenido |
 |---|---|
 | [pruebas-cobertura.log](pruebas-cobertura.log) | Salida completa de esa corrida y sus cuatro métricas. |
 | [vitest.json](vitest.json) | Nombre y resultado de cada caso, tiempos y resumen. |
 | [coverage-summary.json](coverage-summary.json) | Totales y cobertura por archivo, copiados de la misma corrida. |
-| [fuentes-sha256.json](fuentes-sha256.json) | Base Git y hashes del árbol local, incluidos tests, lock, configuración y recursos medidos. |
+| [fuentes-sha256.json](fuentes-sha256.json) | Hashes del árbol local, incluidos tests, lock, configuración y recursos medidos. |
 | [lint.log](lint.log) | Lint sin errores ni advertencias. |
+| [dependencias.json](dependencias.json) | npm audit: cero avisos detectados después del parche Vite. |
 | [build.log](build.log) | Compilación de producción finalizada, código 0. |
 | [formato.log](formato.log) | Comprobación Prettier aprobada, código 0. |
 
@@ -64,4 +65,27 @@ Revisión del login corregido: se retiró el bloque de correos/claves y su CSS. 
 
 ## TM-04: entrega
 
-Fuentes de la suite reducida identificadas por hashes. Las copias Word/Excel y coverage.zip ya están actualizados. Pendiente para la entrega académica: revisión entre integrantes, preparar el paquete fuente, instalar con npm ci desde una copia limpia y ensayar la exposición. No se atribuye revisión cruzada o autoría individual todavía no registrada. El despliegue público del sitio se realiza por separado de la subida del repositorio.
+Fuentes de la suite reducida identificadas por hashes. Las copias Word/Excel y coverage.zip ya están actualizados. El paquete fuente se extrajo en una carpeta nueva: npm ci y build aprobaron con Vite 8.3.5, sin avisos de dependencias. Los registros se adjuntan como instalacion-limpia.log y compilacion-limpia.log. Falta revisión entre integrantes y ensayo de exposición. No se atribuye una revisión cruzada todavía no realizada. El despliegue público del sitio se realiza por separado de la subida del repositorio.
+
+## Revisión de presentación del 27-10-2026
+
+El [informe de revisión](../11_REVISION_PRESENTACION.md) registra el recorrido actual sobre el paquete de producción: pantallas públicas y administrativas, compra aceptada/rechazada, recarga, ofertas, stock crítico, rutas inexistentes y anchos 375/768/1280. Sus registros se conservan por separado de las capturas históricas. La nueva tabla móvil permite desplazamiento horizontal interno y el texto secundario usa el color legible de la interfaz. Los resultados de navegador no incrementan los 33 casos automatizados.
+
+## Publicación HTTP en AWS del 28-10-2026
+
+El 28-10-2026 se comprobaron portada, catálogo y recarga en EC2; el checkout de esa versión falló en HTTP. Los archivos revision-aws-http.json, aws-portada-http.png y aws-checkout-http-errores.json conservan ese resultado histórico. El 29-10-2026 el código corrige el fallo con crearId y pasa el recorrido HTTP local. AWS EC2 fue publicado el 28-10-2026 en http://3.80.59.90:5173/. La revisión del 29-10-2026 no pudo conectar por HTTP ni SSH a esa dirección. La versión final está compilada y verificada por HTTP local; quedan pendientes su carga en la misma instancia y el recorrido público. No se exige HTTPS para resolver el fallo corregido de esta simulación.
+
+## Evidencias finales del 29 de octubre
+
+| Archivo | Procedencia real |
+|---|---|
+| recorrido-final-http.json | Navegador sobre HTTP local, build final; migración de datos, cuatro ofertas, rechazo y compra confirmada. |
+| catalogo-final-http.png | Once productos con sus fotografías, HTTP local. |
+| ofertas-final-http.png / ofertas-movil-http.png | Ofertas con importes y porcentaje, escritorio y móvil, HTTP local. |
+| carrito-final-http.png / checkout-final-http.png / compra-final-http.png | Compra ficticia por $77.982, HTTP local. |
+| administracion-final-http.png | Pedido guardado en el mismo navegador, HTTP local. |
+| componentes-react.html / componentes-react.png | Código fuente final de TarjetaProducto y TiendaProvider, props, estado y React Bootstrap. |
+| registro-vitest.html / vitest-final.png | Vista del log real de Vitest, sin simular una nueva ejecución en terminal. |
+| cobertura-final.png / cobertura-detalle-final.png | Reporte HTML generado por la corrida final. |
+
+Las capturas locales no se presentan como una publicación en AWS. Su ejecución no modifica la cobertura medida por Vitest.

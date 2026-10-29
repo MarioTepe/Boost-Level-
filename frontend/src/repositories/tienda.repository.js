@@ -1,4 +1,4 @@
-import { crearDatosIniciales } from '../data/inicial.js'
+import { aplicarOfertasIniciales, crearDatosIniciales } from '../data/inicial.js'
 import { validarEstado } from '../domain/esquema.js'
 import { ErrorTienda, fallo } from '../domain/errores.js'
 
@@ -9,17 +9,25 @@ export function crearRepositorio(storage, inicial = crearDatosIniciales) {
   let snapshot = { estado: inicial(), error: null }
   function leer() {
     const raw = storage.leer(CLAVE_TIENDA)
-    if (raw === null) return inicial()
     let estado
-    try {
-      estado = JSON.parse(raw)
-    } catch {
-      throw new ErrorTienda(
-        'ESQUEMA_INVALIDO',
-        'No pudimos leer los datos guardados. Puedes restablecer la demostración.',
-      )
+    if (raw === null) estado = inicial()
+    else {
+      try {
+        estado = JSON.parse(raw)
+      } catch {
+        throw new ErrorTienda(
+          'ESQUEMA_INVALIDO',
+          'No pudimos leer los datos guardados. Puedes restablecer la demostración.',
+        )
+      }
     }
-    return validarEstado(estado)
+    validarEstado(estado)
+    const actualizado = aplicarOfertasIniciales(estado)
+    if (actualizado !== estado) {
+      validarEstado(actualizado)
+      storage.guardar(CLAVE_TIENDA, JSON.stringify(actualizado))
+    }
+    return actualizado
   }
   function publicar(estado, error = null) {
     snapshot = { estado, error }

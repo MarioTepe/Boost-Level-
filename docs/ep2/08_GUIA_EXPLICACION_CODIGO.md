@@ -123,3 +123,9 @@ La lista de cotejo de la nueva guía Router es de esa actividad de clases, no re
 Cada respuesta debe acompañarse del archivo o prueba que la demuestra. El reparto del backlog organiza el trabajo, pero los tres integrantes deben comprender el flujo completo.
 
 La revisión local del 26-10-2026 conserva 33 pruebas en cinco archivos; resultados y alcance en el [informe](06_INFORME_COBERTURA_BORRADOR.md). 
+
+## Ofertas e identificadores de compra
+
+`precioOferta` es un monto menor al precio original. `precioVigente` elige ese monto y `porcentajeOferta` calcula y redondea su reducción. La tarjeta recibe el producto por props y muestra fotografía, ambos precios y porcentaje; el servicio calcula el carrito con el mismo precio vigente.
+
+`aplicarOfertasIniciales` adapta una sola vez el almacenamiento anterior, conservando carrito y pedidos. Su indicador evita restaurar una oferta retirada después desde administración. `crearId` combina Math.random con Date.now para los pedidos de demostración y funciona en HTTP. P-09 y P-11 comprueban estos recorridos sin aumentar los 33 casos.

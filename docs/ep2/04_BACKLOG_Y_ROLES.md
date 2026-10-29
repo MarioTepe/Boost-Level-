@@ -92,7 +92,7 @@ Los tres deben explicar una prueba, una decisión técnica, el manejo de errores
 
 - B-01 a B-08: código implementado en frontend/, con 33 pruebas automatizadas aprobadas. No implica atribución de contribuciones individuales ni revisión cruzada realizada.
 - B-09: lint y build correctos; cuatro métricas sobre 80%; responsive local registrado. Falta completar revisión manual de teclado/formularios por otra persona.
-- B-10: ERS, arquitectura, plan, matriz, informe medido y guía de explicación preparados; fuentes y suite identificadas por hashes. Copias Word/Excel y coverage.zip preparados; falta revisión del equipo e instalación limpia. El [guía de entrega](10_FLUJO_GIT_Y_ENTREGA.md) organiza los incrementos posteriores.
+- B-10: ERS, arquitectura, plan, matriz, informe medido y guía de explicación preparados; fuentes y suite identificadas por hashes. Copias Word/Excel y coverage.zip preparados; falta revisión del equipo e instalación limpia. La [guía de entrega](10_FLUJO_GIT_Y_ENTREGA.md) organiza los incrementos posteriores.
 
 Las evidencias y sus límites se consultan en [el informe](06_INFORME_COBERTURA_BORRADOR.md) y [el registro local](evidencias/README.md). La siguiente actividad del equipo es recorrer la [guía del código](08_GUIA_EXPLICACION_CODIGO.md) y repetir la demostración antes de preparar la entrega académica.
 

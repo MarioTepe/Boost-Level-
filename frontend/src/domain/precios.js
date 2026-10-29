@@ -1,4 +1,6 @@
 export const precioVigente = (producto) => producto.precioOferta ?? producto.precio
+export const porcentajeOferta = (producto) =>
+  producto.precio > 0 ? Math.round(((producto.precio - precioVigente(producto)) / producto.precio) * 100) : 0
 export const tieneDescuento = (usuario) =>
   Boolean(usuario?.activo && usuario.rol === 'cliente' && usuario.correo.split('@')[1] === 'duoc.cl')
 

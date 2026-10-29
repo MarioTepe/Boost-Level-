@@ -128,7 +128,8 @@ El pedido conserva una instantánea de nombre, precios, contacto y entrega. La b
 - `id` de producto = `codigo` original; conservar los once códigos y cantidades.
 - Crear categorías estables a partir de los nueve nombres distintos del catálogo.
 - Copiar imágenes utilizadas a `frontend/public/img/`; resolverlas con la base Vite para admitir alojamiento bajo subruta.
-- Importar productos sin ofertas (`precioOferta: null`) y sin umbral crítico inventado (`umbralCritico: null`).
+- Importar once productos, cuatro con precioOferta de demostración, y conservar umbralCritico nulo hasta configurarlo.
+- Aplicar las ofertas iniciales una sola vez a documentos locales anteriores. El indicador ofertasInicialesAplicadas conserva las ediciones posteriores. No reemplazar pedidos, carrito ni precios personalizados.
 - Mantener los dos accesos demo conocidos: admin@duoc.cl/1234 y usuario@gmail.com/1234. Completar perfiles solo con datos identificados como ficticios.
 - Los datos de nacimiento/RUN no existentes en las cuentas heredadas se pueden marcar como null; registro y alta nueva sí validan todos sus campos.
 - Nuevo namespace de persistencia; no importar automáticamente la clave EP1 sin validar su esquema.
@@ -224,7 +225,7 @@ El rechazo por validación termina antes del simulador. La revalidación final o
 
 ## 8. Rutas
 
-Se usa modo declarativo con `BrowserRouter`, montado en main.jsx, y rutas como `/productos/JM001`. Routes/Route están en App.jsx; las páginas y componentes tienen archivos separados. La verificación de recarga se registra junto a las evidencias; el alojamiento público sigue pendiente.
+Se usa modo declarativo con `BrowserRouter`, montado en main.jsx, y rutas como `/productos/JM001`. Routes/Route están en App.jsx; las páginas y componentes tienen archivos separados. La verificación de recarga se registra junto a las evidencias; AWS EC2 fue publicado el 28-10-2026; la versión final requiere volver a comprobarse tras actualizar el servidor.
 
 | Ruta lógica | Vista |
 |---|---|
@@ -259,10 +260,14 @@ IDs/slugs desconocidos muestran estado no encontrado y regreso. Las guardas veri
 
 ## 10. Decisiones pendientes de contraste
 
-La implementación sigue esta base. La guía docente S13 confirma el uso de Vitest para las pruebas. Quedan por contrastar con docente/equipo la frase aislada de integración con backend y las elecciones de negocio (descuento, ofertas, entrega gratuita demo). Cambios se registran en ERS, pruebas y matriz. La etiqueta “Editar usuario” dentro de categoría del diagrama S1 p. 10 se interpreta como “Editar categoría” en esta propuesta.
+La implementación sigue esta base. La guía docente S13 confirma el uso de Vitest para las pruebas. El equipo confirmó el 28-10-2026 que el profesor exige solo frontend en esta entrega. Las elecciones de negocio (descuento, ofertas y entrega gratuita demo) requieren revisión del equipo. Cambios se registran en ERS, pruebas y matriz. La etiqueta “Editar usuario” dentro de categoría del diagrama S1 p. 10 se interpreta como “Editar categoría” en esta propuesta.
 
 La referencia S10 se aplica con BrowserRouter y separación de páginas/componentes. La [correspondencia docente](09_CORRESPONDENCIA_GUIAS_CLASE.md) identifica los conceptos enseñados y las decisiones adicionales, sin atribuir Context, servicios o consistencia de compra al ejemplo de clases.
 
 ## Despliegue final en AWS Academy / Learner Lab
 
-El equipo confirmó este entorno para la publicación final. El servicio se concretará según las guías del profesor y los permisos del laboratorio, después de cerrar código, pruebas y documentos. El frontend se compila con npm run build y el alojamiento debe resolver las rutas de BrowserRouter hacia index.html. La publicación no incorpora un backend ni cambia la persistencia local de la demostración. Registrar URL y capturas únicamente después del despliegue y su verificación.
+El equipo confirmó AWS Academy / Learner Lab y el 28-10-2026 realizó una publicación HTTP en EC2 Ubuntu con Nginx en el puerto 5173. Portada y catálogo están disponibles; falta HTTPS y volver a verificar checkout, que falla al abrirse por HTTP. El informe 11 conserva la comprobación. El frontend se compila con npm run build y el alojamiento debe resolver las rutas de BrowserRouter hacia index.html. La publicación no incorpora un backend ni cambia la persistencia local de la demostración. Registrar URL y capturas únicamente después del despliegue y su verificación.
+
+## Compatibilidad del checkout con HTTP
+
+`src/utils/identificador.js` combina una parte aleatoria y la fecha con Math.random y Date.now. CheckoutPage y tienda.service reutilizan crearId; no dependen de crypto.randomUUID ni de un contexto HTTPS para la compra simulada. El identificador no se usa como credencial de seguridad.

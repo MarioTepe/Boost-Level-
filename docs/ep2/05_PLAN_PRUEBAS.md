@@ -1,6 +1,6 @@
 # Plan de pruebas de Boost Level
 
-**Versión:** 0.5 · **Fecha:** 26-10-2026  
+**Versión:** 0.7 · **Fecha:** 29-10-2026  
 **Estado:** 33 casos conservados y ejecutados; revisión cruzada pendiente.  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
@@ -88,7 +88,7 @@ No se incorpora el IVA del ejemplo docente a las reglas del negocio. Para estudi
 - Formato, lint y compilación correctos.
 - Informe, manifiesto y adjuntos referidos a una misma corrida.
 
-La corrida iniciada el 26-10-2026 22:39:58 CLST (27-10-2026 01:39:58 UTC) aprobó los 33 casos. Cobertura: 93,00% sentencias, 90,23% ramas, 94,25% funciones y 94,11% líneas. Ver [informe](06_INFORME_COBERTURA_BORRADOR.md) y [evidencias](evidencias/README.md). Los hashes identifican los bytes medidos en esa corrida.
+La corrida iniciada el 29-10-2026 05:19:19 CLST (2026-10-29T08:19:19.948Z) aprobó los 33 casos. Cobertura: 93,12% sentencias, 90,46% ramas, 94,32% funciones y 94,22% líneas. Ver [informe](06_INFORME_COBERTURA_BORRADOR.md) y [evidencias](evidencias/README.md). Los hashes identifican los bytes medidos en esa corrida.
 
 ## 6. Variantes retiradas y revisión pendiente
 
@@ -96,9 +96,11 @@ Se retiraron series extensas de campos inválidos, pruebas repetidas de rutas y 
 
 | ID manual | Actividad | Estado |
 |---|---|---|
-| TM-01 | Responsive a 375/768/1280 px | Evidencia histórica local; repetir si cambia interfaz. |
-| TM-02 | Recorrido con teclado, labels, foco, errores y alt | Revisión parcial anterior; falta otra persona. |
-| TM-03 | Abrir pantallas públicas/admin, resultado y detalle de pedido; arrancar según README | Recorridos locales anteriores; comprobar desde copia limpia y completar páginas fuera de la suite. |
-| TM-04 | Revisar Word/Excel, hashes, paquetes, instalación y entrega | Copias actualizadas; revisión del equipo e instalación limpia pendientes. |
+| TM-01 | Responsive a 375/768/1280 px | Repetido a 375/768/1280; tabla móvil corregida. Ver informe 11. |
+| TM-02 | Recorrido con teclado, labels, foco, errores y alt | Menú, salto, foco y diálogo revisados; falta recorrido completo por otra persona. |
+| TM-03 | Abrir pantallas públicas/admin, resultado y detalle de pedido; arrancar según README | Pantallas públicas/admin recorridas en producción local; instalación limpia registrada en informe 11. |
+| TM-04 | Revisar Word/Excel, hashes, paquetes, instalación y entrega | Copias y paquete verificados técnicamente; revisión del equipo y ensayo pendientes. |
 
 La [matriz](07_MATRIZ_TRAZABILIDAD.md) distingue el respaldo actual por requisito. La cobertura no garantiza ausencia de errores ni acredita una revisión docente. Las firmas y la revisión por una persona diferente permanecen pendientes hasta que ocurran.
+
+La revisión final amplía las aserciones existentes de P-09 para comprobar cuatro ofertas, porcentaje y actualización de datos anteriores; conserva el carrito previo. P-11 ejecuta el checkout con crypto sin randomUUID. El inventario sigue teniendo 33 casos; no se añadieron pruebas ocultas ni se rebajaron los umbrales. El recorrido HTTP local del 29-10-2026 se conserva en evidencias/recorrido-final-http.json; su resultado no acredita el servidor AWS.

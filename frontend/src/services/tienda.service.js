@@ -2,6 +2,7 @@ import { carritoReducer } from '../domain/carrito.reducer.js'
 import { aplicarCompra, prepararCompra } from '../domain/compra.rules.js'
 
 import { exigir, fallo } from '../domain/errores.js'
+import { crearId } from '../utils/identificador.js'
 
 import {
   revisarCampos,
@@ -16,7 +17,7 @@ export function crearServicios(
   {
     usuarioId = () => null,
     ahora = () => new Date(),
-    id = () => crypto.randomUUID(),
+    id = crearId,
     pago = async (resultado) => resultado === 'aceptado',
   } = {},
 ) {

@@ -11,6 +11,7 @@ import Campo from '../componentes/ui/Campo.jsx'
 import Direccion from '../componentes/formularios/Direccion.jsx'
 import Resumen from '../componentes/ui/Resumen.jsx'
 import { moneda } from '../utils/moneda.js'
+import { crearId } from '../utils/identificador.js'
 import Icono from '../componentes/ui/Icono.jsx'
 
 export default function CheckoutPage() {
@@ -31,7 +32,7 @@ export default function CheckoutPage() {
   const [error, setError] = useState(null)
   const [cargando, setCargando] = useState(false)
   const bloqueo = useRef(false)
-  const intentoId = useRef(crypto.randomUUID())
+  const intentoId = useRef(crearId())
   const resumen = resumirCarrito(estado, usuario)
   async function comprar(e) {
     e.preventDefault()

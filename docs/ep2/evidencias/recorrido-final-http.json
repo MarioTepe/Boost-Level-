@@ -1,0 +1,133 @@
+{
+  "fecha": "29-10-2026",
+  "entorno": "HTTP local de revisión: http://192.168.1.11:4180; no es AWS",
+  "migracion": {
+    "ofertasAnteriores": 0,
+    "ofertasActuales": 4,
+    "carritoConservado": 1
+  },
+  "ofertas": [
+    {
+      "nombre": "Controlador Inalámbrico Xbox Series X",
+      "original": "$59.990",
+      "porcentaje": "−20%",
+      "rebajado": "$47.992"
+    },
+    {
+      "nombre": "Auriculares Gaming Inalámbricos Hyperx Cloud Flight 2 Negro",
+      "original": "$139.990",
+      "porcentaje": "−20%",
+      "rebajado": "$111.992"
+    },
+    {
+      "nombre": "PlayStation 5",
+      "original": "$549.990",
+      "porcentaje": "−10%",
+      "rebajado": "$494.991"
+    },
+    {
+      "nombre": "Mouse Mx Master 4 Blanco Logitech",
+      "original": "$169.990",
+      "porcentaje": "−20%",
+      "rebajado": "$135.992"
+    }
+  ],
+  "rechazo": {
+    "carrito": "Carrito, 2 unidades",
+    "ruta": "/compra/rechazada",
+    "titulo": "No se confirmó la compra."
+  },
+  "aceptacion": {
+    "carrito": "Carrito, 0 unidades",
+    "comprobante": "COMPROBANTE SIMULADOPedido #L4L79I6129-10-2026, 5:26 a. m.ConfirmadoClientePrueba Presentaciónrevision@gmail.comEntregaRetiro en tienda (demostración)ProductoCantidadPrecio unitarioSubtotalCatanJM0011$29.990$29.990Controlador Inalámbrico Xbox Series XAC0011$47.992$47.992Subtotal $77.982Descuento −$0Entrega Sin costoTotal $77.982Proyecto académico. Sin cobro real ni validez tributaria.",
+    "ruta": "/compra/exitosa/l4l79i61dtb-1793262405320",
+    "titulo": "Tu siguiente nivel está confirmado."
+  },
+  "recargaComprobante": true,
+  "pantallas": [
+    {
+      "imagenesRotas": 0,
+      "ruta": "/productos",
+      "titulos": [
+        "Encuentra tu próximo nivel.",
+        "Catan",
+        "Monitor Lg",
+        "Controlador Inalámbrico Xbox Series X",
+        "Auriculares Gaming Inalámbricos Hyperx Cloud Flight 2 Negro",
+        "PlayStation 5",
+        "PC Gamer ASUS ROG Strix",
+        "Silla Gamer Secretlab Titan",
+        "Mouse Mx Master 4 Blanco Logitech",
+        "Mouse Pad Logitech Xl G840",
+        "Polera Gamer Personalizada Level-Up",
+        "Consola Xbox Series X 1TB"
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/categorias",
+      "titulos": [
+        "Un mundo para cada jugador.",
+        "Juegos de Mesa",
+        "Monitor",
+        "Accesorios",
+        "Consolas",
+        "Computadores Gamers",
+        "Sillas Gamers",
+        "Mouse",
+        "Mousepad",
+        "Poleras Personalizadas"
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/ofertas",
+      "titulos": [
+        "Más potencia. Mejor precio.",
+        "Controlador Inalámbrico Xbox Series X",
+        "Auriculares Gaming Inalámbricos Hyperx Cloud Flight 2 Negro",
+        "PlayStation 5",
+        "Mouse Mx Master 4 Blanco Logitech"
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/blogs",
+      "titulos": [
+        "Un mejor setup empieza con una idea.",
+        "5 consejos para mejorar tu setup gamer",
+        "Cómo cuidar tu computador gamer"
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/nosotros",
+      "titulos": [
+        "Compartimos tu pasión por jugar.",
+        "Un equipo. Muchas formas de jugar."
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/carrito",
+      "titulos": [
+        "Tu próximo nivel, en el carrito.",
+        "Tu carrito está esperando"
+      ]
+    },
+    {
+      "imagenesRotas": 0,
+      "ruta": "/checkout",
+      "titulos": [
+        "Tu carrito está vacío"
+      ]
+    }
+  ],
+  "movil": {
+    "ancho": 375,
+    "contenido": 360,
+    "ofertas": 4
+  },
+  "retirarOfertaPersistida": true,
+  "consola": []
+}

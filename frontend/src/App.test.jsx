@@ -50,11 +50,20 @@ describe('TC-01 a TC-05: catálogo, props, filtros y detalle', () => {
   it('ofertas refleja precio configurado; detalle agrega y respeta el stock', () => {
     const { repo } = renderApp('/ofertas', {
       editar: (e) => {
+        delete e.ofertasInicialesAplicadas
+        e.productos = e.productos.map((p) => ({ ...p, precioOferta: null }))
         e.productos[0].precioOferta = 10000
         e.productos[0].stock = 1
       },
     })
-    expect(screen.getByText('OFERTA')).toBeInTheDocument()
+    expect(repo.leerEstado().ofertasInicialesAplicadas).toBe(true)
+    expect(screen.getAllByRole('article')).toHaveLength(5)
+    const control = screen
+      .getByRole('heading', { name: 'Controlador Inalámbrico Xbox Series X' })
+      .closest('article')
+    expect(within(control).getByText('$59.990', { selector: 'del' })).toBeInTheDocument()
+    expect(within(control).getByText('$47.992')).toBeInTheDocument()
+    expect(within(control).getByText('−20%')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('link', { name: 'Catan', exact: true }))
     expect(screen.getByRole('heading', { level: 1, name: 'Catan' })).toBeInTheDocument()
     pulsar('Agregar al carrito')
@@ -88,6 +97,8 @@ describe('TC-06/07/08: carrito conectado a datos', () => {
 })
 describe('TC-09/10/11: checkout y resultados', () => {
   it('muestra validaciones y completa compra invitado con retiro', async () => {
+    // En HTTP el navegador no ofrece randomUUID; la compra demo debe funcionar igual.
+    vi.stubGlobal('crypto', {})
     const { repo } = renderApp('/checkout', {
       editar: (e) => {
         e.carrito = [{ productoId: 'JM001', cantidad: 1 }]
@@ -104,6 +115,8 @@ describe('TC-09/10/11: checkout y resultados', () => {
     await screen.findByRole('heading', { name: 'Tu siguiente nivel está confirmado.' })
     expect(repo.leerEstado().carrito).toEqual([])
     expect(repo.leerEstado().productos[0].stock).toBe(14)
+    expect(repo.leerEstado().pedidos[0].id).toEqual(expect.any(String))
+    expect(repo.leerEstado().pedidos[0].id.length).toBeGreaterThan(0)
     expect(screen.getByText('COMPROBANTE SIMULADO')).toBeInTheDocument()
   })
   it('precarga cliente, rechaza sin modificar, conserva formulario al reintentar y confirma domicilio', async () => {

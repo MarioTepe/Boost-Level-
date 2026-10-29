@@ -1,6 +1,6 @@
 # Documentación de Boost Level EP2
 
-**Revisión:** 0.9 · **Fecha:** 27-10-2026  
+**Revisión:** 0.11 · **Fecha:** 29-10-2026  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
 Esta carpeta reúne problemas detectados, requisitos, arquitectura, organización del equipo y pruebas. La migración React está implementada en `frontend/`; las páginas HTML se conservan como referencia de EP1. El estado de verificación se registra junto a las evidencias de ejecución.
@@ -19,6 +19,7 @@ Esta carpeta reúne problemas detectados, requisitos, arquitectura, organizació
 | [08 Guía de explicación del código](08_GUIA_EXPLICACION_CODIGO.md) | Recorrido por el código y su relación con lo visto en clases, para preparar la exposición. |
 | [09 Correspondencia con FullStack II](09_CORRESPONDENCIA_GUIAS_CLASE.md) | Nuevas guías React/Router, contenidos ya enseñados y diferencias de router/organización del código. |
 | [10 Entrega y despliegue](10_FLUJO_GIT_Y_ENTREGA.md) | Revisión final, paquetes, presentación y despliegue en AWS Academy / Learner Lab. |
+| [11 Revisión de presentación](11_REVISION_PRESENTACION.md) | Resultado actual de rúbrica, pantallas, pruebas, instalación limpia y pendientes. |
 
 ## Decisiones para comenzar
 
@@ -28,12 +29,16 @@ Esta carpeta reúne problemas detectados, requisitos, arquitectura, organizació
 - Ofertas editables y descuento institucional con reglas de cálculo explícitas en la ERS.
 - Conservación de EP1 y del ejercicio independiente de clases; responsables del backlog son una propuesta, no atribución de trabajo ya realizado.
 
-Los paquetes se verifican con pruebas, lint, build y revisión del navegador. La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) (S13) confirma Vitest. Queda contrastar la frase sobre backend; las reglas de entrega/descuento requieren revisión del equipo. No se atribuye una revisión docente de la entrega.
+Los paquetes se verifican con pruebas, lint, build y revisión del navegador. La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) (S13) confirma Vitest. El equipo confirmó el 28-10-2026 que el profesor exige solo frontend; las reglas de entrega/descuento requieren revisión del equipo. No se atribuye una revisión docente de la entrega.
 
 ## Estado actual
 
-La suite se redujo de 153 a **33 pruebas aprobadas**, cero fallos, skip y todo, en cinco archivos. Cobertura global: **93,00% sentencias, 90,23% ramas, 94,25% funciones y 94,11% líneas**. Se mantienen los 71 archivos productivos y el umbral del 80% en las cuatro métricas.
+La suite se redujo de 153 a **33 pruebas aprobadas**, cero fallos, skip y todo, en cinco archivos. Cobertura global: **93,12% sentencias, 90,46% ramas, 94,32% funciones y 94,22% líneas**. Se mantienen los 72 archivos productivos y el umbral del 80% en las cuatro métricas.
 
-El plan identifica diez casos para ensayar. La matriz y el informe distinguen los caminos conservados de las variantes retiradas. Las copias Word/Excel y coverage.zip corresponden a la misma corrida del 26-10-2026; esta revisión documental no es una ejecución nueva.
+El plan identifica diez casos para ensayar. La matriz y el informe distinguen los caminos conservados de las variantes retiradas. Las copias Word/Excel y coverage.zip corresponden a la corrida final del 29-10-2026, con checkout HTTP y ofertas persistentes.
 
-Falta revisión por otra persona, completar el recorrido manual y verificar el paquete desde una copia limpia. El despliegue será en **AWS Academy / Learner Lab**, al cerrar lo anterior y según el servicio indicado por el profesor y permitido por el laboratorio. No hay recursos de nube creados ni una publicación AWS realizada.
+Se recorrieron las pantallas y se verificó instalación/compilación desde una extracción limpia. Falta revisión por otra persona y ensayo individual. AWS Academy / Learner Lab ya aloja la aplicación en EC2 desde el 28-10-2026. La corrección final del checkout y las ofertas están listas para actualizar esa instancia; la conexión no respondió el 29-10-2026. El informe 11 distingue las verificaciones locales de las públicas.
+
+## Cierre técnico del 29 de octubre
+
+Cuatro ofertas de demostración, precios y porcentajes visibles, carrito preservado al actualizar y checkout compatible con HTTP. AWS EC2 fue publicado el 28-10-2026 en http://3.80.59.90:5173/. La revisión del 29-10-2026 no pudo conectar por HTTP ni SSH a esa dirección. La versión final está compilada y verificada por HTTP local; quedan pendientes su carga en la misma instancia y el recorrido público. No se exige HTTPS para resolver el fallo corregido de esta simulación. Consulte la revisión 11 y el registro HTTP local para distinguir lo comprobado de lo pendiente.

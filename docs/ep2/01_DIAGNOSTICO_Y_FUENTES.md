@@ -44,7 +44,7 @@ S5 exige usar 80% como umbral antes de medir; no es una cobertura obtenida. El i
 | Tema | Evidencia | Tratamiento |
 |---|---|---|
 | Testing | S1/S2 mencionan Jasmine/Karma; S5/S7 y la guía docente S13 usan Vitest. | S13 es la referencia técnica indicada por el usuario: se ejecuta Vitest con Testing Library, jsdom y V8. describe/it/expect comparten vocabulario con Jasmine; no se instala ni ejecuta Jasmine/Karma. La guía sustenta la herramienta, no acredita una nota o revisión docente. |
-| Backend | S1 p. 12 incluye una frase sobre presentación integrada; pp. 1–2 describen frontend con datos JS simulados. | Base de desarrollo local; solicitar aclaración docente si pide integración. No hay API/backend en las carpetas inspeccionadas. |
+| Backend | S1 p. 12 incluye una frase sobre presentación integrada; pp. 1–2 describen frontend con datos JS simulados. | Aclaración comunicada por el equipo el 28-10-2026: el profesor exige solo frontend para esta entrega. No hay API/backend implementado. |
 | Categorías admin | Figura de S1 p. 10 enlaza categoría a “Editar usuario”. | Interpretación de diseño: editar categoría. Revisar template HTML/docente si surge diferencia. |
 | Descuento/entrega/ofertas | EP1 anuncia 20% duoc.cl, no lo calcula; S1 añade entrega/ofertas sin reglas numéricas completas. | ERS 3.3 concreta decisiones revisables del equipo; no se atribuyen esos valores al docente. |
 

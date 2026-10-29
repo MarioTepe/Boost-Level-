@@ -8,6 +8,7 @@
   --bs-body-bg: #10130f;
   --bs-body-color: #eff0e8;
   --bs-secondary-color: #a4aca0;
+  --bs-secondary-rgb: 164, 172, 160;
   --bs-border-color: #333a30;
   --bs-link-color: #c3f45b;
   --bs-link-hover-color: #dcff9b;
@@ -592,6 +593,16 @@ p {
   letter-spacing: -0.1em;
   transform: rotate(-8deg);
 }
+.discount-percentage {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #c3f45b1a;
+  color: var(--lime);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
 .discount-art small {
   font-size: 0.35em;
   vertical-align: top;
@@ -1156,7 +1167,7 @@ p {
 }
 .admin-table {
   padding: 0;
-  overflow: hidden;
+  overflow-x: auto;
 }
 .admin-table .table {
   margin: 0;

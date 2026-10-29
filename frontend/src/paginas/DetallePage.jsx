@@ -4,7 +4,7 @@ import NoEncontrado from '../componentes/ui/NoEncontrado.jsx'
 
 import FotoProducto from '../componentes/ui/FotoProducto.jsx'
 import { moneda } from '../utils/moneda.js'
-import { precioVigente } from '../domain/precios.js'
+import { porcentajeOferta, precioVigente } from '../domain/precios.js'
 import Icono from '../componentes/ui/Icono.jsx'
 
 export default function DetallePage() {
@@ -38,6 +38,9 @@ export default function DetallePage() {
           <div className="detail-price">
             {producto.precioOferta !== null && <del>{moneda(producto.precio)}</del>}
             <strong>{moneda(precioVigente(producto))}</strong>
+            {producto.precioOferta !== null && (
+              <span className="discount-percentage">−{porcentajeOferta(producto)}%</span>
+            )}
           </div>
           <p>{producto.stock ? `${producto.stock} unidades disponibles` : 'Sin stock'}</p>
           <button

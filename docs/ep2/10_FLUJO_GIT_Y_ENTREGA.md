@@ -1,25 +1,25 @@
 # Guía de entrega y despliegue
 
-**Fecha:** 27-10-2026. **Proyecto:** Boost Level, DSY1104. **Entrega:** 29-10-2026.
+**Fecha:** 29-10-2026. **Proyecto:** Boost Level, DSY1104. **Entrega:** 29-10-2026.
 
 ## Resultado técnico actual
 
-La suite tiene 33 casos aprobados, sin fallos, skip ni todo. Las cuatro métricas globales superan el 80%: 93,00% sentencias, 90,23% ramas, 94,25% funciones y 94,11% líneas. Los datos del informe y los adjuntos proceden de la misma corrida local.
+La suite tiene 33 casos aprobados, sin fallos, skip ni todo. Las cuatro métricas globales superan el 80%: 93,12% sentencias, 90,46% ramas, 94,32% funciones y 94,22% líneas. Los datos del informe y los adjuntos proceden de la misma corrida local.
 
 ## Cierre de revisión
 
 1. Revisar los Word y la planilla entre los integrantes. Designar un revisor diferente de quien elaboró el informe y registrar firmas solo cuando se complete esa revisión.
-2. Completar TM-02/TM-03: teclado, formularios y páginas fuera de la suite reducida, incluidos artículos, categorías públicas, stock crítico y detalle de pedido.
-3. Instalar desde una copia limpia con npm ci; ejecutar formato, lint, cobertura y build. Recorrer la aplicación usando las instrucciones del README.
+2. Consultar la revisión local del informe 11 y repetir el recorrido con otro integrante: teclado, formularios, artículos, categorías públicas, stock crítico y detalle de pedido.
+3. Consultar el registro de extracción limpia con npm ci y build; formato, lint y cobertura también quedaron aprobados. Recorrer la aplicación usando las instrucciones del README.
 4. Ensayar las diez pruebas seleccionadas y el flujo catálogo → carrito → compra aceptada/rechazada → administración. Los tres integrantes deben explicar preparación, acción, aserción y límites de la demostración.
-5. Aclarar con el profesor la frase sobre backend de S1, página 12. La aplicación actual conserva un alcance de frontend con datos simulados.
+5. Alcance aclarado por el equipo el 28-10-2026: el profesor exige solo frontend. La aplicación conserva datos simulados y persistencia local.
 
 ## Publicación final en AWS
 
-El destino confirmado es **AWS Academy / Learner Lab**. La publicación se realizará después de cerrar lo anterior, usando el servicio indicado por el profesor y permitido por el laboratorio. Todavía no se han creado recursos ni se ha desplegado la página en AWS.
+El destino confirmado es **AWS Academy / Learner Lab**. AWS EC2 fue publicado el 28-10-2026 en http://3.80.59.90:5173/. La revisión del 29-10-2026 no pudo conectar por HTTP ni SSH a esa dirección. La versión final está compilada y verificada por HTTP local; quedan pendientes su carga en la misma instancia y el recorrido público. No se exige HTTPS para resolver el fallo corregido de esta simulación.
 
-Comprobar acceso público, carga de imágenes/estilos y recarga directa de las rutas de BrowserRouter. Registrar la URL final, fecha y capturas reales. Incorporar esa evidencia al informe únicamente cuando exista y se haya verificado. El alojamiento no convierte las sesiones, pagos o almacenamiento locales de la demostración en servicios de producción.
+Nginx conserva el puerto 5173 y el fallback a index.html para BrowserRouter. No crear otra instancia ni cambiar reglas sin una necesidad comprobada. La guía PUBLICACION_AWS.md del paquete explica la actualización y la comprobación posterior.
 
 ## Archivos de entrega
 
-Las copias completadas están en Documentacion_DSY1104_EvaluaciónParcial2/Completadas_Boost_Level_EP2: ERS, informe de cobertura, planilla de requisitos y coverage.zip. Preparar además el paquete fuente según las instrucciones del profesor, con package-lock.json y sin node_modules, cachés ni datos privados. Verificar su extracción e instalación antes de entregar.
+Las copias completadas están en Documentacion_DSY1104_EvaluaciónParcial2/Completadas_Boost_Level_EP2: ERS, informe de cobertura, planilla de requisitos y coverage.zip. El paquete Boost_Level_EP2_fuentes.zip incluye package-lock.json y fuentes, sin node_modules ni cachés. Su extracción, instalación y compilación se verifican en el informe 11.

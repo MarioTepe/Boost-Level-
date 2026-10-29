@@ -172,3 +172,5 @@ Proyecto desarrollado para la asignatura Full Stack II.
 La [documentación EP2](docs/ep2/README.md) reúne diagnóstico, ERS V2, arquitectura, backlog, plan de pruebas, borrador de cobertura y matriz de trazabilidad.
 
 El incremento React está implementado en `frontend/` con React, Vite, React Bootstrap y Vitest. Las páginas HTML anteriores siguen disponibles como referencia de EP1 y se abren con Live Server. El informe de cobertura se actualiza con la ejecución local y queda sujeto a revisión del equipo antes de la entrega.
+
+La [revisión de presentación](docs/ep2/11_REVISION_PRESENTACION.md) reúne las comprobaciones actuales y lo pendiente antes de la entrega.

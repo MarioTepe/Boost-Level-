@@ -50,7 +50,7 @@ Rutas de implementación relativas a frontend/.
 | useLocation | 15 | CheckoutPage.jsx, Layout.jsx y App.jsx | Datos de reintento, cambios de ruta y claves de formularios. |
 | Estado compartido y localStorage | 16 | Providers y repositorio | El estado está sobre las rutas; usa Context en lugar de entregar todo mediante props desde App. Persistencia validada y recuperación de errores. |
 | Navigate y replace | 17 | componentes/navegacion/RutaAdmin.jsx | Redirige al login si no hay rol admin; protección de navegación local. Checkout vacío muestra estado y enlace, en vez de redirigir como el ejemplo de la guía. |
-| Compilación y publicación | 18 | build/preview y public/_redirects | Compilación y recarga local comprobadas. Regla de fallback preparada para un alojamiento compatible; despliegue público pendiente. |
+| Compilación y publicación | 18 | build/preview y public/_redirects | Compilación local comprobada; EC2 con Nginx y fallback publicado el 28-10-2026. Actualización final y nueva verificación pública pendientes. |
 
 ## 4. Diferencias que debemos poder explicar
 

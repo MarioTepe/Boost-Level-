@@ -5,6 +5,7 @@ import { afterEach, vi } from 'vitest'
 Object.defineProperty(window, 'scrollTo', { value: vi.fn(), writable: true })
 afterEach(() => {
   cleanup()
+  vi.unstubAllGlobals()
   window.localStorage.clear()
   window.sessionStorage.clear()
 })

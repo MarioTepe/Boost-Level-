@@ -1,4 +1,4 @@
-// Datos iniciales conservados de la entrega EP1.
+// Catálogo de EP1 con cuatro ofertas iniciales para la demostración EP2.
 export const productos = [
   {
     codigo: 'JM001',
@@ -37,7 +37,7 @@ export const productos = [
     stock: 20,
     id: 'AC001',
     categoriaId: 'cat-3',
-    precioOferta: null,
+    precioOferta: 47992,
     umbralCritico: null,
     activo: true,
   },
@@ -51,7 +51,7 @@ export const productos = [
     stock: 8,
     id: 'AC002',
     categoriaId: 'cat-3',
-    precioOferta: null,
+    precioOferta: 111992,
     umbralCritico: null,
     activo: true,
   },
@@ -65,7 +65,7 @@ export const productos = [
     stock: 6,
     id: 'CO001',
     categoriaId: 'cat-4',
-    precioOferta: null,
+    precioOferta: 494991,
     umbralCritico: null,
     activo: true,
   },
@@ -105,7 +105,7 @@ export const productos = [
     stock: 18,
     id: 'MS001',
     categoriaId: 'cat-7',
-    precioOferta: null,
+    precioOferta: 135992,
     umbralCritico: null,
     activo: true,
   },

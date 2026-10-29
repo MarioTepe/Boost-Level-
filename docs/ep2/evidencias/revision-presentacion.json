@@ -1,0 +1,626 @@
+{
+  "publicas": [
+    {
+      "desborde": false,
+      "encabezados": [
+        "Catan",
+        "Monitor Lg",
+        "Controlador Inalámbrico Xbox Series X",
+        "Auriculares Gaming Inalámbricos Hyperx Cloud Flight 2 Negro",
+        "PlayStation 5",
+        "PC Gamer ASUS ROG Strix",
+        "Silla Gamer Secretlab Titan",
+        "Mouse Mx Master 4 Blanco Logitech",
+        "Mouse Pad Logitech Xl G840",
+        "Polera Gamer Personalizada Level-Up",
+        "Consola Xbox Series X 1TB"
+      ],
+      "enlaces": [
+        {
+          "href": "/",
+          "texto": "Inicio"
+        },
+        {
+          "href": "/productos/JM001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/JM001",
+          "texto": "Catan"
+        },
+        {
+          "href": "/productos/MO001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/MO001",
+          "texto": "Monitor Lg"
+        },
+        {
+          "href": "/productos/AC001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/AC001",
+          "texto": "Controlador Inalámbrico Xbox Series X"
+        },
+        {
+          "href": "/productos/AC002",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/AC002",
+          "texto": "Auriculares Gaming Inalámbricos Hyperx Cloud Flight 2 Negro"
+        },
+        {
+          "href": "/productos/CO001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/CO001",
+          "texto": "PlayStation 5"
+        },
+        {
+          "href": "/productos/CG001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/CG001",
+          "texto": "PC Gamer ASUS ROG Strix"
+        },
+        {
+          "href": "/productos/SG001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/SG001",
+          "texto": "Silla Gamer Secretlab Titan"
+        },
+        {
+          "href": "/productos/MS001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/MS001",
+          "texto": "Mouse Mx Master 4 Blanco Logitech"
+        },
+        {
+          "href": "/productos/MP001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/MP001",
+          "texto": "Mouse Pad Logitech Xl G840"
+        },
+        {
+          "href": "/productos/PP001",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/PP001",
+          "texto": "Polera Gamer Personalizada Level-Up"
+        },
+        {
+          "href": "/productos/CO002",
+          "texto": "Ver producto"
+        },
+        {
+          "href": "/productos/CO002",
+          "texto": "Consola Xbox Series X 1TB"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/productos",
+      "titulo": "Encuentra tu próximo nivel."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Juegos de Mesa",
+        "Monitor",
+        "Accesorios",
+        "Consolas",
+        "Computadores Gamers",
+        "Sillas Gamers",
+        "Mouse",
+        "Mousepad",
+        "Poleras Personalizadas"
+      ],
+      "enlaces": [
+        {
+          "href": "/categorias/cat-1",
+          "texto": "01Juegos de Mesa1 productos"
+        },
+        {
+          "href": "/categorias/cat-2",
+          "texto": "02Monitor1 productos"
+        },
+        {
+          "href": "/categorias/cat-3",
+          "texto": "03Accesorios2 productos"
+        },
+        {
+          "href": "/categorias/cat-4",
+          "texto": "04Consolas2 productos"
+        },
+        {
+          "href": "/categorias/cat-5",
+          "texto": "05Computadores Gamers1 productos"
+        },
+        {
+          "href": "/categorias/cat-6",
+          "texto": "06Sillas Gamers1 productos"
+        },
+        {
+          "href": "/categorias/cat-7",
+          "texto": "07Mouse1 productos"
+        },
+        {
+          "href": "/categorias/cat-8",
+          "texto": "08Mousepad1 productos"
+        },
+        {
+          "href": "/categorias/cat-9",
+          "texto": "09Poleras Personalizadas1 productos"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/categorias",
+      "titulo": "Un mundo para cada jugador."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Todavía no hay ofertas"
+      ],
+      "enlaces": [
+        {
+          "href": "/",
+          "texto": "Inicio"
+        },
+        {
+          "href": "/productos",
+          "texto": "Explorar productos"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/ofertas",
+      "titulo": "Más potencia. Mejor precio."
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/productos",
+          "texto": "Productos"
+        },
+        {
+          "href": "/carrito",
+          "texto": "Ver carrito"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/productos/JM001",
+      "titulo": "Catan"
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Un equipo. Muchas formas de jugar."
+      ],
+      "enlaces": [],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/nosotros",
+      "titulo": "Compartimos tu pasión por jugar."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "5 consejos para mejorar tu setup gamer",
+        "Cómo cuidar tu computador gamer"
+      ],
+      "enlaces": [
+        {
+          "href": "/blogs/mejora-tu-setup",
+          "texto": "TU SETUP5 consejos para mejorar tu setup gamerPequeños cambios que hacen una gran diferencia al jugar.Leer artículo"
+        },
+        {
+          "href": "/blogs/cuida-tu-pc",
+          "texto": "GUÍA BOOSTCómo cuidar tu computador gamerDale a tu equipo el mantenimiento que necesita para seguir rindiendo.Leer artículo"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/blogs",
+      "titulo": "Un mejor setup empieza con una idea."
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/blogs",
+          "texto": "← Volver al blog"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/blogs/mejora-tu-setup",
+      "titulo": "5 consejos para mejorar tu setup gamer"
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/blogs",
+          "texto": "← Volver al blog"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/blogs/cuida-tu-pc",
+      "titulo": "Cómo cuidar tu computador gamer"
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/productos",
+          "texto": "Volver a explorar"
+        }
+      ],
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/contacto",
+      "titulo": "Conecta con Boost."
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/login",
+          "texto": "Inicia sesión"
+        }
+      ],
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/registro",
+      "titulo": "Tu cuenta. Tu siguiente nivel."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Tu carrito está esperando"
+      ],
+      "enlaces": [
+        {
+          "href": "/productos",
+          "texto": "Explorar productos"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/carrito",
+      "titulo": "Tu próximo nivel, en el carrito."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Tu carrito está vacío"
+      ],
+      "enlaces": [
+        {
+          "href": "/productos",
+          "texto": "Explorar productos"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/checkout"
+    },
+    {
+      "desborde": false,
+      "encabezados": [],
+      "enlaces": [
+        {
+          "href": "/checkout",
+          "texto": "Volver a intentar"
+        },
+        {
+          "href": "/carrito",
+          "texto": "Ver carrito"
+        }
+      ],
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/compra/rechazada",
+      "titulo": "No se confirmó la compra."
+    },
+    {
+      "desborde": false,
+      "encabezados": [
+        "Iniciar sesión"
+      ],
+      "enlaces": [
+        {
+          "href": "/registro",
+          "texto": "Crea tu cuenta demo"
+        }
+      ],
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/login",
+      "titulo": "Nos vemos enel siguiente nivel."
+    }
+  ],
+  "administrativas": [
+    {
+      "desborde": false,
+      "filas": 11,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/productos",
+      "titulo": "Productos"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/productos/nuevo",
+      "titulo": "Nuevo producto"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/productos/JM001",
+      "titulo": "Catan"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/productos/JM001/editar",
+      "titulo": "Editar producto"
+    },
+    {
+      "desborde": false,
+      "filas": 9,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/categorias",
+      "titulo": "Categorías"
+    },
+    {
+      "desborde": false,
+      "filas": 2,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/usuarios",
+      "titulo": "Usuarios"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/usuarios/nuevo",
+      "titulo": "Nuevo cliente"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/usuarios/cliente-demo",
+      "titulo": "Cliente Demo"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/usuarios/cliente-demo/editar",
+      "titulo": "Editar cliente"
+    },
+    {
+      "desborde": false,
+      "filas": 1,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/pedidos",
+      "titulo": "Pedidos"
+    },
+    {
+      "desborde": false,
+      "filas": 1,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/pedidos/ce445e86-e3f8-4c94-a771-a38a2e247eb4",
+      "titulo": "Detalle del pedido"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/criticos",
+      "titulo": "Stock crítico"
+    },
+    {
+      "desborde": false,
+      "filas": 1,
+      "formularios": 0,
+      "imagenesRotas": [],
+      "ruta": "/admin/reportes",
+      "titulo": "Reportes de la tienda"
+    },
+    {
+      "desborde": false,
+      "filas": 0,
+      "formularios": 1,
+      "imagenesRotas": [],
+      "ruta": "/admin/perfil",
+      "titulo": "Mi perfil"
+    }
+  ],
+  "responsive": [
+    {
+      "ancho": 375,
+      "imagenesRotas": 0,
+      "pagina": 360,
+      "ruta": "/productos",
+      "tabla": []
+    },
+    {
+      "ancho": 375,
+      "imagenesRotas": 0,
+      "pagina": 360,
+      "ruta": "/carrito",
+      "tabla": []
+    },
+    {
+      "ancho": 375,
+      "imagenesRotas": 0,
+      "pagina": 360,
+      "ruta": "/checkout",
+      "tabla": []
+    },
+    {
+      "ancho": 375,
+      "imagenesRotas": 0,
+      "pagina": 360,
+      "ruta": "/admin/productos",
+      "tabla": [
+        {
+          "ancho": 334,
+          "contenido": 706,
+          "desplazamiento": "auto"
+        }
+      ]
+    },
+    {
+      "ancho": 768,
+      "imagenesRotas": 0,
+      "pagina": 753,
+      "ruta": "/productos",
+      "tabla": []
+    },
+    {
+      "ancho": 768,
+      "imagenesRotas": 0,
+      "pagina": 753,
+      "ruta": "/carrito",
+      "tabla": []
+    },
+    {
+      "ancho": 768,
+      "imagenesRotas": 0,
+      "pagina": 753,
+      "ruta": "/checkout",
+      "tabla": []
+    },
+    {
+      "ancho": 768,
+      "imagenesRotas": 0,
+      "pagina": 753,
+      "ruta": "/admin/productos",
+      "tabla": [
+        {
+          "ancho": 694,
+          "contenido": 694,
+          "desplazamiento": "auto"
+        }
+      ]
+    },
+    {
+      "ancho": 1280,
+      "imagenesRotas": 0,
+      "pagina": 1265,
+      "ruta": "/productos",
+      "tabla": []
+    },
+    {
+      "ancho": 1280,
+      "imagenesRotas": 0,
+      "pagina": 1265,
+      "ruta": "/carrito",
+      "tabla": []
+    },
+    {
+      "ancho": 1280,
+      "imagenesRotas": 0,
+      "pagina": 1265,
+      "ruta": "/checkout",
+      "tabla": []
+    },
+    {
+      "ancho": 1280,
+      "imagenesRotas": 0,
+      "pagina": 1265,
+      "ruta": "/admin/productos",
+      "tabla": [
+        {
+          "ancho": 854,
+          "contenido": 854,
+          "desplazamiento": "auto"
+        }
+      ]
+    }
+  ],
+  "rutasInexistentes": [
+    {
+      "enlaces": [
+        "/productos"
+      ],
+      "ruta": "/productos/NO-EXISTE",
+      "titulos": [
+        "Producto no encontrado"
+      ]
+    },
+    {
+      "enlaces": [
+        "/productos"
+      ],
+      "ruta": "/blogs/no-existe",
+      "titulos": [
+        "Artículo no encontrado"
+      ]
+    },
+    {
+      "enlaces": [
+        "/productos"
+      ],
+      "ruta": "/ruta-no-existe",
+      "titulos": [
+        "No encontramos lo que buscas"
+      ]
+    }
+  ],
+  "fechaRevision": "27-10-2026",
+  "servidor": "Vite preview, paquete compilado, localhost:4175",
+  "teclado": {
+    "menuConEnter": true,
+    "saltoAlContenido": true,
+    "focoVisible": true,
+    "dialogoTabYShiftTab": true,
+    "escapeYRetornoDeFoco": true,
+    "alcance": "Revisión local parcial; falta segunda persona."
+  },
+  "consola": {
+    "errores": 0,
+    "advertencias": 0
+  }
+}

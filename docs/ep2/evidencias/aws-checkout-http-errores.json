@@ -1,0 +1,8 @@
+[
+  {
+    "level": "error",
+    "message": "TypeError: crypto.randomUUID is not a function\n    at wi (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:9:142847)\n    at es (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:49186)\n    at qc (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:71911)\n    at ml (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:82824)\n    at Zd (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:128003)\n    at Jd (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:127084)\n    at qd (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:126922)\n    at Fd (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:123655)\n    at jf (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:8:135942)\n    at MessagePort.C (http://3.80.59.90:5173/assets/index-Ks3bnF0J.js:1:10646)",
+    "timestamp": "2026-10-28T23:21:21.396Z",
+    "url": "http://3.80.59.90:5173/assets/index-Ks3bnF0J.js"
+  }
+]
