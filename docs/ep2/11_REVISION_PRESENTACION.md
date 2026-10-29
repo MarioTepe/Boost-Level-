@@ -71,10 +71,10 @@ El recorrido final se ejecutó sobre el build de producción por HTTP local el 2
 
 Registro: [recorrido-final-http.json](evidencias/recorrido-final-http.json). Las capturas con sufijo final-http y movil-http corresponden a ese origen local; no son evidencia pública de AWS. La evidencia AWS del 28 de octubre se conserva como histórica.
 
-## Pendientes antes de entregar
+## Pendientes del equipo antes de entregar
 
-1. Revisión de los Word/Excel y ensayo individual de los diez casos seleccionados. Registrar firmas solo cuando se realice la revisión.
-2. AWS EC2 se actualizó el 29-10-2026 en http://13.222.183.60:5173/ (instancia i-04ea79c4ee915d199). La validación pública comprobó Ofertas con cuatro productos y el checkout por HTTP hasta el comprobante simulado; no se realizan cobros. La IP puede cambiar al reiniciar Learner Lab. No se requiere HTTPS para esta demostración.
-3. Confirmar que la versión enviada a GitHub corresponde al manifiesto final y revisar el resultado de su workflow.
+1. Revisar en conjunto los Word y el Excel y ensayar los diez casos seleccionados. Registrar firmas solo después de realizar esa revisión.
+
+GitHub main está sincronizado con la documentación y las evidencias AWS actualizadas. El frontend publicado en AWS corresponde al commit a466481; el commit 9b53d27 incorpora las correcciones documentales y las capturas públicas. La IP puede cambiar al reiniciar Learner Lab.
 
 El resultado no acredita pagos reales, autenticación de servidor ni aprobación docente.
