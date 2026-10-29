@@ -75,6 +75,6 @@ Registro: [recorrido-final-http.json](evidencias/recorrido-final-http.json). Las
 
 1. Revisar en conjunto los Word y el Excel y ensayar los diez casos seleccionados. Registrar firmas solo después de realizar esa revisión.
 
-GitHub main está sincronizado con la documentación y las evidencias AWS actualizadas. El frontend publicado en AWS corresponde al commit a466481; el commit 9b53d27 incorpora las correcciones documentales y las capturas públicas. La IP puede cambiar al reiniciar Learner Lab.
+GitHub main está sincronizado con el código, la documentación y las evidencias AWS actualizadas. La aplicación pública se verificó el 29-10-2026. La dirección es dinámica y el equipo se la comunicará directamente al profesor el día de la presentación.
 
 El resultado no acredita pagos reales, autenticación de servidor ni aprobación docente.

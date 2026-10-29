@@ -73,7 +73,7 @@ El [informe de revisión](../11_REVISION_PRESENTACION.md) registra el recorrido 
 
 ## Publicación HTTP en AWS del 28-10-2026
 
-El 28-10-2026 se comprobaron portada, catálogo y recarga en EC2; el checkout de esa versión falló en HTTP. Los archivos revision-aws-http.json, aws-portada-http.png y aws-checkout-http-errores.json conservan ese resultado histórico. El código final corrige el fallo con crearId. AWS EC2 se actualizó el 29-10-2026 en http://13.222.183.60:5173/ (instancia i-04ea79c4ee915d199). AWS_29-10-2026/ofertas-publicadas.png y checkout-publicado.png son capturas auténticas de la versión pública; publicacion-aws-2026-10-29.json registra el build y el recorrido hasta el comprobante simulado con datos ficticios, sin cobro ni errores de consola. La IP puede cambiar al reiniciar Learner Lab.
+El 28-10-2026 se comprobaron portada, catálogo y recarga en EC2; el checkout de esa versión falló en HTTP. Los archivos revision-aws-http.json, aws-portada-http.png y aws-checkout-http-errores.json conservan ese resultado histórico. El código final corrige el fallo con crearId. AWS EC2 se actualizó el 29-10-2026 en la instancia existente. AWS_29-10-2026/ofertas-publicadas.png y checkout-publicado.png son capturas auténticas de la versión pública; publicacion-aws-2026-10-29.json registra el build y el recorrido hasta el comprobante simulado con datos ficticios, sin cobro ni errores de consola. La dirección pública es dinámica y el equipo la comunicará directamente al profesor el día de la presentación.
 
 ## Evidencias finales del 29 de octubre
 
