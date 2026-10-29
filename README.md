@@ -12,9 +12,9 @@ npm run dev
 
 Abrir la dirección local indicada por Vite. Login: `/login`; administración: `/admin`. Cuentas ficticias: **admin@duoc.cl / 1234** y **usuario@gmail.com / 1234**. Las credenciales de revisión están documentadas aquí y no se publican en la pantalla de acceso.
 
-La [guía de explicación del código](docs/ep2/08_GUIA_EXPLICACION_CODIGO.md) relaciona la implementación con los contenidos de clases. El [índice EP2](docs/ep2/README.md) reúne requisitos, arquitectura, pruebas y evidencias. Los pagos y las cuentas son de demostración local.
+La documentación de la evaluación 2 se conserva en la carpeta local de entrega del equipo. Los pagos y las cuentas son de demostración local.
 
-Se utiliza `BrowserRouter`, con el mapa de rutas en `src/App.jsx`, páginas en `src/paginas/` y un componente por archivo en `src/componentes/`, siguiendo las nuevas guías FullStack II. La [correspondencia con las clases](docs/ep2/09_CORRESPONDENCIA_GUIAS_CLASE.md) explica lo aplicado y las decisiones adicionales del proyecto.
+Se utiliza `BrowserRouter`, con el mapa de rutas en `frontend/src/App.jsx`, páginas en `frontend/src/paginas/` y componentes en `frontend/src/componentes/`, siguiendo las nuevas guías FullStack II.
 
 ## Referencia de la evaluación 1
 
@@ -169,8 +169,8 @@ Proyecto desarrollado para la asignatura Full Stack II.
 
 ## Planificación de la evaluación 2
 
-La [documentación EP2](docs/ep2/README.md) reúne diagnóstico, ERS V2, arquitectura, backlog, plan de pruebas, borrador de cobertura y matriz de trazabilidad.
+La documentación EP2, con ERS V2, arquitectura, pruebas, cobertura y trazabilidad, se conserva en la carpeta local de entrega del equipo.
 
 El incremento React está implementado en `frontend/` con React, Vite, React Bootstrap y Vitest. Las páginas HTML anteriores siguen disponibles como referencia de EP1 y se abren con Live Server. El informe de cobertura se actualiza con la ejecución local y queda sujeto a revisión del equipo antes de la entrega.
 
-La [revisión de presentación](docs/ep2/11_REVISION_PRESENTACION.md) reúne las comprobaciones actuales y lo pendiente antes de la entrega.
+La revisión de presentación está en esa misma carpeta local.

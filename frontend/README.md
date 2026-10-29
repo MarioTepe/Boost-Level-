@@ -65,13 +65,13 @@ npm run test:ejecutar -- src/componentes/catalogo --reporter=verbose
 
 Vitest y `@vitest/coverage-v8` usan la misma versión. La cobertura incluye el código de producción y exige 80% en sentencias, ramas, funciones y líneas, siguiendo la plantilla revisada del profesor. El HTML se genera en `coverage/index.html` y se regenera al ejecutar las pruebas.
 
-La rúbrica EP2, página 7 (IE2.2.1), exige 10/10 pruebas bien estructuradas para el nivel máximo; la página 9 (IE2.2.2) pide demostrar 10 en la presentación. No es un límite máximo de pruebas. En el [plan de pruebas](../docs/ep2/05_PLAN_PRUEBAS.md) se identifican diez casos existentes para estudiar y explicar. Se comprueban renderizado, props, eventos, estado, validación y resultados; la suite completa conserva las verificaciones adicionales de reglas y persistencia.
+La rúbrica EP2, página 7 (IE2.2.1), exige 10/10 pruebas bien estructuradas para el nivel máximo; la página 9 (IE2.2.2) pide demostrar 10 en la presentación. No es un límite máximo de pruebas. El plan de pruebas, conservado en la carpeta local de entrega, identifica diez casos para estudiar y explicar. Se comprueban renderizado, props, eventos, estado, validación y resultados; la suite completa conserva verificaciones adicionales de reglas y persistencia.
 
 ## Explicar el proyecto
 
-Leer la [guía de explicación](../docs/ep2/08_GUIA_EXPLICACION_CODIGO.md) y la [documentación EP2](../docs/ep2/README.md). Allí se relacionan los archivos con props, `useState`, eventos, actualización inmutable, React Bootstrap, persistencia y tests. Las ampliaciones respecto del ejercicio de clases se justifican por las nuevas vistas.
+La guía de explicación y la documentación EP2 se conservan en la carpeta local de entrega. Relacionan los archivos con props, `useState`, eventos, actualización inmutable, React Bootstrap, persistencia y tests. Las ampliaciones respecto del ejercicio de clases se justifican por las nuevas vistas.
 
-La [correspondencia con FullStack II](../docs/ep2/09_CORRESPONDENCIA_GUIAS_CLASE.md) incorpora las nuevas guías React/Router. Confirma que efectos, almacenamiento local, rutas, parámetros, filtros en URL y Navigate ya forman parte de clases. BrowserRouter y la separación de páginas/componentes están aplicados. Context, repositorio y servicios se justifican como decisiones adicionales.
+La correspondencia con FullStack II está documentada en la carpeta local de entrega. Efectos, almacenamiento local, rutas, parámetros, filtros en URL y Navigate forman parte de las guías de clase. BrowserRouter y la separación de páginas/componentes están aplicados. Context, repositorio y servicios se justifican como decisiones adicionales.
 
 La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) confirma Vitest, Testing Library, jsdom y V8. Las siete pruebas del catálogo están al lado de TarjetaProducto y GrillaProductos, con Preparar/Actuar/Comprobar, beforeEach, vi.fn() y userEvent con await. La suite completa se ejecuta con Vitest y genera cobertura mediante V8.
 
