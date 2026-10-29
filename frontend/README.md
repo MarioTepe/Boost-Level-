@@ -73,7 +73,7 @@ Leer la [guía de explicación](../docs/ep2/08_GUIA_EXPLICACION_CODIGO.md) y la 
 
 La [correspondencia con FullStack II](../docs/ep2/09_CORRESPONDENCIA_GUIAS_CLASE.md) incorpora las nuevas guías React/Router. Confirma que efectos, almacenamiento local, rutas, parámetros, filtros en URL y Navigate ya forman parte de clases. BrowserRouter y la separación de páginas/componentes están aplicados. Context, repositorio y servicios se justifican como decisiones adicionales.
 
-La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) confirma Vitest, Testing Library, jsdom y V8. Las siete pruebas del catálogo están al lado de TarjetaProducto y GrillaProductos, con Preparar/Actuar/Comprobar, beforeEach, vi.fn() y userEvent con await. El plan conserva la referencia histórica a Jasmine/Karma sin afirmar que Vitest ejecute esas herramientas.
+La [guía de pruebas del profesor](https://vihgo.github.io/repaso-dsy1104-2026/#guia-pruebas) confirma Vitest, Testing Library, jsdom y V8. Las siete pruebas del catálogo están al lado de TarjetaProducto y GrillaProductos, con Preparar/Actuar/Comprobar, beforeEach, vi.fn() y userEvent con await. La suite completa se ejecuta con Vitest y genera cobertura mediante V8.
 
 ## Publicación y próximos cambios
 
