@@ -3,7 +3,7 @@
 **Fecha:** 29-10-2026. Revisión final de código, pruebas y recorrido HTTP local. **Asignatura:** DSY1104. **Docente:** Víctor Hugo Gómez Atabales. **Entrega:** 29-10-2026.  
 **Integrantes:** Jordán Guzmán Parra, Mario Tepe Espinoza y Luis Contreras Gonzalez.
 
-El frontend está implementado y supera las comprobaciones técnicas locales. Las pantallas del anexo están presentes; no hace falta aumentar el catálogo de once productos para cumplir ese alcance. El equipo confirmó que el profesor exige solo frontend. La entrega completa requiere revisar los documentos entre integrantes, ensayar la exposición y comprobar la actualización final en la instancia AWS Academy / Learner Lab ya existente.
+El frontend está implementado y supera las comprobaciones técnicas locales. Las pantallas del anexo están presentes; no hace falta aumentar el catálogo de once productos para cumplir ese alcance. El equipo confirmó que el profesor exige solo frontend. La actualización final de la instancia AWS Academy / Learner Lab ya está comprobada públicamente. Quedan la revisión cruzada de documentos y el ensayo de la exposición.
 
 ## Fuentes contrastadas
 
@@ -74,7 +74,7 @@ Registro: [recorrido-final-http.json](evidencias/recorrido-final-http.json). Las
 ## Pendientes antes de entregar
 
 1. Revisión de los Word/Excel y ensayo individual de los diez casos seleccionados. Registrar firmas solo cuando se realice la revisión.
-2. AWS EC2 fue publicado el 28-10-2026 en http://3.80.59.90:5173/. La revisión del 29-10-2026 no pudo conectar por HTTP ni SSH a esa dirección. La versión final está compilada y verificada por HTTP local; quedan pendientes su carga en la misma instancia y el recorrido público. No se exige HTTPS para resolver el fallo corregido de esta simulación.
+2. AWS EC2 se actualizó el 29-10-2026 en http://13.222.183.60:5173/ (instancia i-04ea79c4ee915d199). La validación pública comprobó Ofertas con cuatro productos y el checkout por HTTP hasta el comprobante simulado; no se realizan cobros. La IP puede cambiar al reiniciar Learner Lab. No se requiere HTTPS para esta demostración.
 3. Confirmar que la versión enviada a GitHub corresponde al manifiesto final y revisar el resultado de su workflow.
 
 El resultado no acredita pagos reales, autenticación de servidor ni aprobación docente.

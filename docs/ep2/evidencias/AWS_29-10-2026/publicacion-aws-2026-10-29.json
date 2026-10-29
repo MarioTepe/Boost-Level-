@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-10-29",
+  "zona_horaria": "America/Santiago",
+  "instancia_id": "i-04ea79c4ee915d199",
+  "ipv4_publica": "13.222.183.60",
+  "url": "http://13.222.183.60:5173/",
+  "repositorio": "https://github.com/MarioTepe/Boost-Level-/",
+  "rama": "main",
+  "commit_desplegado": "a4664814626262f880b56c4dd7e950113b9f4b65",
+  "build": {
+    "http_status": 200,
+    "javascript": "/assets/index-CkvhSUqE.js",
+    "css": "/assets/index-oQSY5qBo.css",
+    "contiene_crypto_randomUUID": false,
+    "vite": "8.3.5"
+  },
+  "ofertas": {
+    "ruta": "/ofertas",
+    "productos_visibles": 4,
+    "codigos": [
+      "AC001",
+      "AC002",
+      "CO001",
+      "MS001"
+    ],
+    "resultado": "precios originales, de oferta y porcentajes visibles"
+  },
+  "checkout": {
+    "ruta": "/checkout",
+    "estado": "aceptado; comprobante simulado visible",
+    "resultadoSimulado": "aceptado",
+    "errores_consola": 0,
+    "datos": "ficticios, omitidos de este registro",
+    "cobro_real": false
+  },
+  "capturas": [
+    "ofertas-publicadas.png",
+    "checkout-publicado.png"
+  ],
+  "nota": "Verificación manual en navegador sobre AWS EC2. Compra y carrito de demostración se guardan localmente en el navegador; no hay backend de pagos. La IP pública puede cambiar al reiniciar AWS Academy/Learner Lab."
+}

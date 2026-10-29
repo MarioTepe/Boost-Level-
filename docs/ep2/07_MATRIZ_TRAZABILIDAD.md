@@ -51,4 +51,4 @@ Los IDs P corresponden al [plan vigente](05_PLAN_PRUEBAS.md). La corrida de [vit
 
 Cada fila distingue el comportamiento probado de las alternativas pendientes. No se hereda la verificación exhaustiva de la suite anterior. La cobertura se calcula con la misma configuración y no sustituye aserciones o revisión manual. Cuando cambien código, configuración o reglas, repetir pruebas y actualizar informe/manifiesto. La revisión del equipo se registrará cuando se realice.
 
-La compra de P-11 comprueba un entorno sin crypto.randomUUID; el recorrido HTTP local confirma rechazo, reintento, comprobante y recarga. La comprobación de esta misma versión en AWS sigue pendiente de conectividad.
+La compra de P-11 comprueba un entorno sin crypto.randomUUID; el recorrido HTTP local confirma rechazo, reintento, comprobante y recarga. La versión actual también se verificó públicamente en AWS hasta el comprobante simulado; la prueba automatizada sigue siendo local.

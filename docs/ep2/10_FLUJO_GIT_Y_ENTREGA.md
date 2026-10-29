@@ -16,7 +16,7 @@ La suite tiene 33 casos aprobados, sin fallos, skip ni todo. Las cuatro métrica
 
 ## Publicación final en AWS
 
-El destino confirmado es **AWS Academy / Learner Lab**. AWS EC2 fue publicado el 28-10-2026 en http://3.80.59.90:5173/. La revisión del 29-10-2026 no pudo conectar por HTTP ni SSH a esa dirección. La versión final está compilada y verificada por HTTP local; quedan pendientes su carga en la misma instancia y el recorrido público. No se exige HTTPS para resolver el fallo corregido de esta simulación.
+El destino confirmado es **AWS Academy / Learner Lab**. AWS EC2 se actualizó el 29-10-2026 en http://13.222.183.60:5173/ (instancia i-04ea79c4ee915d199). La validación pública comprobó Ofertas con cuatro productos y el checkout por HTTP hasta el comprobante simulado; no se realizan cobros. La IP puede cambiar al reiniciar Learner Lab. No se requiere HTTPS para esta demostración.
 
 Nginx conserva el puerto 5173 y el fallback a index.html para BrowserRouter. No crear otra instancia ni cambiar reglas sin una necesidad comprobada. La guía PUBLICACION_AWS.md del paquete explica la actualización y la comprobación posterior.
 
